@@ -3,13 +3,13 @@
 ## Phase 1: Project Setup
 
 ### Backend
-- [ ] T001 Initialize a Go module for the backend.
-- [ ] T002 Set up the directory structure for the backend:
+- [X] T001 Initialize a Go module for the backend.
+- [X] T002 Set up the directory structure for the backend:
   - `src/backend/cmd`
   - `src/backend/internal`
   - `src/backend/pkg`
 - [ ] T003 Install necessary dependencies (e.g., HTTP router, ClickHouse driver).
-- [ ] T004 Create a basic HTTP server with a health check endpoint.
+- [X] T004 Create a basic HTTP server with a health check endpoint.
 - [ ] T036 Set up structured logging for the backend.
 - [ ] T037 Implement metrics collection for backend performance and API usage.
 
