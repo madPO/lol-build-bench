@@ -1,50 +1,43 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# LoL Build Bench Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Event-Driven
+Event-driven architecture is the foundation of this project. All components must communicate through well-defined events, ensuring decoupled and scalable interactions. This principle mandates the use of event brokers, asynchronous messaging, and clear event contracts.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Observability
+Observability is critical to understanding the system's behavior. All components must include structured logging, metrics, and tracing to ensure issues can be diagnosed and resolved quickly. This principle ensures transparency and accountability in the system's operation.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Fast Performance
+Performance is a key priority. The system must be optimized for low latency and high throughput, ensuring a seamless user experience. This principle mandates regular performance testing and profiling to identify and eliminate bottlenecks.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Always Fresh Dependencies
+Dependencies must always be up-to-date to ensure security, compatibility, and access to the latest features. This principle requires regular dependency audits and updates, with automated tools where possible, to maintain a modern and secure codebase.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Program Structure
+The program must adhere to the following structure:
+- **Data Model**: Contains data only. It must not include methods or perform any actions. Its sole purpose is to store information.
+- **Conversion Methods**: Pure functions without side effects. These functions take a data model as input and return a data model, potentially transforming it into a different data model.
+- **Actions**: Functions that perform side effects. These functions interact with the external world, such as making API calls, writing to files, or updating the UI.
+
+### MVP Development Requirements
+- **No Tests During MVP**: While building the Minimum Viable Product (MVP), no tests are required. The focus is on rapid development and iteration.
+- **Code as Documentation**: No separate documentation is needed, as the code itself serves as the documentation. Clear and readable code is mandatory to ensure maintainability.
+
+### Git Branch Strategy
+The project must follow a clear and structured Git branching strategy:
+- **stable**: This branch is used for releases. It contains production-ready code.
+- **next**: This branch is used for active development. It includes the latest changes that are being prepared for the next release.
+- **feature/[task-number]**: These branches are used for developing specific tasks. Each branch should be named after the task number it addresses.
 
 ## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
 [SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
 ## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
 [SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+The constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan to ensure compliance.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.5.0 | **Ratified**: TODO(RATIFICATION_DATE) | **Last Amended**: 2025-12-04
