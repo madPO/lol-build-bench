@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  clickhouse:
+    image: docker.io/clickhouse/clickhouse-server:25.11
+    container_name: builder-bench-clickhouse
+    ports:
+      - "8123:8123" # HTTP interface
+      - "9000:9000" # Native client interface
+      - "9009:9009" # Interserver communication
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - clickhouse_config:/etc/clickhouse-server
+    environment:
+      - CLICKHOUSE_DB=default
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=123
+
+volumes:
+  clickhouse_data:
+  clickhouse_config:

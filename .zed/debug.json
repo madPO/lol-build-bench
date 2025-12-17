@@ -1,0 +1,16 @@
+// Project-local debug tasks
+//
+// For more documentation on how to configure debug tasks,
+// see: https://zed.dev/docs/debugger
+[
+  {
+    "adapter": "Delve",
+    "label": "Debug loader service",
+    "request": "launch",
+    "mode": "debug",
+    "program": "./app/loader-service/main.go",
+    "cwd": "$ZED_WORKTREE_ROOT/src/backend/",
+    "buildFlags": [],
+    "env": {}
+  }
+]
