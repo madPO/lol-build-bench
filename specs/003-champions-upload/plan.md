@@ -221,23 +221,23 @@ Champion {
 
 ```sql
 CREATE TABLE champions (
-  -- CloudEvent identifiers
-  cid UUID,                           -- Generated champion event identifier
-  oid String,                         -- Original champion ID (e.g., "Annie")
-  pid String,                         -- Patch reference (foreign key to patches.pid)
-  created_time DateTime64(3, 'UTC'),  -- Event creation timestamp
+  -- Champion identifiers
+  event_id UUID,                           -- Generated event identifier (primary key)
+  oid String,                         -- Original champion ID from source system
+  pid String,                        -- Reference to patch
   
-  -- CloudEvent metadata (standardized)
-  source String,                      -- Event source ("dragontail")
-  specversion String,                 -- CloudEvents version ("1.0")
-  type String,                        -- Event type ("champion.created")
-  datacontenttype String,             -- MIME type ("application/json")
-  subject String,                     -- Champion name for routing
+  -- CloudEvent metadata (standardized event structure)
+  created_time DateTime64(3, 'UTC'),     -- Event creation timestamp
+  source String,                          -- Event source identifier
+  specversion String,                     -- CloudEvents specification version
+  type String,                            -- Event type discriminator
+  datacontenttype String,                 -- Data content MIME type
+  subject String,                         -- CloudEvent subject (business identifier)
   
-  -- Complete champion data
-  data JSON                           -- All champion attributes (65+ fields)
+  -- Full data payload
+  data JSON                               -- Complete entity data
 ) ENGINE = ReplacingMergeTree(created_time)
-ORDER BY (subject, type, created_time, pid)
+ORDER BY (subject, type, pid)
 ```
 
 **Key Design Differences from Initial Plan**:
@@ -245,7 +245,7 @@ ORDER BY (subject, type, created_time, pid)
 - CloudEvent metadata columns (cid, oid, pid, source, specversion, type, etc.)
 - No separate stat columns - all nested in JSON
 - Patch reference via `pid` column (foreign key to patches table)
-- ReplacingMergeTree deduplicates on (subject, type, created_time, pid)
+- ReplacingMergeTree deduplicates on (subject, type, pid)
 
 ### 1.3 Function Contracts
 **File**: `contracts/api-contracts.md` (to be generated)

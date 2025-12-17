@@ -94,25 +94,7 @@ if err != nil {
 log.Println("Champions imported successfully")
 ```
 
-### Parameters
 
-| Parameter | Type | Required | Constraints | Purpose |
-|-----------|------|----------|-------------|---------|
-| `filePath` | string | Yes | Valid file path, JSON format | Local path to champions data file |
-| `patchId` | string | Yes | Format: "patch_X_Y_Z" | Patch identifier (foreign key to patches table) |
-
-### Example Function Call
-
-```go
-result, err := champion.ImportFromFile(
-    "champions.json",
-    "patch_15_24_1",
-)
-if err != nil {
-    log.Fatal(err)
-}
-fmt.Printf("Imported %d champions\n", result.SuccessCount)
-```
 
 ---
 
@@ -243,7 +225,7 @@ Champions are stored directly as CloudEvent objects in the database:
 
 ```json
 {
-  "cid": "550e8400-e29b-41d4-a716-446655440000",
+  "event_id": "550e8400-e29b-41d4-a716-446655440000",
   "oid": "Annie",
   "pid": "patch_15_24_1",
   "created_time": "2025-12-15T10:30:00Z",
@@ -271,7 +253,7 @@ Champions are stored directly as CloudEvent objects in the database:
 
 | Field | Type | Value | Purpose |
 |-------|------|-------|---------|
-| `cid` | UUID | Auto-generated | Event identifier (unique per import) |
+| `event_id` | UUID | Auto-generated | Event identifier (unique per import) |
 | `oid` | String | Champion ID | Original champion ID from Data Dragon |
 | `pid` | String | Patch reference | Foreign key to patches table (e.g., "patch_15_24_1") |
 | `created_time` | DateTime | Import timestamp | Used for version ordering and deduplication |

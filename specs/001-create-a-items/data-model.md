@@ -26,7 +26,7 @@ import (
 )
 
 type Item struct {
-    IID         uuid.UUID  // Item identifier (generated, primary key)
+    EventID     uuid.UUID  // Event identifier (generated, primary key)
     OID         string     // Original item ID from Data Dragon (e.g., "1001")
     Name        string     // Item name (e.g., "Boots of Speed")
     MapId       int32      // Map identifier - always 11 for Summoner's Rift
@@ -37,7 +37,7 @@ type Item struct {
 ```
 
 **Field Descriptions**:
-- `IID`: Generated UUID for internal identification and deduplication tracking
+- `EventID`: Generated UUID for internal identification and deduplication tracking
 - `OID`: Original item ID from Riot Data Dragon (e.g., "3340" for Farsight Alteration)
 - `Name`: Human-readable item name used as CloudEvent subject and display identifier
 - `MapId`: Map identifier - always 11 for Summoner's Rift (filtering applied in business logic)
@@ -59,8 +59,8 @@ type Item struct {
 - `PatchOID` must reference valid patch (business logic check)
 
 **Storage Behavior**:
-- ReplacingMergeTree automatically retains only latest `CreatedTime` for each (subject, type, created_time, pid) tuple
-- Updates to same item (same subject/type/created_time/pid) replace previous version
+- ReplacingMergeTree automatically retains only latest `CreatedTime` for each (subject, type, pid) tuple
+- Updates to same item (same subject/type/pid) replace previous version
 - No manual deduplication required
 
 ---
@@ -122,32 +122,32 @@ data                → Data (serialized as JSON)
 ```sql
 CREATE TABLE IF NOT EXISTS items (
     -- Item identifiers
-    iid UUID,                           -- Generated item identifier (primary)
-    oid String,                         -- Original item ID from Data Dragon (e.g., "1001", "3340")
-    pid String,                   -- Reference to patch PID (foreign key to patches.pid)
-    created_time DateTime64(3, 'UTC'), -- Event creation timestamp (used for version ordering)
-
+    event_id UUID,                           -- Generated event identifier (primary key)
+    oid String,                         -- Original item ID from source system
+    pid String,                        -- Reference to patch
+    
     -- CloudEvent metadata (standardized event structure)
-    source String,                      -- Event source identifier (always "dragontail")
-    specversion String,                 -- CloudEvents specification version (always "1.0")
-    type String,                        -- Event type discriminator (always "item.created")
-    datacontenttype String,             -- Data content MIME type (always "application/json")
-    subject String,                     -- CloudEvent subject (item name for routing/filtering)
-
-    -- Full item data payload
-    data JSON                           -- Complete item details from Data Dragon (stats, gold, description, etc.)
-
+    created_time DateTime64(3, 'UTC'),     -- Event creation timestamp
+    source String,                          -- Event source identifier
+    specversion String,                     -- CloudEvents specification version
+    type String,                            -- Event type discriminator
+    datacontenttype String,                 -- Data content MIME type
+    subject String,                         -- CloudEvent subject (business identifier)
+    
+    -- Full data payload
+    data JSON                               -- Complete entity data
+    
 ) ENGINE = ReplacingMergeTree(created_time)
-ORDER BY (subject, type, created_time, pid);
+ORDER BY (subject, type, pid);
 ```
 
 **Engine Configuration**:
-- `ReplacingMergeTree(created_time)`: Automatically keeps row with latest `created_time` for each unique (subject, type, created_time, pid)
-- `ORDER BY (subject, type, created_time, pid)`: Defines uniqueness constraint and sort order for efficient queries
+- `ReplacingMergeTree(created_time)`: Automatically keeps row with latest `created_time` for each unique (subject, type, pid)
+- `ORDER BY (subject, type, pid)`: Defines uniqueness constraint and sort order for efficient queries
 
 **Indexes**:
-- Primary index: (subject, type, created_time, pid) via ORDER BY clause
-- Enables fast queries by item subject, type, created_time, and patch ID
+- Primary index: (subject, type, pid) via ORDER BY clause
+- Enables fast queries by item subject, type, and patch ID
 
 **Query Patterns**:
 ```sql
@@ -195,7 +195,7 @@ SELECT * FROM items FINAL ORDER BY created_time DESC;
    └─ INSERT INTO items VALUES (...)
 
 8. Automatic Deduplication (ReplacingMergeTree)
-   └─ Keep latest created_time for each (subject, type, created_time, pid)
+    └─ Keep latest created_time for each (subject, type, pid)
 ```
 
 ### Query Flow (Database → Application)
@@ -238,8 +238,8 @@ func CreateItemFromItemData(itemID string, itemData dragontail.ItemData, patchOI
         panic(fmt.Sprintf("failed to marshal itemData: %v", err))
     }
 
-    return Item{
-        IID:         uuid.New(),
+return Item{
+        EventID:     uuid.New(),
         OID:         itemID,
         Name:        itemData.Name,
         MapId:       11, // Hardcoded - already filtered
@@ -281,13 +281,13 @@ func CreateEventFromItem(item Item) CreateItemEvent {
 
 **Entity Constraints** (enforced by Item struct):
 - ✓ `MapId` is always 11 (hardcoded after filter)
-- ✓ `IID` is always valid UUID (generated by uuid.New())
+- ✓ `EventID` is always valid UUID (generated by uuid.New())
 - ✓ `CreatedTime` is always valid UTC timestamp (generated by time.Now().UTC())
 
 **Database Constraints** (enforced by ClickHouse schema):
 - ✓ Type constraints: UUID, String, Int32, DateTime64
-- ✓ Uniqueness: ReplacingMergeTree enforces latest version per (subject, type, created_time, pid)
-- ✓ Ordering: ORDER BY ensures efficient queries by subject, type, created_time, and pid
+- ✓ Uniqueness: ReplacingMergeTree enforces latest version per (subject, type, pid)
+- ✓ Ordering: ORDER BY ensures efficient queries by subject, type, and pid
 
 ---
 

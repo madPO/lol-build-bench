@@ -21,13 +21,13 @@ CREATE TABLE IF NOT EXISTS runes (
     data JSON                           -- Complete rune details from Data Dragon (name, description, etc.)
 
 ) ENGINE = ReplacingMergeTree(created_time)
-ORDER BY (subject, type, created_time, pid);
+ORDER BY (subject, type, pid);
 
 -- Engine Explanation:
 -- ReplacingMergeTree(created_time): Automatically keeps the row with the latest created_time
 --                                    for each unique combination of ORDER BY fields
--- ORDER BY (subject, type, created_time, pid): Defines the primary sorting key and uniqueness constraint
---                                Enables efficient queries by rune name, type, and original ID
+-- ORDER BY (subject, type, pid): Defines the primary sorting key and uniqueness constraint
+--                                Enables efficient queries by rune name, type, and patch
 
 -- Query Examples:
 --
@@ -47,7 +47,7 @@ ORDER BY (subject, type, created_time, pid);
 --       Always use FINAL when querying to ensure latest version is returned
 
 -- Indexes:
--- Primary index: (subject, type, created_time, pid) automatically created via ORDER BY
+-- Primary index: (subject, type, pid) automatically created via ORDER BY
 -- Supports efficient filtering and sorting on these columns
 
 -- Performance Characteristics:

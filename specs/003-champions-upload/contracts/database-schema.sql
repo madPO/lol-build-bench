@@ -4,30 +4,30 @@
 -- Purpose: Store League of Legends champion data with CloudEvent structure
 
 CREATE TABLE IF NOT EXISTS champions (
-    -- Champion identifiers
-    cid UUID,                           -- Generated champion identifier (primary)
-    oid String,                         -- Original champion ID from Data Dragon (e.g., "Annie")
-    pid String,                         -- Reference to patch PID (foreign key to patches.pid)
-    created_time DateTime64(3, 'UTC'),  -- Event creation timestamp (used for version ordering)
+-- Champion identifiers
+    event_id UUID,                           -- Generated event identifier (primary key)
+    oid String,                         -- Original champion ID from source system
+    pid String,                        -- Reference to patch
     
-    -- CloudEvent metadata (standardized event structure)
-    source String,                      -- Event source identifier (always "dragontail")
-    specversion String,                 -- CloudEvents specification version (always "1.0")
-    type String,                        -- Event type discriminator (always "champion.created")
-    datacontenttype String,             -- Data content MIME type (always "application/json")
-    subject String,                     -- CloudEvent subject (champion name for routing/filtering)
+-- CloudEvent metadata (standardized event structure)
+    created_time DateTime64(3, 'UTC'),     -- Event creation timestamp
+    source String,                          -- Event source identifier
+    specversion String,                     -- CloudEvents specification version
+    type String,                            -- Event type discriminator
+    datacontenttype String,                 -- Data content MIME type
+    subject String,                         -- CloudEvent subject (business identifier)
     
     -- Full champion data payload
     data JSON                           -- Complete champion details: stats, abilities, passive, image, etc.
 
 ) ENGINE = ReplacingMergeTree(created_time)
-ORDER BY (subject, type, created_time, pid);
+ORDER BY (subject, type, pid);
 
 -- Engine Explanation:
 -- ReplacingMergeTree(created_time): Automatically keeps the row with the latest created_time
 --                                    for each unique combination of ORDER BY fields
--- ORDER BY (subject, type, created_time, pid): Defines the primary sorting key and uniqueness constraint
---                                               Enables efficient queries by champion name, event type, and patch
+-- ORDER BY (subject, type, pid): Defines the primary sorting key and uniqueness constraint
+--                                Enables efficient queries by champion name, event type, and patch
 
 -- JSON Schema for data column
 -- Complete champion object with all attributes:
@@ -86,7 +86,7 @@ ORDER BY (subject, type, created_time, pid);
 --       Always use FINAL when querying to ensure latest version is returned
 
 -- Indexes:
--- Primary index: (subject, type, created_time, pid) automatically created via ORDER BY
+-- Primary index: (subject, type, pid) automatically created via ORDER BY
 -- Supports efficient filtering by champion name, event type, and patch reference
 
 -- Performance Characteristics:
