@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS runes (
     data JSON                           -- Complete rune details from Data Dragon (name, description, etc.)
 
 ) ENGINE = ReplacingMergeTree(created_time)
-ORDER BY (subject, type, created_time, pid);
+ORDER BY (subject, type, pid);
 
 -- Champions Table Schema
 -- Feature: Champions Upload (003-champions-upload)
@@ -72,16 +72,16 @@ CREATE TABLE IF NOT EXISTS champions (
     oid String,                         -- Original champion ID from Data Dragon (e.g., "Annie")
     pid String,                         -- Reference to patch PID (foreign key to patches.pid)
     created_time DateTime64(3, 'UTC'),  -- Event creation timestamp (used for version ordering)
-    
+
     -- CloudEvent metadata (standardized event structure)
     source String,                      -- Event source identifier (always "dragontail")
     specversion String,                 -- CloudEvents specification version (always "1.0")
     type String,                        -- Event type discriminator (always "champion.created")
     datacontenttype String,             -- Data content MIME type (always "application/json")
     subject String,                     -- CloudEvent subject (champion name for routing/filtering)
-    
+
     -- Full champion data payload
     data JSON                           -- Complete champion details: stats, abilities, passive, image, etc.
 
 ) ENGINE = ReplacingMergeTree(created_time)
-ORDER BY (subject, type, created_time, pid);
+ORDER BY (subject, type, pid);
