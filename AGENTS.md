@@ -1,6 +1,15 @@
 # AGENTS.md - Development Guidelines
 
+## Project Overview
+LoL Build Bench is a web application for generating and testing League of Legends champion builds. The project uses:
+- **Backend**: Go 1.25.3 with event-driven architecture (CloudEvent pattern)
+- **Frontend**: Qwik JS with TypeScript, PostCSS, and Vite
+- **Database**: ClickHouse
+- **Architecture**: Event-driven with CloudEvent pattern for all data changes
+
 ## Build/Test/Lint Commands
+
+### Backend Services
 ```bash
 # Build services
 cd src/backend && go build ./app/api-service
@@ -10,42 +19,85 @@ cd src/backend && go build ./app/loader-service
 cd src/backend && go run ./app/api-service/main.go
 cd src/backend && go run ./app/loader-service/main.go
 
-# Generate protobuf
+# Generate protobuf from API contracts
 ./scripts/generate-proto.sh
+```
 
-# Database setup
+### Frontend (Qwik JS)
+```bash
+# Navigate to frontend directory
+cd src/frontend
+
+# Install dependencies
+pnpm install
+
+# Development server
+pnpm run dev
+
+# Build for production
+pnpm run build
+
+# Preview production build
+pnpm run preview
+```
+
+### Database
+```bash
+# Start ClickHouse database
 docker-compose -f deployments/docker/docker-compose.yml up
 
-# Create database tables
+# Create database tables from scratch
 # Connect to ClickHouse and run: scripts/database.sql
+# This script creates the complete database structure:
+# - patches: CloudEvent metadata for patches
+# - items: League of Legends item data for Summoner's Rift (map ID 11)
+# - runes: League of Legends rune data
+# - champions: League of Legends champion data with CloudEvent structure
+```
 
-# No tests during MVP phase (per constitution)
+### Testing Policy
+```bash
+# No tests during MVP phase (per project constitution)
+# Focus on rapid development and feature delivery
+# Code serves as documentation during MVP phase
+```
+
+## Project Structure
+```
+src/
+├── backend/
+│   ├── app/
+│   │   ├── api-service/        # API server entry point
+│   │   └── loader-service/     # Data loading service entry point
+│   ├── entities/               # Data structures and pure functions (no side effects)
+│   ├── features/               # Business logic with side effects (use case implementations)
+│   └── services/               # gRPC service implementations
+├── frontend/                   # Qwik JS frontend
+│   ├── components/             # Reusable components
+│   ├── pages/                  # Page-level components
+│   └── styles/                 # PostCSS styles
+specs/                          # Feature specifications
+deployments/                    # Docker and deployment configs
+scripts/                        # Utility scripts
+api/                           # gRPC API contract definitions (.proto files)
 ```
 
 ## Code Style Guidelines
 - **Language**: Go 1.25.3, follow standard Go conventions
+- **Frontend**: Qwik JS with TypeScript, follow Qwik conventions
 - **Architecture**: Event-driven with CloudEvent pattern for all data changes
-- **Structure**: entities/ (data only), features/ (business logic), services/ (external interfaces)
+- **Structure**: 
+  - Backend: entities/ (data only), features/ (business logic), services/ (external interfaces)
+  - Frontend: components/, pages/, styles/
 - **Imports**: Standard library first, then third-party, then local packages
 - **Naming**: Use Go conventions (PascalCase for exported, camelCase for unexported)
 - **Error Handling**: Return errors explicitly, use structured logging
 - **Dependencies**: ClickHouse for database, gRPC for services, always use latest versions
-- **No Tests**: MVP development phase excludes tests per project constitution
+- **No Tests**: MVP development phase excludes tests per project constitution. Focus on rapid feature delivery with code as documentation.
 
-## Recent Changes
-- **2025-12-15**: Added champions uploader feature (003-champions-upload)
-  - New entities: entities/champion/champion.go, entities/champion/createChampionEvent.go
-  - New features: features/champion/importFromFile.go, features/champion/championQueue.go
-  - Database: champions table with ReplacingMergeTree engine
-  - Pattern: Reads individual JSON files (one per champion) from directory structure and loads to ClickHouse
-  - File path: basePath/patchId/data/language/champions/ (one JSON file per champion)
-- **2025-12-14**: Added runes uploader feature (002-runes-uploader)
-  - New entities: entities/rune/rune.go, entities/rune/createRuneEvent.go (planned)
-  - New features: features/rune/importFromFile.go, features/rune/runeQueue.go (planned)
-  - Database: runes table with ReplacingMergeTree engine (planned)
-  - Pattern: Mirrors item uploader, reads from JSON and loads to ClickHouse
-- **2025-12-14**: Added items uploader feature (001-create-a-items)
-  - New entities: entities/item/item.go, entities/item/createItemEvent.go
-  - New features: features/item/importFromFile.go, features/item/itemQueue.go
-  - Database: items table with ReplacingMergeTree engine
-  - Pattern: Mirrors patch uploader, filters to map ID 11 (Summoner's Rift)
+## Development Workflow
+1. Create feature branch: `feature/[task-number]`
+2. Develop in `next` branch
+3. Merge to `stable` for releases
+4. Follow event-driven architecture for data changes
+5. Use CloudEvent pattern for all data modifications
