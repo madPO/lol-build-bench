@@ -1,6 +1,7 @@
 package item
 
 import (
+	"encoding/json"
 	"lol-build-bench/entities/item"
 	"lol-build-bench/features/applicationScope"
 )
@@ -17,6 +18,11 @@ func OpenItemQueue(scope applicationScope.Scope) (func(item.CreateItemEvent) err
 		}
 
 		return func(scope applicationScope.Scope, event item.CreateItemEvent) error {
+				jsonData, err := json.Marshal(event.Data)
+				if err != nil {
+					return err
+				}
+
 				return batch.Append(
 					event.EventId,
 					event.OID,
@@ -27,7 +33,7 @@ func OpenItemQueue(scope applicationScope.Scope) (func(item.CreateItemEvent) err
 					event.Type,
 					event.DataContentType,
 					event.Subject,
-					string(event.Data))
+					string(jsonData))
 			},
 			func(scope applicationScope.Scope) error {
 				return batch.Send()
