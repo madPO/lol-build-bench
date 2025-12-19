@@ -1,0 +1,178 @@
+syntax = "proto3";
+
+package query;
+
+import "google/protobuf/field_mask.proto";
+
+option go_package = "github.com/lol-builds/api/proto/query";
+
+// QueryService provides gRPC endpoints for querying League of Legends game data
+service QueryService {
+  // GetChampion retrieves a single champion by ID with optional field selection
+  rpc GetChampion(GetChampionRequest) returns (GetChampionResponse) {}
+  
+  // QueryChampions returns paginated list of champions with filtering and sorting
+  rpc QueryChampions(QueryChampionsRequest) returns (QueryChampionsResponse) {}
+  
+  // QueryItems returns paginated list of items with filtering and sorting
+  rpc QueryItems(QueryItemsRequest) returns (QueryItemsResponse) {}
+  
+  // QueryRunes returns paginated list of runes with filtering and sorting
+  rpc QueryRunes(QueryRunesRequest) returns (QueryRunesResponse) {}
+}
+
+// ============ REQUEST/RESPONSE MESSAGES ============
+
+message GetChampionRequest {
+  string champion_id = 1;
+  google.protobuf.FieldMask fields = 2;
+}
+
+message GetChampionResponse {
+  Champion champion = 1;
+  bool found = 2;
+}
+
+message QueryChampionsRequest {
+  repeated FilterCondition filters = 1;
+  SortSpec sort = 2;
+  PaginationRequest page = 3;
+  google.protobuf.FieldMask fields = 4;
+  string patch_version = 5;  // Optional: patch version for data retrieval
+}
+
+message QueryChampionsResponse {
+  repeated Champion champions = 1;
+  PaginationResponse pagination = 2;
+  int64 total_count = 3;
+  string patch_version = 4;  // Patch version of returned data
+}
+
+message QueryItemsRequest {
+  repeated FilterCondition filters = 1;
+  SortSpec sort = 2;
+  PaginationRequest page = 3;
+  google.protobuf.FieldMask fields = 4;
+  string patch_version = 5;  // Optional: patch version for data retrieval
+}
+
+message QueryItemsResponse {
+  repeated Item items = 1;
+  PaginationResponse pagination = 2;
+  int64 total_count = 3;
+  string patch_version = 4;  // Patch version of returned data
+}
+
+message QueryRunesRequest {
+  repeated FilterCondition filters = 1;
+  SortSpec sort = 2;
+  PaginationRequest page = 3;
+  google.protobuf.FieldMask fields = 4;
+  string patch_version = 5;  // Optional: patch version for data retrieval
+}
+
+message QueryRunesResponse {
+  repeated Rune runes = 1;
+  PaginationResponse pagination = 2;
+  int64 total_count = 3;
+  string patch_version = 4;  // Patch version of returned data
+}
+
+// ============ ENTITY MESSAGES ============
+
+message Champion {
+  string id = 1;
+  string name = 2;
+  string title = 3;
+  string icon = 4;
+  string role = 5;
+  int32 difficulty = 6;
+  ChampionStats stats = 7;
+  Abilities abilities = 8;
+}
+
+message ChampionStats {
+  float health = 1;
+  float health_per_level = 2;
+  float mana = 3;
+  float mana_per_level = 4;
+  float armor = 5;
+  float armor_per_level = 6;
+  float spellblock = 7;
+  float spellblock_per_level = 8;
+  float attackdamage = 9;
+  float attackdamage_per_level = 10;
+  float attackspeed = 11;
+  float attackspeed_per_level = 12;
+}
+
+message Abilities {
+  string passive = 1;
+  string q = 2;
+  string w = 3;
+  string e = 4;
+  string r = 5;
+}
+
+message Item {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  int32 price = 4;
+  repeated string build_path = 5;
+  repeated string from = 6;
+  repeated string into = 7;
+  ItemStats stats = 8;
+  repeated string categories = 9;
+}
+
+message ItemStats {
+  float armor = 1;
+  float spellblock = 2;
+  float health = 3;
+  float mana = 4;
+  float attackdamage = 5;
+  float attackspeed = 6;
+  float movementspeed = 7;
+  float cooldownreduction = 8;
+  float spellvamp = 9;
+  float lifesteal = 10;
+}
+
+message Rune {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  bool keystone = 4;
+  string primary_tree = 5;
+  string secondary_tree = 6;
+  string icon = 7;
+  string tooltip = 8;
+}
+
+// ============ FILTER/SORT/PAGINATION MESSAGES ============
+
+message FilterCondition {
+  string field = 1;
+  string operator = 2;
+  string value = 3;
+}
+
+message SortSpec {
+  string field = 1;
+  string order = 2;  // "asc" or "desc"
+}
+
+message PaginationRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+  int32 page_number = 3;
+}
+
+message PaginationResponse {
+  int64 total_count = 1;
+  int32 page_size = 2;
+  int32 current_page = 3;
+  string next_token = 4;
+  bool has_next = 5;
+}
