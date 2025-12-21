@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package health;
-option go_package = "src/backend/routes/health";
+option go_package = "/health";
 
 // The health service definition.
 service Health {

@@ -1,1 +1,0 @@
-protoc --go_out=. --go-grpc_out=. ./src/backend/internal/health.proto

@@ -2,13 +2,12 @@
 // versions:
 // - protoc-gen-go-grpc v1.6.0
 // - protoc             v6.33.1
-// source: src/backend/internal/health.proto
+// source: health.proto
 
 package health
 
 import (
 	context "context"
-
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -124,5 +123,5 @@ var Health_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "src/backend/internal/health.proto",
+	Metadata: "health.proto",
 }

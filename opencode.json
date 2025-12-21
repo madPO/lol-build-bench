@@ -16,5 +16,6 @@
     "webfetch": "deny",
     "doom_loop": "ask",
     "external_directory": "ask"
-  }
+  },
+  "instructions": [".specify/memory/constitution.md"]
 }
