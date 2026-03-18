@@ -1,1 +1,0 @@
-grpcurl -plaintext -proto ./src/backend/internal/health/health.proto localhost:8080 health.Health/Check
