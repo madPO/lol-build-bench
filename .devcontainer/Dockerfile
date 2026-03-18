@@ -23,6 +23,7 @@ RUN dnf -y update && dnf -y install \
     python3 \
     python3-pip \
     nodejs \
+    procps-ng \
     && dnf clean all
 
 ENV LANG=en_US.UTF-8
@@ -40,8 +41,9 @@ RUN sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh
     echo "PermitEmptyPasswords yes" >> /etc/ssh/sshd_config && \
     ssh-keygen -A
 
-WORKDIR /workdir
-RUN chown ${USER_NAME}:${USER_NAME} /workdir
+WORKDIR /workspace
+RUN chown ${USER_NAME}:${USER_NAME} /workspace
+USER ${USER_NAME}
 
 RUN curl -fsSL https://opencode.ai/install | bash
 
@@ -54,8 +56,6 @@ RUN printf '#!/usr/bin/env sh\nexec uvx --from git+https://github.com/github/spe
     > /usr/local/bin/specify && chmod +x /usr/local/bin/specify
 
 ENV PATH="/root/.bun/bin:/usr/local/bin:${PATH}"
-
-USER ${USER_NAME}
 
 ENV GOPATH="/home/${USER_NAME}/go"
 ENV PATH="/home/${USER_NAME}/.bun/bin:/usr/local/go/bin:${GOPATH}/bin:${PATH}"
