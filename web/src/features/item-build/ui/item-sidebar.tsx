@@ -28,15 +28,6 @@ export const ItemSidebar = component$(() => {
 
   return (
     <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col relative">
-      {/* Inventory full warning */}
-      {inventoryFull.value && (
-        <div class="mb-4 flex-shrink-0 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
-          <p class="text-sm text-yellow-800">
-            Inventory full! Remove an item to add more.
-          </p>
-        </div>
-      )}
-
       {/* Item grid */}
       <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-1 flex-1 min-h-0 overflow-y-auto pr-2">
         {items.map((item) => (
@@ -77,7 +68,7 @@ export const ItemSidebar = component$(() => {
             disabled={inventoryFull.value}
             aria-label={item.name}
             aria-disabled={inventoryFull.value}
-            class={`w-12 h-12 p-0 rounded-md transition-colors overflow-hidden ${
+            class={`w-12 h-12 p-0 rounded-md transition-colors overflow-hidden cursor-pointer ${
               inventoryFull.value
                 ? "bg-gray-100 cursor-not-allowed opacity-50"
                 : "bg-gray-100 hover:bg-blue-100"

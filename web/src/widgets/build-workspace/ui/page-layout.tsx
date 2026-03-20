@@ -15,10 +15,10 @@ export interface PageLayoutProps {
 export const PageLayout = component$<PageLayoutProps>(({ ...props }) => {
   return (
     <div class="h-screen w-screen overflow-hidden bg-gray-50 p-4" {...props}>
-      {/* Main 3x3 grid container */}
-      <div class="grid grid-cols-3 grid-rows-3 gap-4 h-full w-full">
+      {/* Main compact grid container with dynamic row heights */}
+      <div class="grid grid-cols-[auto_auto_1fr] grid-rows-[min-content_1fr_1fr] gap-2 h-full w-full">
         {/* Column 1, Row 1-2: Item Sidebar */}
-        <div class="col-start-1 col-span-1 row-start-1 row-span-2 overflow-hidden h-full">
+        <div class="col-start-1 col-span-1 row-start-1 row-span-2 overflow-hidden h-full min-w-[320px] max-w-[400px]">
           <Slot name="item-sidebar" />
         </div>
 

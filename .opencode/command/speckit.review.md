@@ -14,7 +14,7 @@ $ARGUMENTS
 ## Outline
 
 1. **Context Setup (Orchestrator)**:
-    - Run `.specify/scripts/bash/check-prerequisites.sh -json -require-tasks -include-tasks` from repo root and parse `FEATURE_DIR` and `AVAILABLE_DOCS`.
+    - Run `.specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks` from repo root and parse `FEATURE_DIR` and `AVAILABLE_DOCS`.
     - Read `.specify/memory/constitution.md` to understand core project principles, constraints, and "memory" (briefly summarize only the sections relevant to the changed areas).
     - Discover available documentation paths from `AVAILABLE_DOCS` (e.g. `spec.md`, `plan.md`, `tasks.md`, `data-model.md`, `contracts/*.md`) but **do not load full contents yet**.
 2. **Determine Scope (Diff-first)**:

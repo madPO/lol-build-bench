@@ -84,9 +84,9 @@ Auto-generated context and guidelines for coding agents.
 - Minimize the amount of data serialized into the HTML; only pass necessary state to client-side components.
 
 ## Recent Changes
+- 004-inventory-redesign: Added TypeScript (v5.4.5) + @builder.io/qwik (v1.19.2), Tailwind CSS (v4.2.2), Basecoat CSS (v0.3.11)
 - 003-rework-champion-select: Added TypeScript 5.4.5, Qwik JS (v1.19.2) + Qwik City, Vite, Tailwind CSS (v4.2.2), Basecoat CSS (v0.3.11)
 - 003-rework-champion-select: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
-- 002-redesign-item-list: Added TypeScript 5.4.5 (Qwik JS v1.19.2) + Qwik, Qwik City, Tailwind CSS v4.2.2, Basecoat CSS v0.3.11, Vite 7.3.1
 
 
 <!-- MANUAL ADDITIONS START -->
@@ -96,5 +96,5 @@ Dont commit any changes.
 <!-- MANUAL ADDITIONS END -->
 
 ## Active Technologies
-- TypeScript 5.4.5, Qwik JS (v1.19.2) + Qwik City, Vite, Tailwind CSS (v4.2.2), Basecoat CSS (v0.3.11) (003-rework-champion-select)
-- Static JSON data (`src/data/champions.json`) (003-rework-champion-select)
+- TypeScript (v5.4.5) + @builder.io/qwik (v1.19.2), Tailwind CSS (v4.2.2), Basecoat CSS (v0.3.11) (004-inventory-redesign)
+- N/A (Client-side transient state via Qwik context) (004-inventory-redesign)
