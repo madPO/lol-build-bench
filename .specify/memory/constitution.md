@@ -1,19 +1,15 @@
 <!--
 === Sync Impact Report ===
-Version change: 3.0.0 -> 3.1.0
+Version change: 3.1.0 -> 3.2.0
 Modified principles: none
 Added sections:
-  - Principle II. Data, Transformation, Actions
-  - Principle III. Cloud Events & Event-Driven Persistence
-  - Principle IV. Low Coupling, High Cohesion
-  - Principle V. MVP-First Development
-  - Development Workflow review checklist expanded (items 2-5)
+  - Principle VI. Feature-Sliced Design (FSD)
+  - Development Workflow review checklist expanded (item 6)
 Removed sections: none
 Templates requiring updates:
-  - .specify/templates/plan-template.md ............ compatible, no update needed
+  - .specify/templates/plan-template.md ............ ✅ updated
   - .specify/templates/spec-template.md ............ compatible, no update needed
-  - .specify/templates/tasks-template.md ........... compatible, no update needed
-  - .specify/templates/commands/ ................... no command files exist
+  - .specify/templates/tasks-template.md ........... ✅ updated
 Follow-up TODOs: none
 === End Sync Impact Report ===
 -->
@@ -134,6 +130,16 @@ increments:
 reduces wasted effort, and ensures every increment delivers
 real user value.
 
+### VI. Feature-Sliced Design (FSD)
+
+All frontend codebase structure MUST strictly adhere to the Feature-Sliced Design (FSD) architecture. The structure MUST be organized by `app`, `pages` (or `routes`), `widgets`, `features`, and `entities`.
+
+- **Forbidden Directory**: The `shared` directory MUST NOT be used under any circumstances.
+- **Strict Hierarchy**: Dependencies MUST only point inwards (e.g., `app` can import `pages`, `pages` can import `widgets`, `widgets` can import `features` or `entities`).
+- **Separation of Concerns**: Each slice MUST contain its own UI, model, and API logic where applicable.
+
+**Rationale**: FSD maintains separation of concerns, high cohesion, and a predictable structure. Banning the `shared` directory prevents it from becoming an unmaintainable dumping ground for loosely related code, forcing better domain modeling within specific entities or features.
+
 ## Technology Stack
 
 | Layer | Technology | Runtime / Tooling |
@@ -171,6 +177,7 @@ Additional constraints:
   4. No circular dependencies; modules have single
      responsibility.
   5. Feature delivers smallest viable slice (MVP-first).
+  6. Frontend architecture strictly follows Feature-Sliced Design (FSD) and does NOT use a `shared` directory.
 - **Build verification**: Both stacks MUST build without errors
   before a PR is approved (`go build ./...` and `bun run build`).
 - **No test gates**: Since testing is deferred, CI pipelines
@@ -198,4 +205,4 @@ and architectural choices MUST comply with its principles.
   brief constitution-compliance note (even if just
   "No constitution impact").
 
-**Version**: 3.1.0 | **Ratified**: 2026-03-18 | **Last Amended**: 2026-03-18
+**Version**: 3.2.0 | **Ratified**: 2026-03-18 | **Last Amended**: 2026-03-20

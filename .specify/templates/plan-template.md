@@ -32,6 +32,7 @@
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
 [Gates determined based on constitution file]
+- [ ] Frontend follows Feature-Sliced Design (FSD) architecture (NO shared directory)
 
 ## Project Structure
 
@@ -78,9 +79,12 @@ backend/
 
 frontend/
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
+│   ├── app/
+│   ├── pages/     # or routes/
+│   ├── widgets/
+│   ├── features/
+│   └── entities/
+│   # Note: shared/ is STRICTLY FORBIDDEN
 └── tests/
 
 # [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)

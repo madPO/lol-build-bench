@@ -21,9 +21,10 @@ description: "Task list template for feature implementation"
 ## Path Conventions
 
 - **Single project**: `src/`, `tests/` at repository root
-- **Web app**: `backend/src/`, `frontend/src/`
+- **Web app**: `backend/src/` (Go), `frontend/src/` (Qwik with FSD: `app/`, `pages/`, `widgets/`, `features/`, `entities/`)
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
 - Paths shown below assume single project - adjust based on plan.md structure
+- **IMPORTANT**: For frontend, the `shared/` directory MUST NOT be used.
 
 <!-- 
   ============================================================================
