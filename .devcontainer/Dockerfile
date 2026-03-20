@@ -43,14 +43,13 @@ RUN sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh
 
 WORKDIR /workspace
 RUN chown ${USER_NAME}:${USER_NAME} /workspace
-USER ${USER_NAME}
 
 RUN curl -fsSL https://opencode.ai/install | bash
 
 RUN curl -fsSL https://bun.sh/install | bash
 
-RUN curl -fsSL https://astral.sh/uv/install.sh | sh && \
-    ln -s /root/.local/bin/uvx /usr/local/bin/uvx
+RUN curl -fsSL https://astral.sh/uv/install.sh | sh
+RUN ln -s /root/.local/bin/uvx /usr/local/bin/uvx
 
 RUN printf '#!/usr/bin/env sh\nexec uvx --from git+https://github.com/github/spec-kit.git specify "$@"\n' \
     > /usr/local/bin/specify && chmod +x /usr/local/bin/specify
