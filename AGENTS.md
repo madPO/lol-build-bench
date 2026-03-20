@@ -84,6 +84,7 @@ Auto-generated context and guidelines for coding agents.
 - Minimize the amount of data serialized into the HTML; only pass necessary state to client-side components.
 
 ## Recent Changes
+- 002-redesign-item-list: Added TypeScript 5.4.5 (Qwik JS v1.19.2) + Qwik, Qwik City, Tailwind CSS v4.2.2, Basecoat CSS v0.3.11, Vite 7.3.1
 
 - 001-champion-build-ui: Added TypeScript 5.4.5 (Qwik JS v1.19.2) + Qwik, Qwik City, Basecoat CSS, Tailwind CSS. Setup FSD architecture.
 
@@ -92,3 +93,7 @@ Auto-generated context and guidelines for coding agents.
 Dont commit any changes.
 
 <!-- MANUAL ADDITIONS END -->
+
+## Active Technologies
+- TypeScript 5.4.5 (Qwik JS v1.19.2) + Qwik, Qwik City, Tailwind CSS v4.2.2, Basecoat CSS v0.3.11, Vite 7.3.1 (002-redesign-item-list)
+- N/A (static JSON data from `src/data/items.json`, 253 items) (002-redesign-item-list)
