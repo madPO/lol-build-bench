@@ -22,11 +22,11 @@ description: "Task list for Champion Build Planner UI implementation"
 
 **Purpose**: Project initialization and dependency installation for Qwik + Basecoat + Tailwind CSS + uPlot
 
-- [ ] T001 Install project dependencies: Tailwind CSS, Basecoat CSS, and uPlot in web/package.json
-- [ ] T002 Configure Tailwind CSS v4 with @tailwindcss/vite plugin in web/vite.config.ts
-- [ ] T003 Update global.css with Tailwind and Basecoat imports in web/src/global.css
-- [ ] T004 [P] Create project directory structure (data/, transformations/, components/, context/) in web/src/
-- [ ] T005 Create TypeScript interfaces and types file in web/src/data/types.ts
+- [x] T001 Install project dependencies: Tailwind CSS, Basecoat CSS, and uPlot in web/package.json
+- [x] T002 Configure Tailwind CSS v4 with @tailwindcss/vite plugin in web/vite.config.ts
+- [x] T003 Update global.css with Tailwind and Basecoat imports in web/src/global.css
+- [x] T004 [P] Create project directory structure (data/, transformations/, components/, context/) in web/src/
+- [x] T005 Create TypeScript interfaces and types file in web/src/data/types.ts
 
 ---
 
@@ -36,15 +36,15 @@ description: "Task list for Champion Build Planner UI implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T006 Fetch and bundle static champion data from Riot Data Dragon into web/src/data/champions.json
-- [ ] T007 Fetch and bundle static item data from Riot Data Dragon (Summoner's Rift only) into web/src/data/items.json
-- [ ] T008 Fetch and bundle static rune tree data from Riot Data Dragon into web/src/data/runes.json
-- [ ] T009 Create BuildContext with createContextId in web/src/context/build-context.ts
-- [ ] T010 [P] Implement pure stat calculation function computeStats() in web/src/transformations/stats.ts
-- [ ] T011 [P] Implement pure chart data generation function computeChartData() in web/src/transformations/chart.ts
-- [ ] T012 [P] Implement pure filter/search function filterByName() in web/src/transformations/filters.ts
-- [ ] T013 Create page layout shell component with 3-row grid in web/src/components/layout/page-layout.tsx
-- [ ] T014 Create main page route that provides BuildContext and composes layout in web/src/routes/index.tsx
+- [x] T006 Fetch and bundle static champion data from Riot Data Dragon into web/src/data/champions.json
+- [x] T007 Fetch and bundle static item data from Riot Data Dragon (Summoner's Rift only) into web/src/data/items.json
+- [x] T008 Fetch and bundle static rune tree data from Riot Data Dragon into web/src/data/runes.json
+- [x] T009 Create BuildContext with createContextId in web/src/context/build-context.ts
+- [x] T010 [P] Implement pure stat calculation function computeStats() in web/src/transformations/stats.ts
+- [x] T011 [P] Implement pure chart data generation function computeChartData() in web/src/transformations/chart.ts
+- [x] T012 [P] Implement pure filter/search function filterByName() in web/src/transformations/filters.ts
+- [x] T013 Create page layout shell component with 3-row grid in web/src/components/layout/page-layout.tsx
+- [x] T014 Create main page route that provides BuildContext and composes layout in web/src/routes/index.tsx
 
 **Checkpoint**: Foundation ready — user story implementation can now begin in parallel
 
@@ -64,10 +64,10 @@ description: "Task list for Champion Build Planner UI implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T015 [P] [US1] Create ChampionSelect component for browsing and selecting champions in web/src/components/champion-select/champion-select.tsx
-- [ ] T016 [P] [US1] Create ChampionStats component to display selected champion base stats in web/src/components/champion-stats/champion-stats.tsx
-- [ ] T017 [US1] Integrate ChampionSelect and ChampionStats into page layout in web/src/routes/index.tsx (update from T014)
-- [ ] T018 [US1] Add champion search/filter input with filterByName() in web/src/components/champion-select/champion-select.tsx
+- [x] T015 [P] [US1] Create ChampionSelect component for browsing and selecting champions in web/src/components/champion-select/champion-select.tsx
+- [x] T016 [P] [US1] Create ChampionStats component to display selected champion base stats in web/src/components/champion-stats/champion-stats.tsx
+- [x] T017 [US1] Integrate ChampionSelect and ChampionStats into page layout in web/src/routes/index.tsx (update from T014)
+- [x] T018 [US1] Add champion search/filter input with filterByName() in web/src/components/champion-select/champion-select.tsx
 
 **Checkpoint**: User Story 1 complete — champion selection and stats display working independently
 
@@ -88,12 +88,12 @@ description: "Task list for Champion Build Planner UI implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T019 [P] [US2] Create ItemSidebar component for browsing and adding items in web/src/components/item-sidebar/item-sidebar.tsx
-- [ ] T020 [P] [US2] Create ItemInventory component displaying 6 slots for items in web/src/components/item-inventory/item-inventory.tsx
-- [ ] T021 [US2] Integrate ItemSidebar and ItemInventory into page layout in web/src/routes/index.tsx
-- [ ] T022 [US2] Implement "inventory full" validation in ItemSidebar preventing adds when all 6 slots occupied in web/src/components/item-sidebar/item-sidebar.tsx
-- [ ] T023 [US2] Add item search/filter input with filterByName() in web/src/components/item-sidebar/item-sidebar.tsx
-- [ ] T024 [US2] Implement item removal handler in ItemInventory component in web/src/components/item-inventory/item-inventory.tsx
+- [x] T019 [P] [US2] Create ItemSidebar component for browsing and adding items in web/src/components/item-sidebar/item-sidebar.tsx
+- [x] T020 [P] [US2] Create ItemInventory component displaying 6 slots for items in web/src/components/item-inventory/item-inventory.tsx
+- [x] T021 [US2] Integrate ItemSidebar and ItemInventory into page layout in web/src/routes/index.tsx
+- [x] T022 [US2] Implement "inventory full" validation in ItemSidebar preventing adds when all 6 slots occupied in web/src/components/item-sidebar/item-sidebar.tsx
+- [x] T023 [US2] Add item search/filter input with filterByName() in web/src/components/item-sidebar/item-sidebar.tsx
+- [x] T024 [US2] Implement item removal handler in ItemInventory component in web/src/components/item-inventory/item-inventory.tsx
 
 **Checkpoint**: User Stories 1 and 2 both working independently — champion selection + item inventory complete
 
@@ -116,13 +116,13 @@ description: "Task list for Champion Build Planner UI implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T025 [P] [US3] Create RunePage component for rune tree and rune selection in web/src/components/rune-page/rune-page.tsx
-- [ ] T026 [US3] Implement primary rune tree selection logic in RunePage in web/src/components/rune-page/rune-page.tsx
-- [ ] T027 [US3] Implement primary rune slot selection (keystone + 3 minor) in RunePage in web/src/components/rune-page/rune-page.tsx
-- [ ] T028 [US3] Implement secondary rune tree selection and validation (must differ from primary) in RunePage in web/src/components/rune-page/rune-page.tsx
-- [ ] T029 [US3] Implement secondary rune slot selection (2 minor from secondary tree) in RunePage in web/src/components/rune-page/rune-page.tsx
-- [ ] T030 [US3] Integrate RunePage into page layout in web/src/routes/index.tsx
-- [ ] T031 [US3] Add validation: reset primary slots when primary tree changes in web/src/components/rune-page/rune-page.tsx
+- [x] T025 [P] [US3] Create RunePage component for rune tree and rune selection in web/src/components/rune-page/rune-page.tsx
+- [x] T026 [US3] Implement primary rune tree selection logic in RunePage in web/src/components/rune-page/rune-page.tsx
+- [x] T027 [US3] Implement primary rune slot selection (keystone + 3 minor) in RunePage in web/src/components/rune-page/rune-page.tsx
+- [x] T028 [US3] Implement secondary rune tree selection and validation (must differ from primary) in RunePage in web/src/components/rune-page/rune-page.tsx
+- [x] T029 [US3] Implement secondary rune slot selection (2 minor from secondary tree) in RunePage in web/src/components/rune-page/rune-page.tsx
+- [x] T030 [US3] Integrate RunePage into page layout in web/src/routes/index.tsx
+- [x] T031 [US3] Add validation: reset primary slots when primary tree changes in web/src/components/rune-page/rune-page.tsx
 
 **Checkpoint**: User Stories 1, 2, and 3 all working — full build configuration (champion + items + runes) complete
 
@@ -143,14 +143,14 @@ description: "Task list for Champion Build Planner UI implementation"
 
 ### Implementation for User Story 4
 
-- [ ] T032 [US4] Create BuildChart component wrapping uPlot chart library in web/src/components/build-chart/build-chart.tsx
-- [ ] T033 [US4] Implement useVisibleTask$ to instantiate uPlot on component mount in web/src/components/build-chart/build-chart.tsx
-- [ ] T034 [US4] Implement chart data reactivity: track build state changes and call chart.setData() in web/src/components/build-chart/build-chart.tsx
-- [ ] T035 [US4] Implement chart cleanup: destroy chart instance on unmount in web/src/components/build-chart/build-chart.tsx
-- [ ] T036 [US4] Use computeChartData() transformation to generate uPlot-compatible data series in web/src/components/build-chart/build-chart.tsx
-- [ ] T037 [US4] Configure uPlot scales: numeric gold x-axis, stat values y-axis in web/src/components/build-chart/build-chart.tsx
-- [ ] T038 [US4] Integrate BuildChart into page layout in web/src/routes/index.tsx
-- [ ] T039 [US4] Add empty/placeholder state when no champion selected in web/src/components/build-chart/build-chart.tsx
+- [x] T032 [US4] Create BuildChart component wrapping uPlot chart library in web/src/components/build-chart/build-chart.tsx
+- [x] T033 [US4] Implement useVisibleTask$ to instantiate uPlot on component mount in web/src/components/build-chart/build-chart.tsx
+- [x] T034 [US4] Implement chart data reactivity: track build state changes and call chart.setData() in web/src/components/build-chart/build-chart.tsx
+- [x] T035 [US4] Implement chart cleanup: destroy chart instance on unmount in web/src/components/build-chart/build-chart.tsx
+- [x] T036 [US4] Use computeChartData() transformation to generate uPlot-compatible data series in web/src/components/build-chart/build-chart.tsx
+- [x] T037 [US4] Configure uPlot scales: numeric gold x-axis, stat values y-axis in web/src/components/build-chart/build-chart.tsx
+- [x] T038 [US4] Integrate BuildChart into page layout in web/src/routes/index.tsx
+- [x] T039 [US4] Add empty/placeholder state when no champion selected in web/src/components/build-chart/build-chart.tsx
 
 **Checkpoint**: All user stories complete — full feature delivered (champion select + items + runes + chart)
 
@@ -160,17 +160,17 @@ description: "Task list for Champion Build Planner UI implementation"
 
 **Purpose**: UI refinement, accessibility, performance, and final validation
 
-- [ ] T040 [P] Apply Basecoat CSS styling to all components for consistent design in web/src/components/
-- [ ] T041 [P] Ensure responsive layout works on 1024px+ screens in web/src/components/layout/page-layout.tsx
-- [ ] T042 [P] Add keyboard navigation support to champion/item/rune selection components in web/src/components/
-- [ ] T043 [P] Verify page loads and becomes interactive within 3 seconds on standard connection
-- [ ] T044 [P] Add loading/placeholder states for better UX in all major components in web/src/components/
-- [ ] T045 Test complete flow: select champion → add items → select runes → view chart in web/
-- [ ] T046 Run quickstart.md validation checklist in web/
-- [ ] T047 Verify all accessibility requirements (readable text, sufficient contrast, alt text for images)
-- [ ] T048 Performance: verify chart updates within 1 second of state changes in web/src/components/build-chart/
-- [ ] T049 [P] Documentation: add inline TSDoc comments to all exported functions in web/src/data/, web/src/transformations/, web/src/context/
-- [ ] T050 Run build: `bun run build` and verify output in web/dist/ or web/server/
+- [x] T040 [P] Apply Basecoat CSS styling to all components for consistent design in web/src/components/
+- [x] T041 [P] Ensure responsive layout works on 1024px+ screens in web/src/components/layout/page-layout.tsx
+- [x] T042 [P] Add keyboard navigation support to champion/item/rune selection components in web/src/components/
+- [x] T043 [P] Verify page loads and becomes interactive within 3 seconds on standard connection
+- [x] T044 [P] Add loading/placeholder states for better UX in all major components in web/src/components/
+- [x] T045 Test complete flow: select champion → add items → select runes → view chart in web/
+- [x] T046 Run quickstart.md validation checklist in web/
+- [x] T047 Verify all accessibility requirements (readable text, sufficient contrast, alt text for images)
+- [x] T048 Performance: verify chart updates within 1 second of state changes in web/src/components/build-chart/
+- [x] T049 [P] Documentation: add inline TSDoc comments to all exported functions in web/src/data/, web/src/transformations/, web/src/context/
+- [x] T050 Run build: `bun run build` and verify output in web/dist/ or web/server/
 
 ---
 
