@@ -68,10 +68,10 @@ export const ItemSidebar = component$(() => {
             disabled={inventoryFull.value}
             aria-label={item.name}
             aria-disabled={inventoryFull.value}
-            class={`w-12 h-12 p-0 rounded-md transition-colors overflow-hidden cursor-pointer ${
+            class={`w-12 h-12 p-0 rounded-md transition-all overflow-hidden cursor-pointer ${
               inventoryFull.value
                 ? "bg-gray-100 cursor-not-allowed opacity-50"
-                : "bg-gray-100 hover:bg-blue-100"
+                : "bg-gray-100 border border-gray-200 hover:border-blue-500 hover:scale-110 active:scale-95"
             }`}
           >
             <img

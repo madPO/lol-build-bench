@@ -11,7 +11,7 @@ export const ItemInventory = component$(() => {
         {buildState.inventory.map((item, index) => (
           <div
             key={index}
-            class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-lg overflow-hidden relative group flex items-center justify-center"
+            class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-lg overflow-hidden relative group flex items-center justify-center transition-all hover:scale-110 active:scale-95 hover:border-blue-500 z-10 hover:z-20"
           >
             {item ? (
               <>
