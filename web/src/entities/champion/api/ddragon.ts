@@ -5,7 +5,3 @@ const DDRAGON_BASE = `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}
 export function getChampionImageUrl(image: string): string {
   return `${DDRAGON_BASE}/champion/${image}`;
 }
-
-export function getItemImageUrl(image: string): string {
-  return `${DDRAGON_BASE}/item/${image}`;
-}

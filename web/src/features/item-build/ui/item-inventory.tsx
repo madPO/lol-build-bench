@@ -5,8 +5,9 @@
  */
 
 import { component$, useContext } from "@builder.io/qwik";
-import { BuildContext } from "~/shared/config/build-context";
-import { getItemImageUrl } from "~/shared/api/ddragon";
+import { BuildContext } from "~/app/config/build-context";
+import { getItemImageUrl } from "~/entities/item";
+import { computeTotalGold, countFilledSlots } from "../model/inventory";
 
 export const ItemInventory = component$(() => {
   const buildState = useContext(BuildContext);
@@ -56,11 +57,11 @@ export const ItemInventory = component$(() => {
           <p>
             <span class="text-gray-600">Total Gold Spent:</span>
             <span class="font-semibold ml-2">
-              {buildState.inventory.reduce((sum, item) => sum + (item?.gold.total || 0), 0)}
+              {computeTotalGold(buildState.inventory)}
             </span>
           </p>
           <p class="text-xs text-gray-500 mt-2">
-            {buildState.inventory.filter((item) => item !== null).length}/6 Slots Filled
+            {countFilledSlots(buildState.inventory)}/6 Slots Filled
           </p>
         </div>
       </div>

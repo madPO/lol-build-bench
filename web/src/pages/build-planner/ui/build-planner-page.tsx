@@ -1,5 +1,5 @@
 import { component$, useContextProvider, useStore } from "@builder.io/qwik";
-import { BuildContext, createInitialBuildState } from "~/shared/config/build-context";
+import { BuildContext, createInitialBuildState } from "~/app/config/build-context";
 import { PageLayout } from "~/widgets/build-workspace";
 import { ChampionSelect } from "~/features/champion-select";
 import { ChampionStatsCard } from "~/entities/champion";

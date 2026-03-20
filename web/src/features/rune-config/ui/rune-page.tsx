@@ -5,33 +5,30 @@
  */
 
 import { component$, useContext, useSignal, useComputed$ } from "@builder.io/qwik";
-import { BuildContext } from "~/shared/config/build-context";
-import runes from "~/data/runes.json";
-import type { RuneTree } from "~/entities/rune";
+import { BuildContext } from "~/app/config/build-context";
+import { findTreeByKey, getAvailableSecondaryTrees } from "../model/rune-transforms";
+import { runes } from "../model/data";
 
 export const RunePage = component$(() => {
   const buildState = useContext(BuildContext);
   const showPrimaryRunes = useSignal(false);
   const showSecondaryRunes = useSignal(false);
 
-  const runeTreeList = runes as unknown as RuneTree[];
+  const runeTreeList = runes;
 
   // Get primary tree object if selected
   const primaryTreeObj = useComputed$(() => {
-    if (!buildState.runeConfig.primaryTree) return null;
-    return runeTreeList.find((t) => t.key === buildState.runeConfig.primaryTree) || null;
+    return findTreeByKey(runeTreeList, buildState.runeConfig.primaryTree);
   });
 
   // Get secondary tree object if selected
   const secondaryTreeObj = useComputed$(() => {
-    if (!buildState.runeConfig.secondaryTree) return null;
-    return runeTreeList.find((t) => t.key === buildState.runeConfig.secondaryTree) || null;
+    return findTreeByKey(runeTreeList, buildState.runeConfig.secondaryTree);
   });
 
   // Filter available secondary trees (not equal to primary)
   const availableSecondaryTrees = useComputed$(() => {
-    if (!buildState.runeConfig.primaryTree) return runeTreeList;
-    return runeTreeList.filter((t) => t.key !== buildState.runeConfig.primaryTree);
+    return getAvailableSecondaryTrees(runeTreeList, buildState.runeConfig.primaryTree);
   });
 
   return (

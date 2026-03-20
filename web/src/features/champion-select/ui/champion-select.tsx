@@ -5,11 +5,10 @@
  */
 
 import { component$, useContext, useSignal, useComputed$ } from "@builder.io/qwik";
-import { BuildContext } from "~/shared/config/build-context";
+import { BuildContext } from "~/app/config/build-context";
 import { filterChampionsByName } from "../model/filters";
-import champions from "~/data/champions.json";
-import type { Champion } from "~/entities/champion";
-import { getChampionImageUrl } from "~/shared/api/ddragon";
+import { champions } from "../model/data";
+import { getChampionImageUrl } from "~/entities/champion";
 
 export const ChampionSelect = component$(() => {
   const buildState = useContext(BuildContext);
@@ -17,7 +16,7 @@ export const ChampionSelect = component$(() => {
 
   // Filter champions based on search term
   const filteredChampions = useComputed$(() => {
-    return filterChampionsByName(champions as unknown as Champion[], searchTerm.value);
+    return filterChampionsByName(champions, searchTerm.value);
   });
 
   return (

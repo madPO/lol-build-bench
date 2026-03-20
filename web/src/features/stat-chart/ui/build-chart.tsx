@@ -5,7 +5,7 @@
  */
 
 import { component$, useContext, useSignal, useVisibleTask$ } from "@builder.io/qwik";
-import { BuildContext } from "~/shared/config/build-context";
+import { BuildContext } from "~/app/config/build-context";
 import { computeChartData, getRelevantStats } from "../model/chart";
 import uPlot from "uplot";
 

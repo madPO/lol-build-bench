@@ -5,10 +5,10 @@
  */
 
 import { component$, useContext, useSignal, useComputed$ } from "@builder.io/qwik";
-import { BuildContext } from "~/shared/config/build-context";
+import { BuildContext } from "~/app/config/build-context";
 import { filterItemsByName } from "../model/filters";
-import items from "~/data/items.json";
-import type { Item } from "~/entities/item";
+import { items } from "../model/data";
+import { isInventoryFull, findFirstEmptySlot } from "../model/inventory";
 
 export const ItemSidebar = component$(() => {
   const buildState = useContext(BuildContext);
@@ -16,17 +16,17 @@ export const ItemSidebar = component$(() => {
 
   // Filter items based on search term
   const filteredItems = useComputed$(() => {
-    return filterItemsByName(items as unknown as Item[], searchTerm.value);
+    return filterItemsByName(items, searchTerm.value);
   });
 
   // Check if inventory is full
   const inventoryFull = useComputed$(() => {
-    return buildState.inventory.every((item) => item !== null);
+    return isInventoryFull(buildState.inventory);
   });
 
   // Find first empty slot
   const firstEmptySlot = useComputed$(() => {
-    return buildState.inventory.findIndex((item) => item === null);
+    return findFirstEmptySlot(buildState.inventory);
   });
 
   return (

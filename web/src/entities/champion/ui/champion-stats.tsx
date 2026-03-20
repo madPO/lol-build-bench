@@ -5,7 +5,7 @@
  */
 
 import { component$, useContext } from "@builder.io/qwik";
-import { BuildContext } from "~/shared/config/build-context";
+import { BuildContext } from "~/app/config/build-context";
 
 export const ChampionStats = component$(() => {
   const buildState = useContext(BuildContext);
