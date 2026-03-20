@@ -8,7 +8,8 @@ import { ChampionSelectBoard } from "~/widgets/champion-select-board";
 import { SelectChampionModal } from "~/features/select-champion";
 import { getChampionImageUrl, type Champion } from "~/entities/champion";
 import { ItemSidebar, ItemInventory } from "~/features/item-build";
-import { RunePage } from "~/features/rune-config";
+import { RuneSelectionBoard } from "~/widgets/rune-selection/ui/rune-selection-board";
+import { getAllRuneBranches } from "~/entities/rune-branch/api";
 import { BuildChart } from "~/features/stat-chart";
 
 export const BuildPlannerPage = component$(() => {
@@ -16,6 +17,8 @@ export const BuildPlannerPage = component$(() => {
   const isModalOpen = useSignal(false);
   
   useContextProvider(BuildContext, buildState);
+
+  const branches = getAllRuneBranches();
 
   const handleSelectChampion = $((champ: Omit<Champion, "avatarUrl">) => {
     buildState.selectedChampion = {
@@ -30,7 +33,7 @@ export const BuildPlannerPage = component$(() => {
         <ChampionSelectBoard q:slot="champion-board" isOpen={isModalOpen} />
         <ItemSidebar q:slot="item-sidebar" />
         <ItemInventory q:slot="inventory" />
-        <RunePage q:slot="rune-page" />
+        <RuneSelectionBoard q:slot="rune-page" branches={branches} />
         <BuildChart q:slot="chart" />
       </PageLayout>
       

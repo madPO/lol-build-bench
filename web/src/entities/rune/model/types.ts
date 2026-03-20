@@ -1,32 +1,9 @@
-/** A single rune within a slot */
+// web/src/entities/rune/model/types.ts
 export interface Rune {
-  id: number;
-  key: string;
+  id: string;
+  branchId: string;  // Reference to the parent RuneBranch
   name: string;
-  icon: string;
-  shortDesc: string;
-  longDesc: string;
-}
-
-/** A slot within a rune tree (contains 3-4 rune choices) */
-export interface RuneSlot {
-  runes: Rune[];
-}
-
-/** A rune tree/path (e.g., Precision, Domination) */
-export interface RuneTree {
-  id: number;
-  key: string;
-  name: string;
-  icon: string;
-  slots: RuneSlot[];
-}
-
-/** Current rune page configuration */
-export interface RuneConfig {
-  primaryTree: string | null;
-  keystone: number | null;
-  primarySlots: (number | null)[];
-  secondaryTree: string | null;
-  secondarySlots: (number | null)[];
+  description: string;
+  iconUrl: string;
+  tier: number;      // e.g., Keystone (0), Tier 1, Tier 2, etc.
 }

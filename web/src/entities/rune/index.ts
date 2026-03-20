@@ -1,1 +1,1 @@
-export type { Rune, RuneSlot, RuneTree, RuneConfig } from "./model/types";
+export type { Rune } from "./model/types";
