@@ -22,14 +22,9 @@ export const PageLayout = component$<PageLayoutProps>(({ ...props }) => {
           <Slot name="item-sidebar" />
         </div>
 
-        {/* Column 2-3, Row 1: Champion Select & Stats */}
-        <div class="col-start-2 col-span-2 row-start-1 row-span-1 grid grid-cols-3 gap-4 overflow-hidden h-full">
-          <div class="col-span-1 h-full overflow-hidden">
-            <Slot name="champion-select" />
-          </div>
-          <div class="col-span-2 h-full overflow-hidden">
-            <Slot name="champion-stats" />
-          </div>
+        {/* Column 2-3, Row 1: Champion Selection Board */}
+        <div class="col-start-2 col-span-2 row-start-1 row-span-1 overflow-hidden h-full">
+          <Slot name="champion-board" />
         </div>
 
         {/* Column 2, Row 2: Inventory */}
