@@ -4,7 +4,12 @@
  * Uses uPlot for efficient canvas-based rendering
  */
 
-import { component$, useContext, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import {
+  component$,
+  useContext,
+  useSignal,
+  useVisibleTask$,
+} from "@builder.io/qwik";
 import { BuildContext } from "~/app/config/build-context";
 import { computeChartData, getRelevantStats } from "../model/chart";
 import uPlot from "uplot";
@@ -23,14 +28,17 @@ export const BuildChart = component$(() => {
     if (!containerRef.value) return;
 
     // Generate chart data
-    const chartData = computeChartData(buildState.selectedChampion, buildState.inventory);
+    const chartData = computeChartData(
+      buildState.selectedChampion,
+      buildState.inventory,
+    );
 
     if (chartData.goldValues.length === 0) {
       // No data to display
-    if (chartInstance.value) {
-      chartInstance.value.destroy();
-      chartInstance.value = null;
-    }
+      if (chartInstance.value) {
+        chartInstance.value.destroy();
+        chartInstance.value = null;
+      }
       return;
     }
 
@@ -44,9 +52,10 @@ export const BuildChart = component$(() => {
     }
 
     // Create or update chart
+    const targetHeight = Math.max(containerRef.value.clientHeight, 200);
     const opts: uPlot.Options = {
       width: containerRef.value.clientWidth,
-      height: 300,
+      height: targetHeight,
       title: "Build Stats Progression",
       axes: [
         {
@@ -84,8 +93,9 @@ export const BuildChart = component$(() => {
       chartInstance.value.setData(plotData);
       // Update size if container changed
       const newWidth = containerRef.value.clientWidth;
-      if (newWidth !== opts.width) {
-        chartInstance.value.setSize({ width: newWidth, height: 300 });
+      const newHeight = Math.max(containerRef.value.clientHeight, 200);
+      if (newWidth !== opts.width || newHeight !== opts.height) {
+        chartInstance.value.setSize({ width: newWidth, height: newHeight });
       }
     } else {
       chartInstance.value = new uPlot(opts, plotData, containerRef.value);
@@ -101,9 +111,9 @@ export const BuildChart = component$(() => {
 
   if (!buildState.selectedChampion) {
     return (
-      <div class="card bg-white rounded-lg shadow p-4">
-        <h2 class="text-lg font-semibold mb-4">Build Chart</h2>
-        <div class="flex items-center justify-center py-16 text-gray-500">
+      <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+        <h2 class="text-lg font-semibold flex-shrink-0 mb-4">Build Chart</h2>
+        <div class="flex-1 flex items-center justify-center text-gray-500 min-h-0">
           <p>Select a champion to view stat progression chart</p>
         </div>
       </div>
@@ -111,11 +121,11 @@ export const BuildChart = component$(() => {
   }
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4">
-      <h2 class="text-lg font-semibold mb-4">
+    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+      <h2 class="text-lg font-semibold flex-shrink-0 mb-4">
         {buildState.selectedChampion.name} - Stat Progression
       </h2>
-      <div ref={containerRef} class="overflow-x-auto" />
+      <div ref={containerRef} class="flex-1 min-h-0 w-full overflow-hidden" />
     </div>
   );
 });

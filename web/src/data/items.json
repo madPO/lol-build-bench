@@ -13,9 +13,7 @@
     "stats": {
       "FlatMovementSpeedMod": 25
     },
-    "tags": [
-      "Boots"
-    ],
+    "tags": ["Boots"],
     "from": [],
     "into": [
       "3005",
@@ -51,15 +49,9 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "ManaRegen"
-    ],
+    "tags": ["ManaRegen"],
     "from": [],
-    "into": [
-      "3114",
-      "3012",
-      "4642"
-    ],
+    "into": ["3114", "3012", "4642"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -83,16 +75,9 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "HealthRegen"
-    ],
+    "tags": ["HealthRegen"],
     "from": [],
-    "into": [
-      "3109",
-      "3211",
-      "323109",
-      "3801"
-    ],
+    "into": ["3109", "3211", "323109", "3801"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -118,12 +103,8 @@
     "stats": {
       "FlatHPPoolMod": 350
     },
-    "tags": [
-      "Health"
-    ],
-    "from": [
-      "1028"
-    ],
+    "tags": ["Health"],
+    "from": ["1028"],
     "into": [
       "4637",
       "3084",
@@ -165,9 +146,7 @@
     "stats": {
       "FlatCritChanceMod": 0.15
     },
-    "tags": [
-      "CriticalStrike"
-    ],
+    "tags": ["CriticalStrike"],
     "from": [],
     "into": [
       "123430",
@@ -207,9 +186,7 @@
     "stats": {
       "FlatMagicDamageMod": 45
     },
-    "tags": [
-      "SpellDamage"
-    ],
+    "tags": ["SpellDamage"],
     "from": [],
     "into": [
       "2522",
@@ -251,15 +228,9 @@
     "stats": {
       "FlatMPPoolMod": 300
     },
-    "tags": [
-      "Mana"
-    ],
+    "tags": ["Mana"],
     "from": [],
-    "into": [
-      "3024",
-      "3802",
-      "3803"
-    ],
+    "into": ["3024", "3802", "3803"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -285,9 +256,7 @@
     "stats": {
       "FlatHPPoolMod": 150
     },
-    "tags": [
-      "Health"
-    ],
+    "tags": ["Health"],
     "from": [],
     "into": [
       "3742",
@@ -346,9 +315,7 @@
     "stats": {
       "FlatArmorMod": 15
     },
-    "tags": [
-      "Armor"
-    ],
+    "tags": ["Armor"],
     "from": [],
     "into": [
       "2421",
@@ -393,12 +360,8 @@
     "stats": {
       "FlatArmorMod": 40
     },
-    "tags": [
-      "Armor"
-    ],
-    "from": [
-      "1029"
-    ],
+    "tags": ["Armor"],
+    "from": ["1029"],
     "into": [
       "3742",
       "3068",
@@ -437,9 +400,7 @@
     "stats": {
       "FlatSpellBlockMod": 20
     },
-    "tags": [
-      "SpellBlock"
-    ],
+    "tags": ["SpellBlock"],
     "from": [],
     "into": [
       "1057",
@@ -482,10 +443,7 @@
     "stats": {
       "FlatPhysicalDamageMod": 10
     },
-    "tags": [
-      "Damage",
-      "Lane"
-    ],
+    "tags": ["Damage", "Lane"],
     "from": [],
     "into": [
       "1053",
@@ -539,9 +497,7 @@
     "stats": {
       "FlatPhysicalDamageMod": 25
     },
-    "tags": [
-      "Damage"
-    ],
+    "tags": ["Damage"],
     "from": [],
     "into": [
       "667666",
@@ -592,20 +548,9 @@
     "stats": {
       "FlatPhysicalDamageMod": 40
     },
-    "tags": [
-      "Damage"
-    ],
+    "tags": ["Damage"],
     "from": [],
-    "into": [
-      "3031",
-      "3026",
-      "3032",
-      "3072",
-      "3095",
-      "3097",
-      "4403",
-      "6671"
-    ],
+    "into": ["3031", "3026", "3032", "3072", "3095", "3097", "4403", "6671"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -631,9 +576,7 @@
     "stats": {
       "PercentAttackSpeedMod": 0.1
     },
-    "tags": [
-      "AttackSpeed"
-    ],
+    "tags": ["AttackSpeed"],
     "from": [],
     "into": [
       "1043",
@@ -674,21 +617,9 @@
     "stats": {
       "PercentAttackSpeedMod": 0.15
     },
-    "tags": [
-      "AttackSpeed",
-      "OnHit"
-    ],
-    "from": [
-      "1042"
-    ],
-    "into": [
-      "3302",
-      "3153",
-      "3115",
-      "6672",
-      "3091",
-      "3124"
-    ],
+    "tags": ["AttackSpeed", "OnHit"],
+    "from": ["1042"],
+    "into": ["3302", "3153", "3115", "6672", "3091", "3124"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -714,9 +645,7 @@
     "stats": {
       "FlatMagicDamageMod": 20
     },
-    "tags": [
-      "SpellDamage"
-    ],
+    "tags": ["SpellDamage"],
     "from": [],
     "into": [
       "3113",
@@ -770,21 +699,9 @@
       "FlatPhysicalDamageMod": 15,
       "PercentLifeStealMod": 0.07
     },
-    "tags": [
-      "Damage",
-      "LifeSteal"
-    ],
-    "from": [
-      "1036"
-    ],
-    "into": [
-      "3153",
-      "3146",
-      "3072",
-      "3074",
-      "3139",
-      "4403"
-    ],
+    "tags": ["Damage", "LifeSteal"],
+    "from": ["1036"],
+    "into": ["3153", "3146", "3072", "3074", "3139", "4403"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -811,11 +728,7 @@
       "FlatHPPoolMod": 110,
       "FlatHPRegenMod": 0.8
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "Lane"
-    ],
+    "tags": ["Health", "HealthRegen", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -844,13 +757,7 @@
       "FlatHPPoolMod": 80,
       "FlatPhysicalDamageMod": 10
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "LifeSteal",
-      "SpellVamp",
-      "Lane"
-    ],
+    "tags": ["Health", "Damage", "LifeSteal", "SpellVamp", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -879,12 +786,7 @@
       "FlatHPPoolMod": 90,
       "FlatMagicDamageMod": 18
     },
-    "tags": [
-      "Health",
-      "Lane",
-      "ManaRegen",
-      "SpellDamage"
-    ],
+    "tags": ["Health", "Lane", "ManaRegen", "SpellDamage"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -912,20 +814,9 @@
     "stats": {
       "FlatSpellBlockMod": 45
     },
-    "tags": [
-      "SpellBlock"
-    ],
-    "from": [
-      "1033"
-    ],
-    "into": [
-      "2504",
-      "8020",
-      "328020",
-      "3091",
-      "6665",
-      "4401"
-    ],
+    "tags": ["SpellBlock"],
+    "from": ["1033"],
+    "into": ["2504", "8020", "328020", "3091", "6665", "4401"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -951,18 +842,9 @@
     "stats": {
       "FlatMagicDamageMod": 65
     },
-    "tags": [
-      "SpellDamage"
-    ],
+    "tags": ["SpellDamage"],
     "from": [],
-    "into": [
-      "3157",
-      "4645",
-      "3089",
-      "3102",
-      "3128",
-      "4403"
-    ],
+    "into": ["3157", "4645", "3089", "3102", "3128", "4403"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -989,15 +871,9 @@
       "FlatHPPoolMod": 50,
       "FlatMagicDamageMod": 15
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "Lane"
-    ],
+    "tags": ["Health", "SpellDamage", "Lane"],
     "from": [],
-    "into": [
-      "3041"
-    ],
+    "into": ["3041"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1023,11 +899,7 @@
     "stats": {
       "FlatPhysicalDamageMod": 7
     },
-    "tags": [
-      "Damage",
-      "OnHit",
-      "Lane"
-    ],
+    "tags": ["Damage", "OnHit", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1053,9 +925,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Jungle"
-    ],
+    "tags": ["Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1081,9 +951,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Jungle"
-    ],
+    "tags": ["Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1109,9 +977,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Jungle"
-    ],
+    "tags": ["Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1137,9 +1003,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Jungle"
-    ],
+    "tags": ["Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1165,9 +1029,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Jungle"
-    ],
+    "tags": ["Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1193,9 +1055,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Jungle"
-    ],
+    "tags": ["Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1221,12 +1081,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "HealthRegen",
-      "Consumable",
-      "Lane",
-      "Jungle"
-    ],
+    "tags": ["HealthRegen", "Consumable", "Lane", "Jungle"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1255,20 +1110,9 @@
       "FlatArmorMod": 30,
       "FlatPhysicalDamageMod": 15
     },
-    "tags": [
-      "Armor",
-      "Damage"
-    ],
-    "from": [
-      "1029",
-      "1036",
-      "1029"
-    ],
-    "into": [
-      "6333",
-      "6700",
-      "3026"
-    ],
+    "tags": ["Armor", "Damage"],
+    "from": ["1029", "1036", "1029"],
+    "into": ["6333", "6700", "3026"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1294,21 +1138,9 @@
     "stats": {
       "FlatPhysicalDamageMod": 25
     },
-    "tags": [
-      "Damage",
-      "CooldownReduction",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "2022",
-      "1037"
-    ],
-    "into": [
-      "6698",
-      "2520",
-      "6699",
-      "6696"
-    ],
+    "tags": ["Damage", "CooldownReduction", "ArmorPenetration"],
+    "from": ["2022", "1037"],
+    "into": ["6698", "2520", "6699", "6696"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1335,24 +1167,9 @@
       "FlatHPPoolMod": 250,
       "FlatPhysicalDamageMod": 15
     },
-    "tags": [
-      "Health",
-      "Damage"
-    ],
-    "from": [
-      "1036",
-      "1028"
-    ],
-    "into": [
-      "2501",
-      "3053",
-      "3073",
-      "3814",
-      "3181",
-      "3161",
-      "3748",
-      "6610"
-    ],
+    "tags": ["Health", "Damage"],
+    "from": ["1036", "1028"],
+    "into": ["2501", "3053", "3073", "3814", "3181", "3161", "3748", "6610"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1376,9 +1193,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "CooldownReduction"
-    ],
+    "tags": ["CooldownReduction"],
     "from": [],
     "into": [
       "2020",
@@ -1415,17 +1230,9 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "HealthRegen",
-      "Consumable",
-      "Active",
-      "Lane",
-      "Jungle"
-    ],
+    "tags": ["HealthRegen", "Consumable", "Active", "Lane", "Jungle"],
     "from": [],
-    "into": [
-      "2033"
-    ],
+    "into": ["2033"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1452,11 +1259,7 @@
       "FlatHPPoolMod": 150,
       "FlatHPRegenMod": 4
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "Lane"
-    ],
+    "tags": ["Health", "HealthRegen", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1482,12 +1285,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Consumable",
-      "Lane",
-      "Stealth",
-      "Vision"
-    ],
+    "tags": ["Consumable", "Lane", "Stealth", "Vision"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1524,10 +1322,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "3113",
-      "4642"
-    ],
+    "from": ["3113", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -1552,12 +1347,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Health",
-      "Consumable",
-      "NonbootsMovement",
-      "Tenacity"
-    ],
+    "tags": ["Health", "Consumable", "NonbootsMovement", "Tenacity"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1583,11 +1373,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Consumable",
-      "ManaRegen",
-      "SpellDamage"
-    ],
+    "tags": ["Consumable", "ManaRegen", "SpellDamage"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1613,12 +1399,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Consumable",
-      "Damage",
-      "LifeSteal",
-      "SpellVamp"
-    ],
+    "tags": ["Consumable", "Damage", "LifeSteal", "SpellVamp"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1644,10 +1425,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Damage",
-      "Consumable"
-    ],
+    "tags": ["Damage", "Consumable"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -1676,19 +1454,9 @@
       "FlatMagicDamageMod": 40,
       "FlatArmorMod": 25
     },
-    "tags": [
-      "Armor",
-      "SpellDamage",
-      "Active"
-    ],
-    "from": [
-      "1052",
-      "1029",
-      "1052"
-    ],
-    "into": [
-      "3157"
-    ],
+    "tags": ["Armor", "SpellDamage", "Active"],
+    "from": ["1052", "1029", "1052"],
+    "into": ["3157"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1716,14 +1484,8 @@
       "FlatArmorMod": 25
     },
     "tags": [],
-    "from": [
-      "1052",
-      "1029",
-      "1052"
-    ],
-    "into": [
-      "3157"
-    ],
+    "from": ["1052", "1029", "1052"],
+    "into": ["3157"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1750,14 +1512,8 @@
       "FlatHPPoolMod": 550,
       "FlatPhysicalDamageMod": 30
     },
-    "tags": [
-      "Health",
-      "Damage"
-    ],
-    "from": [
-      "2021",
-      "2021"
-    ],
+    "tags": ["Health", "Damage"],
+    "from": ["2021", "2021"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -1785,17 +1541,8 @@
       "FlatHPPoolMod": 400,
       "FlatArmorMod": 50
     },
-    "tags": [
-      "Health",
-      "Armor",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1031",
-      "3067",
-      "1028"
-    ],
+    "tags": ["Health", "Armor", "CooldownReduction", "AbilityHaste"],
+    "from": ["1031", "3067", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -1823,16 +1570,8 @@
       "FlatMPPoolMod": 600,
       "FlatMagicDamageMod": 80
     },
-    "tags": [
-      "SpellDamage",
-      "Mana",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3802",
-      "2508"
-    ],
+    "tags": ["SpellDamage", "Mana", "CooldownReduction", "AbilityHaste"],
+    "from": ["3802", "2508"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -1860,15 +1599,8 @@
       "FlatSpellBlockMod": 80,
       "FlatHPPoolMod": 400
     },
-    "tags": [
-      "Health",
-      "SpellBlock",
-      "HealthRegen"
-    ],
-    "from": [
-      "3211",
-      "1057"
-    ],
+    "tags": ["Health", "SpellBlock", "HealthRegen"],
+    "from": ["3211", "1057"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -1895,16 +1627,9 @@
     "stats": {
       "FlatMagicDamageMod": 30
     },
-    "tags": [
-      "SpellDamage"
-    ],
-    "from": [
-      "1052"
-    ],
-    "into": [
-      "2503",
-      "6653"
-    ],
+    "tags": ["SpellDamage"],
+    "from": ["1052"],
+    "into": ["2503", "6653"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -1932,19 +1657,8 @@
       "FlatMagicDamageMod": 70,
       "PercentAttackSpeedMod": 0.25
     },
-    "tags": [
-      "Health",
-      "AttackSpeed",
-      "SpellDamage",
-      "OnHit",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3057",
-      "1026",
-      "3067",
-      "1042"
-    ],
+    "tags": ["Health", "AttackSpeed", "SpellDamage", "OnHit", "AbilityHaste"],
+    "from": ["3057", "1026", "3067", "1042"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -1979,10 +1693,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "3086",
-      "3144"
-    ],
+    "from": ["3086", "3144"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2009,18 +1720,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 65
     },
-    "tags": [
-      "Damage",
-      "LifeSteal",
-      "SpellVamp",
-      "Tenacity",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3133",
-      "1037",
-      "1036"
-    ],
+    "tags": ["Damage", "LifeSteal", "SpellVamp", "Tenacity", "AbilityHaste"],
+    "from": ["3133", "1037", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2047,15 +1748,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Damage",
-      "ArmorPenetration",
-      "AbilityHaste"
-    ],
-    "from": [
-      "2020",
-      "3134"
-    ],
+    "tags": ["Damage", "ArmorPenetration", "AbilityHaste"],
+    "from": ["2020", "3134"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2083,15 +1777,8 @@
       "FlatMPPoolMod": 300,
       "FlatMagicDamageMod": 90
     },
-    "tags": [
-      "SpellDamage",
-      "Mana",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3802",
-      "1026"
-    ],
+    "tags": ["SpellDamage", "Mana", "AbilityHaste"],
+    "from": ["3802", "1026"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2119,15 +1806,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike"
-    ],
-    "from": [
-      "1037",
-      "6670",
-      "1036"
-    ],
+    "tags": ["Damage", "CriticalStrike"],
+    "from": ["1037", "6670", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2164,11 +1844,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1029",
-      "1033"
-    ],
+    "from": ["3067", "1029", "1033"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2195,16 +1871,8 @@
     "stats": {
       "FlatHPPoolMod": 600
     },
-    "tags": [
-      "Health",
-      "NonbootsMovement",
-      "Tenacity",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3067",
-      "1011"
-    ],
+    "tags": ["Health", "NonbootsMovement", "Tenacity", "AbilityHaste"],
+    "from": ["3067", "1011"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2232,19 +1900,9 @@
       "FlatMPPoolMod": 300,
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "Mana",
-      "ManaRegen"
-    ],
-    "from": [
-      "3114",
-      "1028",
-      "3070"
-    ],
-    "into": [
-      "2530"
-    ],
+    "tags": ["Health", "Mana", "ManaRegen"],
+    "from": ["3114", "1028", "3070"],
+    "into": ["2530"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2272,15 +1930,8 @@
       "FlatArmorMod": 40,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Health",
-      "Armor",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3066",
-      "1031"
-    ],
+    "tags": ["Health", "Armor", "NonbootsMovement"],
+    "from": ["3066", "1031"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2308,16 +1959,8 @@
       "FlatMPPoolMod": 600,
       "FlatMagicDamageMod": 70
     },
-    "tags": [
-      "SpellDamage",
-      "Mana",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3070",
-      "3802",
-      "3108"
-    ],
+    "tags": ["SpellDamage", "Mana", "AbilityHaste"],
+    "from": ["3070", "3802", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2345,18 +1988,8 @@
       "FlatMPPoolMod": 500,
       "FlatPhysicalDamageMod": 35
     },
-    "tags": [
-      "Damage",
-      "Mana",
-      "CooldownReduction",
-      "OnHit",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3070",
-      "3133",
-      "1036"
-    ],
+    "tags": ["Damage", "Mana", "CooldownReduction", "OnHit", "AbilityHaste"],
+    "from": ["3070", "3133", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2384,18 +2017,9 @@
       "FlatMovementSpeedMod": 45,
       "PercentAttackSpeedMod": 0.25
     },
-    "tags": [
-      "AttackSpeed",
-      "Boots"
-    ],
-    "from": [
-      "1001",
-      "1042",
-      "1042"
-    ],
-    "into": [
-      "3172"
-    ],
+    "tags": ["AttackSpeed", "Boots"],
+    "from": ["1001", "1042", "1042"],
+    "into": ["3172"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2421,15 +2045,9 @@
     "stats": {
       "FlatMovementSpeedMod": 55
     },
-    "tags": [
-      "Boots"
-    ],
-    "from": [
-      "1001"
-    ],
-    "into": [
-      "3170"
-    ],
+    "tags": ["Boots"],
+    "from": ["1001"],
+    "into": ["3170"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2455,16 +2073,9 @@
     "stats": {
       "FlatMovementSpeedMod": 45
     },
-    "tags": [
-      "Boots",
-      "MagicPenetration"
-    ],
-    "from": [
-      "1001"
-    ],
-    "into": [
-      "3175"
-    ],
+    "tags": ["Boots", "MagicPenetration"],
+    "from": ["1001"],
+    "into": ["3175"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2491,21 +2102,9 @@
       "FlatMPPoolMod": 300,
       "FlatArmorMod": 25
     },
-    "tags": [
-      "Armor",
-      "Mana",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1029",
-      "1027",
-      "2022"
-    ],
-    "into": [
-      "323110",
-      "3110"
-    ],
+    "tags": ["Armor", "Mana", "CooldownReduction", "AbilityHaste"],
+    "from": ["1029", "1027", "2022"],
+    "into": ["323110", "3110"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2532,14 +2131,8 @@
       "FlatArmorMod": 45,
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Armor",
-      "Damage"
-    ],
-    "from": [
-      "2019",
-      "1038"
-    ],
+    "tags": ["Armor", "Damage"],
+    "from": ["2019", "1038"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2567,15 +2160,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 75
     },
-    "tags": [
-      "CriticalStrike",
-      "Damage"
-    ],
-    "from": [
-      "1038",
-      "1037",
-      "1018"
-    ],
+    "tags": ["CriticalStrike", "Damage"],
+    "from": ["1038", "1037", "1018"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2603,16 +2189,8 @@
       "FlatPhysicalDamageMod": 50,
       "PercentAttackSpeedMod": 0.4
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "AttackSpeed"
-    ],
-    "from": [
-      "1038",
-      "3144",
-      "1036"
-    ],
+    "tags": ["Damage", "CriticalStrike", "AttackSpeed"],
+    "from": ["1038", "3144", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2640,16 +2218,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 35
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "3123",
-      "3035",
-      "1018"
-    ],
+    "tags": ["Damage", "CriticalStrike", "ArmorPenetration"],
+    "from": ["3123", "3035", "1018"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2676,19 +2246,9 @@
     "stats": {
       "FlatPhysicalDamageMod": 20
     },
-    "tags": [
-      "ArmorPenetration",
-      "Damage"
-    ],
-    "from": [
-      "1036",
-      "1036"
-    ],
-    "into": [
-      "3033",
-      "3036",
-      "6694"
-    ],
+    "tags": ["ArmorPenetration", "Damage"],
+    "from": ["1036", "1036"],
+    "into": ["3033", "3036", "6694"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2715,15 +2275,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 35
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "3035",
-      "6670"
-    ],
+    "tags": ["Damage", "CriticalStrike", "ArmorPenetration"],
+    "from": ["3035", "6670"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2751,14 +2304,8 @@
       "FlatHPPoolMod": 100,
       "FlatMagicDamageMod": 20
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1082"
-    ],
+    "tags": ["Health", "SpellDamage", "NonbootsMovement"],
+    "from": ["1082"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2786,22 +2333,9 @@
       "FlatHPPoolMod": 200,
       "FlatPhysicalDamageMod": 15
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1028",
-      "1036"
-    ],
-    "into": [
-      "3071",
-      "3078",
-      "3073",
-      "6630",
-      "6631"
-    ],
+    "tags": ["Health", "Damage", "NonbootsMovement"],
+    "from": ["1028", "1036"],
+    "into": ["3071", "3078", "3073", "6630", "6631"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2829,16 +2363,8 @@
       "PercentAttackSpeedMod": 0.65,
       "PercentMovementSpeedMod": 0.1
     },
-    "tags": [
-      "CriticalStrike",
-      "AttackSpeed",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1042",
-      "3086",
-      "1042"
-    ],
+    "tags": ["CriticalStrike", "AttackSpeed", "NonbootsMovement"],
+    "from": ["1042", "3086", "1042"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2866,17 +2392,9 @@
       "FlatMovementSpeedMod": 45,
       "FlatArmorMod": 25
     },
-    "tags": [
-      "Armor",
-      "Boots"
-    ],
-    "from": [
-      "1001",
-      "1029"
-    ],
-    "into": [
-      "3174"
-    ],
+    "tags": ["Armor", "Boots"],
+    "from": ["1001", "1029"],
+    "into": ["3174"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2904,17 +2422,8 @@
       "FlatHPPoolMod": 300,
       "FlatArmorMod": 25
     },
-    "tags": [
-      "Health",
-      "SpellBlock",
-      "Armor",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3067",
-      "1029",
-      "1033"
-    ],
+    "tags": ["Health", "SpellBlock", "Armor", "AbilityHaste"],
+    "from": ["3067", "1029", "1033"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -2942,20 +2451,9 @@
       "FlatPhysicalDamageMod": 20,
       "PercentAttackSpeedMod": 0.2
     },
-    "tags": [
-      "Damage",
-      "AttackSpeed"
-    ],
-    "from": [
-      "1036",
-      "1042",
-      "1036"
-    ],
-    "into": [
-      "3078",
-      "3302",
-      "6672"
-    ],
+    "tags": ["Damage", "AttackSpeed"],
+    "from": ["1036", "1042", "1036"],
+    "into": ["3078", "3302", "6672"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -2981,16 +2479,8 @@
     "stats": {
       "FlatHPPoolMod": 400
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "Tenacity"
-    ],
-    "from": [
-      "1037",
-      "2021",
-      "1028"
-    ],
+    "tags": ["Health", "Damage", "Tenacity"],
+    "from": ["1037", "2021", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3015,21 +2505,9 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "OnHit",
-      "AbilityHaste"
-    ],
-    "from": [
-      "2022"
-    ],
-    "into": [
-      "3078",
-      "3100",
-      "2510",
-      "3508",
-      "6632",
-      "6662"
-    ],
+    "tags": ["OnHit", "AbilityHaste"],
+    "from": ["2022"],
+    "into": ["3078", "3100", "2510", "3508", "6632", "6662"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3063,10 +2541,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3211",
-      "3067"
-    ],
+    "from": ["3211", "3067"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3094,20 +2569,9 @@
       "FlatHPPoolMod": 200,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Health",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1028"
-    ],
-    "into": [
-      "3742",
-      "323002",
-      "3002",
-      "3181",
-      "4401"
-    ],
+    "tags": ["Health", "NonbootsMovement"],
+    "from": ["1028"],
+    "into": ["3742", "323002", "3002", "3181", "4401"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3133,15 +2597,8 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1028",
-      "2022"
-    ],
+    "tags": ["Health", "CooldownReduction", "AbilityHaste"],
+    "from": ["1028", "2022"],
     "into": [
       "3071",
       "8020",
@@ -3202,17 +2659,8 @@
       "FlatHPPoolMod": 350,
       "FlatArmorMod": 50
     },
-    "tags": [
-      "Health",
-      "Armor",
-      "Aura",
-      "AbilityHaste"
-    ],
-    "from": [
-      "6660",
-      "1031",
-      "1028"
-    ],
+    "tags": ["Health", "Armor", "Aura", "AbilityHaste"],
+    "from": ["6660", "1031", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3239,17 +2687,9 @@
     "stats": {
       "FlatMPPoolMod": 240
     },
-    "tags": [
-      "Mana",
-      "ManaRegen"
-    ],
+    "tags": ["Mana", "ManaRegen"],
     "from": [],
-    "into": [
-      "3003",
-      "3004",
-      "2526",
-      "3119"
-    ],
+    "into": ["3003", "3004", "2526", "3119"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3285,11 +2725,7 @@
       "ArmorPenetration",
       "AbilityHaste"
     ],
-    "from": [
-      "3044",
-      "3067",
-      "1037"
-    ],
+    "from": ["3044", "3067", "1037"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3317,15 +2753,8 @@
       "FlatPhysicalDamageMod": 80,
       "PercentLifeStealMod": 0.15
     },
-    "tags": [
-      "Damage",
-      "LifeSteal"
-    ],
-    "from": [
-      "1038",
-      "1037",
-      "1053"
-    ],
+    "tags": ["Damage", "LifeSteal"],
+    "from": ["1038", "1037", "1053"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3362,11 +2791,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "2021",
-      "3044",
-      "1042"
-    ],
+    "from": ["2021", "3044", "1042"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3401,11 +2826,7 @@
       "OnHit",
       "AbilityHaste"
     ],
-    "from": [
-      "3077",
-      "1053",
-      "3133"
-    ],
+    "from": ["3077", "1053", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3433,15 +2854,8 @@
       "FlatHPPoolMod": 150,
       "FlatArmorMod": 75
     },
-    "tags": [
-      "Health",
-      "Armor"
-    ],
-    "from": [
-      "3076",
-      "1031",
-      "1028"
-    ],
+    "tags": ["Health", "Armor"],
+    "from": ["3076", "1031", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3468,17 +2882,9 @@
     "stats": {
       "FlatArmorMod": 30
     },
-    "tags": [
-      "Armor"
-    ],
-    "from": [
-      "1029",
-      "1029"
-    ],
-    "into": [
-      "323075",
-      "3075"
-    ],
+    "tags": ["Armor"],
+    "from": ["1029", "1029"],
+    "into": ["323075", "3075"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3504,20 +2910,9 @@
     "stats": {
       "FlatPhysicalDamageMod": 20
     },
-    "tags": [
-      "Damage",
-      "OnHit"
-    ],
-    "from": [
-      "1036",
-      "1036"
-    ],
-    "into": [
-      "3074",
-      "3748",
-      "6698",
-      "6631"
-    ],
+    "tags": ["Damage", "OnHit"],
+    "from": ["1036", "1036"],
+    "into": ["3074", "3748", "6698", "6631"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3554,11 +2949,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "3057",
-      "3044",
-      "3051"
-    ],
+    "from": ["3057", "3044", "3051"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3585,18 +2976,9 @@
     "stats": {
       "FlatArmorMod": 40
     },
-    "tags": [
-      "Armor"
-    ],
-    "from": [
-      "1029",
-      "1029"
-    ],
-    "into": [
-      "323110",
-      "3110",
-      "3143"
-    ],
+    "tags": ["Armor"],
+    "from": ["1029", "1029"],
+    "into": ["323110", "3110", "3143"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3622,15 +3004,8 @@
     "stats": {
       "FlatHPPoolMod": 1000
     },
-    "tags": [
-      "Health",
-      "HealthRegen"
-    ],
-    "from": [
-      "1011",
-      "1011",
-      "3801"
-    ],
+    "tags": ["Health", "HealthRegen"],
+    "from": ["1011", "1011", "3801"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3657,15 +3032,8 @@
     "stats": {
       "FlatHPPoolMod": 900
     },
-    "tags": [
-      "Health",
-      "HealthRegen"
-    ],
-    "from": [
-      "1011",
-      "3801",
-      "1011"
-    ],
+    "tags": ["Health", "HealthRegen"],
+    "from": ["1011", "3801", "1011"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3694,16 +3062,8 @@
       "PercentAttackSpeedMod": 0.4,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "CriticalStrike",
-      "AttackSpeed",
-      "OnHit",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3086",
-      "3144"
-    ],
+    "tags": ["CriticalStrike", "AttackSpeed", "OnHit", "NonbootsMovement"],
+    "from": ["3086", "3144"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3732,24 +3092,9 @@
       "PercentAttackSpeedMod": 0.15,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "CriticalStrike",
-      "AttackSpeed",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1018",
-      "1042"
-    ],
-    "into": [
-      "2512",
-      "3094",
-      "3046",
-      "3085",
-      "4403",
-      "6671",
-      "6675"
-    ],
+    "tags": ["CriticalStrike", "AttackSpeed", "NonbootsMovement"],
+    "from": ["1018", "1042"],
+    "into": ["2512", "3094", "3046", "3085", "4403", "6671", "6675"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -3777,17 +3122,8 @@
       "PercentAttackSpeedMod": 0.3,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Damage",
-      "AttackSpeed",
-      "OnHit",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3144",
-      "6690",
-      "1037"
-    ],
+    "tags": ["Damage", "AttackSpeed", "OnHit", "NonbootsMovement"],
+    "from": ["3144", "6690", "1037"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3814,13 +3150,8 @@
     "stats": {
       "FlatMagicDamageMod": 130
     },
-    "tags": [
-      "SpellDamage"
-    ],
-    "from": [
-      "1058",
-      "1058"
-    ],
+    "tags": ["SpellDamage"],
+    "from": ["1058", "1058"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3848,17 +3179,8 @@
       "FlatSpellBlockMod": 45,
       "PercentAttackSpeedMod": 0.5
     },
-    "tags": [
-      "SpellBlock",
-      "AttackSpeed",
-      "OnHit",
-      "Tenacity"
-    ],
-    "from": [
-      "1043",
-      "1057",
-      "1043"
-    ],
+    "tags": ["SpellBlock", "AttackSpeed", "OnHit", "Tenacity"],
+    "from": ["1043", "1057", "1043"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3887,15 +3209,8 @@
       "PercentAttackSpeedMod": 0.35,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "CriticalStrike",
-      "AttackSpeed",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3086",
-      "3144"
-    ],
+    "tags": ["CriticalStrike", "AttackSpeed", "NonbootsMovement"],
+    "from": ["3086", "3144"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3924,17 +3239,8 @@
       "FlatPhysicalDamageMod": 50,
       "PercentAttackSpeedMod": 0.2
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "AttackSpeed",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1038",
-      "1018",
-      "3144"
-    ],
+    "tags": ["Damage", "CriticalStrike", "AttackSpeed", "NonbootsMovement"],
+    "from": ["1038", "1018", "3144"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -3962,17 +3268,8 @@
       "FlatMagicDamageMod": 100,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "SpellDamage",
-      "OnHit",
-      "NonbootsMovement",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3057",
-      "3113",
-      "1026"
-    ],
+    "tags": ["SpellDamage", "OnHit", "NonbootsMovement", "AbilityHaste"],
+    "from": ["3057", "3113", "1026"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4000,14 +3297,8 @@
       "FlatSpellBlockMod": 40,
       "FlatMagicDamageMod": 105
     },
-    "tags": [
-      "SpellBlock",
-      "SpellDamage"
-    ],
-    "from": [
-      "1058",
-      "4632"
-    ],
+    "tags": ["SpellBlock", "SpellDamage"],
+    "from": ["1058", "4632"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4034,16 +3325,8 @@
     "stats": {
       "FlatMagicDamageMod": 30
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3108",
-      "3114"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["3108", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4070,15 +3353,8 @@
     "stats": {
       "FlatMagicDamageMod": 25
     },
-    "tags": [
-      "SpellDamage",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1052",
-      "2022"
-    ],
+    "tags": ["SpellDamage", "CooldownReduction", "AbilityHaste"],
+    "from": ["1052", "2022"],
     "into": [
       "123430",
       "4636",
@@ -4133,11 +3409,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1031",
-      "1006"
-    ],
+    "from": ["3067", "1031", "1006"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4165,17 +3437,8 @@
       "FlatMPPoolMod": 400,
       "FlatArmorMod": 75
     },
-    "tags": [
-      "Armor",
-      "Mana",
-      "Aura",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3082",
-      "3024"
-    ],
+    "tags": ["Armor", "Mana", "Aura", "CooldownReduction", "AbilityHaste"],
+    "from": ["3082", "3024"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4203,18 +3466,9 @@
       "FlatSpellBlockMod": 20,
       "FlatMovementSpeedMod": 45
     },
-    "tags": [
-      "Boots",
-      "SpellBlock",
-      "Tenacity"
-    ],
-    "from": [
-      "1001",
-      "1033"
-    ],
-    "into": [
-      "3173"
-    ],
+    "tags": ["Boots", "SpellBlock", "Tenacity"],
+    "from": ["1001", "1033"],
+    "into": ["3173"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -4241,12 +3495,7 @@
       "FlatHPPoolMod": 150,
       "FlatMagicDamageMod": 50
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "ManaRegen",
-      "Lane"
-    ],
+    "tags": ["Health", "SpellDamage", "ManaRegen", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -4275,13 +3524,8 @@
       "FlatMagicDamageMod": 30,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "NonbootsMovement",
-      "SpellDamage"
-    ],
-    "from": [
-      "1052"
-    ],
+    "tags": ["NonbootsMovement", "SpellDamage"],
+    "from": ["1052"],
     "into": [
       "123430",
       "3100",
@@ -4315,12 +3559,8 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "ManaRegen"
-    ],
-    "from": [
-      "1004"
-    ],
+    "tags": ["ManaRegen"],
+    "from": ["1004"],
     "into": [
       "124011",
       "326621",
@@ -4364,17 +3604,8 @@
       "FlatMagicDamageMod": 80,
       "PercentAttackSpeedMod": 0.5
     },
-    "tags": [
-      "AttackSpeed",
-      "SpellDamage",
-      "OnHit",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1043",
-      "1026",
-      "3108"
-    ],
+    "tags": ["AttackSpeed", "SpellDamage", "OnHit", "AbilityHaste"],
+    "from": ["1043", "1026", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4402,16 +3633,8 @@
       "FlatHPPoolMod": 400,
       "FlatMagicDamageMod": 65
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "Slow"
-    ],
-    "from": [
-      "1026",
-      "1011",
-      "1052"
-    ],
+    "tags": ["Health", "SpellDamage", "Slow"],
+    "from": ["1026", "1011", "1052"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4439,15 +3662,8 @@
       "FlatMPPoolMod": 600,
       "FlatMagicDamageMod": 90
     },
-    "tags": [
-      "SpellDamage",
-      "Mana",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3802",
-      "1026"
-    ],
+    "tags": ["SpellDamage", "Mana", "AbilityHaste"],
+    "from": ["3802", "1026"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4475,16 +3691,8 @@
       "FlatMPPoolMod": 500,
       "FlatHPPoolMod": 550
     },
-    "tags": [
-      "Health",
-      "Mana",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3070",
-      "1011",
-      "3067"
-    ],
+    "tags": ["Health", "Mana", "AbilityHaste"],
+    "from": ["3070", "1011", "3067"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4511,16 +3719,9 @@
     "stats": {
       "FlatPhysicalDamageMod": 15
     },
-    "tags": [
-      "Damage"
-    ],
-    "from": [
-      "1036"
-    ],
-    "into": [
-      "3033",
-      "6609"
-    ],
+    "tags": ["Damage"],
+    "from": ["1036"],
+    "into": ["3033", "6609"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -4548,17 +3749,8 @@
       "FlatPhysicalDamageMod": 30,
       "PercentAttackSpeedMod": 0.25
     },
-    "tags": [
-      "Damage",
-      "AttackSpeed",
-      "SpellDamage",
-      "OnHit"
-    ],
-    "from": [
-      "1052",
-      "1043",
-      "1037"
-    ],
+    "tags": ["Damage", "AttackSpeed", "SpellDamage", "OnHit"],
+    "from": ["1052", "1043", "1037"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4585,16 +3777,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 20
     },
-    "tags": [
-      "Damage",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1036",
-      "2022",
-      "1036"
-    ],
+    "tags": ["Damage", "CooldownReduction", "AbilityHaste"],
+    "from": ["1036", "2022", "1036"],
     "into": [
       "6333",
       "126697",
@@ -4641,14 +3825,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 20
     },
-    "tags": [
-      "Damage",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "1036",
-      "1036"
-    ],
+    "tags": ["Damage", "ArmorPenetration"],
+    "from": ["1036", "1036"],
     "into": [
       "3142",
       "667666",
@@ -4690,14 +3868,8 @@
     "stats": {
       "FlatMagicDamageMod": 95
     },
-    "tags": [
-      "MagicPenetration",
-      "SpellDamage"
-    ],
-    "from": [
-      "4630",
-      "1026"
-    ],
+    "tags": ["MagicPenetration", "SpellDamage"],
+    "from": ["4630", "1026"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4724,16 +3896,8 @@
     "stats": {
       "FlatMagicDamageMod": 75
     },
-    "tags": [
-      "SpellDamage",
-      "MagicPenetration",
-      "AbilityHaste"
-    ],
-    "from": [
-      "4630",
-      "3108",
-      "3108"
-    ],
+    "tags": ["SpellDamage", "MagicPenetration", "AbilityHaste"],
+    "from": ["4630", "3108", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4770,11 +3934,7 @@
       "NonbootsMovement",
       "Tenacity"
     ],
-    "from": [
-      "3140",
-      "1037",
-      "1053"
-    ],
+    "from": ["3140", "1037", "1053"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4801,17 +3961,9 @@
     "stats": {
       "FlatSpellBlockMod": 30
     },
-    "tags": [
-      "Active",
-      "SpellBlock"
-    ],
-    "from": [
-      "1033"
-    ],
-    "into": [
-      "3139",
-      "6035"
-    ],
+    "tags": ["Active", "SpellBlock"],
+    "from": ["1033"],
+    "into": ["3139", "6035"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -4838,17 +3990,8 @@
       "FlatPhysicalDamageMod": 55,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Damage",
-      "Active",
-      "NonbootsMovement",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "3134",
-      "6690",
-      "1036"
-    ],
+    "tags": ["Damage", "Active", "NonbootsMovement", "ArmorPenetration"],
+    "from": ["3134", "6690", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4876,16 +4019,8 @@
       "FlatHPPoolMod": 350,
       "FlatArmorMod": 75
     },
-    "tags": [
-      "Health",
-      "Armor",
-      "Active",
-      "Slow"
-    ],
-    "from": [
-      "3082",
-      "1011"
-    ],
+    "tags": ["Health", "Armor", "Active", "Slow"],
+    "from": ["3082", "1011"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -4912,22 +4047,9 @@
     "stats": {
       "PercentAttackSpeedMod": 0.2
     },
-    "tags": [
-      "AttackSpeed"
-    ],
-    "from": [
-      "1042",
-      "1042"
-    ],
-    "into": [
-      "2512",
-      "3094",
-      "3032",
-      "3085",
-      "3087",
-      "3095",
-      "3097"
-    ],
+    "tags": ["AttackSpeed"],
+    "from": ["1042", "1042"],
+    "into": ["2512", "3094", "3032", "3085", "3087", "3095", "3097"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -4953,21 +4075,9 @@
     "stats": {
       "FlatMagicDamageMod": 45
     },
-    "tags": [
-      "SpellDamage"
-    ],
-    "from": [
-      "1052",
-      "1052"
-    ],
-    "into": [
-      "4645",
-      "4636",
-      "3146",
-      "6655",
-      "3152",
-      "4646"
-    ],
+    "tags": ["SpellDamage"],
+    "from": ["1052", "1052"],
+    "into": ["4645", "4636", "3146", "6655", "3152", "4646"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -4994,18 +4104,8 @@
       "FlatMagicDamageMod": 80,
       "FlatPhysicalDamageMod": 40
     },
-    "tags": [
-      "Damage",
-      "LifeSteal",
-      "SpellDamage",
-      "Active",
-      "SpellVamp"
-    ],
-    "from": [
-      "1053",
-      "3145",
-      "1052"
-    ],
+    "tags": ["Damage", "LifeSteal", "SpellDamage", "Active", "SpellVamp"],
+    "from": ["1053", "3145", "1052"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5033,19 +4133,9 @@
       "FlatHPPoolMod": 200,
       "FlatMagicDamageMod": 30
     },
-    "tags": [
-      "Health",
-      "SpellDamage"
-    ],
-    "from": [
-      "1052",
-      "1028"
-    ],
-    "into": [
-      "8010",
-      "4633",
-      "6653"
-    ],
+    "tags": ["Health", "SpellDamage"],
+    "from": ["1052", "1028"],
+    "into": ["8010", "4633", "6653"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -5080,11 +4170,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "3145",
-      "3108",
-      "1028"
-    ],
+    "from": ["3145", "3108", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5113,18 +4199,8 @@
       "PercentAttackSpeedMod": 0.25,
       "PercentLifeStealMod": 0.1
     },
-    "tags": [
-      "Damage",
-      "AttackSpeed",
-      "LifeSteal",
-      "Slow",
-      "OnHit"
-    ],
-    "from": [
-      "1053",
-      "1043",
-      "1037"
-    ],
+    "tags": ["Damage", "AttackSpeed", "LifeSteal", "Slow", "OnHit"],
+    "from": ["1053", "1043", "1037"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5152,18 +4228,9 @@
       "FlatSpellBlockMod": 25,
       "FlatPhysicalDamageMod": 25
     },
-    "tags": [
-      "Damage",
-      "SpellBlock"
-    ],
-    "from": [
-      "1036",
-      "1033",
-      "1036"
-    ],
-    "into": [
-      "3156"
-    ],
+    "tags": ["Damage", "SpellBlock"],
+    "from": ["1036", "1033", "1036"],
+    "into": ["3156"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -5190,17 +4257,8 @@
       "FlatSpellBlockMod": 40,
       "FlatPhysicalDamageMod": 60
     },
-    "tags": [
-      "SpellBlock",
-      "Damage",
-      "LifeSteal",
-      "SpellVamp",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3155",
-      "3133"
-    ],
+    "tags": ["SpellBlock", "Damage", "LifeSteal", "SpellVamp", "AbilityHaste"],
+    "from": ["3155", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5228,15 +4286,8 @@
       "FlatMagicDamageMod": 105,
       "FlatArmorMod": 50
     },
-    "tags": [
-      "Armor",
-      "SpellDamage",
-      "Active"
-    ],
-    "from": [
-      "1058",
-      "2420"
-    ],
+    "tags": ["Armor", "SpellDamage", "Active"],
+    "from": ["1058", "2420"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5263,17 +4314,9 @@
     "stats": {
       "FlatMovementSpeedMod": 45
     },
-    "tags": [
-      "Boots",
-      "CooldownReduction"
-    ],
-    "from": [
-      "1001",
-      "2022"
-    ],
-    "into": [
-      "3171"
-    ],
+    "tags": ["Boots", "CooldownReduction"],
+    "from": ["1001", "2022"],
+    "into": ["3171"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -5300,16 +4343,8 @@
       "FlatHPPoolMod": 450,
       "FlatPhysicalDamageMod": 45
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1037",
-      "2021",
-      "1028"
-    ],
+    "tags": ["Health", "Damage", "AbilityHaste"],
+    "from": ["1037", "2021", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5337,17 +4372,8 @@
       "FlatHPPoolMod": 350,
       "FlatMagicDamageMod": 75
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3916",
-      "1026",
-      "3067"
-    ],
+    "tags": ["Health", "SpellDamage", "CooldownReduction", "AbilityHaste"],
+    "from": ["3916", "1026", "3067"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5374,12 +4400,8 @@
     "stats": {
       "FlatMovementSpeedMod": 65
     },
-    "tags": [
-      "Boots"
-    ],
-    "from": [
-      "3009"
-    ],
+    "tags": ["Boots"],
+    "from": ["3009"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5406,13 +4428,8 @@
     "stats": {
       "FlatMovementSpeedMod": 45
     },
-    "tags": [
-      "CooldownReduction",
-      "Boots"
-    ],
-    "from": [
-      "3158"
-    ],
+    "tags": ["CooldownReduction", "Boots"],
+    "from": ["3158"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5441,14 +4458,8 @@
       "PercentAttackSpeedMod": 0.4,
       "PercentLifeStealMod": 0.05
     },
-    "tags": [
-      "AttackSpeed",
-      "LifeSteal",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3006"
-    ],
+    "tags": ["AttackSpeed", "LifeSteal", "NonbootsMovement"],
+    "from": ["3006"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5476,15 +4487,8 @@
       "FlatSpellBlockMod": 30,
       "FlatMovementSpeedMod": 45
     },
-    "tags": [
-      "SpellBlock",
-      "Boots",
-      "Tenacity",
-      "MagicResist"
-    ],
-    "from": [
-      "3111"
-    ],
+    "tags": ["SpellBlock", "Boots", "Tenacity", "MagicResist"],
+    "from": ["3111"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5512,13 +4516,8 @@
       "FlatMovementSpeedMod": 45,
       "FlatArmorMod": 35
     },
-    "tags": [
-      "Armor",
-      "Boots"
-    ],
-    "from": [
-      "3047"
-    ],
+    "tags": ["Armor", "Boots"],
+    "from": ["3047"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5545,13 +4544,8 @@
     "stats": {
       "FlatMovementSpeedMod": 45
     },
-    "tags": [
-      "Boots",
-      "MagicPenetration"
-    ],
-    "from": [
-      "3020"
-    ],
+    "tags": ["Boots", "MagicPenetration"],
+    "from": ["3020"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5579,12 +4573,7 @@
       "FlatHPPoolMod": 150,
       "FlatPhysicalDamageMod": 30
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "Lane",
-      "AbilityHaste"
-    ],
+    "tags": ["Health", "Damage", "Lane", "AbilityHaste"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -5619,10 +4608,7 @@
       "ArmorPenetration",
       "AbilityHaste"
     ],
-    "from": [
-      "3134",
-      "3133"
-    ],
+    "from": ["3134", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5651,16 +4637,8 @@
       "FlatPhysicalDamageMod": 40,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "2021",
-      "3066",
-      "1037"
-    ],
+    "tags": ["Health", "Damage", "NonbootsMovement"],
+    "from": ["2021", "3066", "1037"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5689,12 +4667,7 @@
       "FlatPhysicalDamageMod": 25,
       "PercentLifeStealMod": 0.05
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "LifeSteal",
-      "Lane"
-    ],
+    "tags": ["Health", "Damage", "LifeSteal", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -5733,11 +4706,7 @@
       "MagicResist",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1029",
-      "1033"
-    ],
+    "from": ["3067", "1029", "1033"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5765,21 +4734,9 @@
       "FlatSpellBlockMod": 35,
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "SpellBlock"
-    ],
-    "from": [
-      "1028",
-      "1033",
-      "1006"
-    ],
-    "into": [
-      "2504",
-      "3065",
-      "6664"
-    ],
+    "tags": ["Health", "HealthRegen", "SpellBlock"],
+    "from": ["1028", "1033", "1006"],
+    "into": ["2504", "3065", "6664"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -5813,10 +4770,7 @@
       "Tenacity",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "3114"
-    ],
+    "from": ["3067", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5851,10 +4805,7 @@
       "MagicPenetration",
       "ArmorPenetration"
     ],
-    "from": [
-      "3051",
-      "1043"
-    ],
+    "from": ["3051", "1043"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -5879,13 +4830,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Active",
-      "Jungle",
-      "Lane",
-      "Trinket",
-      "Vision"
-    ],
+    "tags": ["Active", "Jungle", "Lane", "Trinket", "Vision"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -5911,13 +4856,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Active",
-      "Jungle",
-      "Lane",
-      "Trinket",
-      "Vision"
-    ],
+    "tags": ["Active", "Jungle", "Lane", "Trinket", "Vision"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -5943,11 +4882,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Active",
-      "Trinket",
-      "Vision"
-    ],
+    "tags": ["Active", "Trinket", "Vision"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -5973,11 +4908,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Active",
-      "Trinket",
-      "Vision"
-    ],
+    "tags": ["Active", "Trinket", "Vision"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -6006,16 +4937,8 @@
       "FlatMagicDamageMod": 45,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "AttackSpeed",
-      "SpellDamage",
-      "ManaRegen",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3113",
-      "3114"
-    ],
+    "tags": ["AttackSpeed", "SpellDamage", "ManaRegen", "NonbootsMovement"],
+    "from": ["3113", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6051,11 +4974,7 @@
       "OnHit",
       "AbilityHaste"
     ],
-    "from": [
-      "3057",
-      "3133",
-      "1018"
-    ],
+    "from": ["3057", "3133", "1018"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6080,9 +4999,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Consumable"
-    ],
+    "tags": ["Consumable"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -6108,9 +5025,7 @@
       "purchasable": true
     },
     "stats": {},
-    "tags": [
-      "Consumable"
-    ],
+    "tags": ["Consumable"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -6140,17 +5055,8 @@
       "FlatArmorMod": 55,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Health",
-      "Armor",
-      "Slow",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3066",
-      "1028",
-      "1031"
-    ],
+    "tags": ["Health", "Armor", "Slow", "NonbootsMovement"],
+    "from": ["3066", "1028", "1031"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6178,17 +5084,8 @@
       "FlatHPPoolMod": 600,
       "FlatPhysicalDamageMod": 40
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "Damage",
-      "OnHit"
-    ],
-    "from": [
-      "3077",
-      "2021",
-      "1011"
-    ],
+    "tags": ["Health", "HealthRegen", "Damage", "OnHit"],
+    "from": ["3077", "2021", "1011"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6215,18 +5112,9 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen"
-    ],
-    "from": [
-      "1028",
-      "1006"
-    ],
-    "into": [
-      "3084",
-      "3083"
-    ],
+    "tags": ["Health", "HealthRegen"],
+    "from": ["1028", "1006"],
+    "into": ["3084", "3083"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -6260,21 +5148,8 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "1052",
-      "1027",
-      "2022"
-    ],
-    "into": [
-      "2522",
-      "6656",
-      "323003",
-      "3003",
-      "6655",
-      "2503",
-      "3118",
-      "4644"
-    ],
+    "from": ["1052", "1027", "2022"],
+    "into": ["2522", "6656", "323003", "3003", "6655", "2503", "3118", "4644"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -6301,22 +5176,9 @@
       "FlatMPPoolMod": 375,
       "FlatHPPoolMod": 300
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "Mana",
-      "ManaRegen"
-    ],
-    "from": [
-      "1028",
-      "1028",
-      "1027"
-    ],
-    "into": [
-      "4402",
-      "326657",
-      "6657"
-    ],
+    "tags": ["Health", "HealthRegen", "Mana", "ManaRegen"],
+    "from": ["1028", "1028", "1027"],
+    "into": ["4402", "326657", "6657"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -6343,15 +5205,8 @@
       "FlatHPPoolMod": 250,
       "FlatPhysicalDamageMod": 50
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "3134",
-      "2021"
-    ],
+    "tags": ["Health", "Damage", "ArmorPenetration"],
+    "from": ["3134", "2021"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6378,13 +5233,7 @@
     "stats": {
       "FlatHPPoolMod": 30
     },
-    "tags": [
-      "Health",
-      "ManaRegen",
-      "Vision",
-      "GoldPer",
-      "Lane"
-    ],
+    "tags": ["Health", "ManaRegen", "Vision", "GoldPer", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -6412,17 +5261,8 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "ManaRegen",
-      "Vision",
-      "GoldPer",
-      "Lane"
-    ],
-    "from": [
-      "3867"
-    ],
+    "tags": ["Health", "HealthRegen", "ManaRegen", "Vision", "GoldPer", "Lane"],
+    "from": ["3867"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6449,17 +5289,8 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "ManaRegen",
-      "Vision",
-      "GoldPer",
-      "Lane"
-    ],
-    "from": [
-      "3867"
-    ],
+    "tags": ["Health", "HealthRegen", "ManaRegen", "Vision", "GoldPer", "Lane"],
+    "from": ["3867"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6486,17 +5317,8 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "ManaRegen",
-      "Vision",
-      "GoldPer",
-      "Lane"
-    ],
-    "from": [
-      "3867"
-    ],
+    "tags": ["Health", "HealthRegen", "ManaRegen", "Vision", "GoldPer", "Lane"],
+    "from": ["3867"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6523,17 +5345,8 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "ManaRegen",
-      "Vision",
-      "GoldPer",
-      "Lane"
-    ],
-    "from": [
-      "3867"
-    ],
+    "tags": ["Health", "HealthRegen", "ManaRegen", "Vision", "GoldPer", "Lane"],
+    "from": ["3867"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6560,17 +5373,8 @@
     "stats": {
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "ManaRegen",
-      "Vision",
-      "GoldPer",
-      "Lane"
-    ],
-    "from": [
-      "3867"
-    ],
+    "tags": ["Health", "HealthRegen", "ManaRegen", "Vision", "GoldPer", "Lane"],
+    "from": ["3867"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6597,17 +5401,9 @@
     "stats": {
       "FlatMagicDamageMod": 25
     },
-    "tags": [
-      "SpellDamage"
-    ],
-    "from": [
-      "1052"
-    ],
-    "into": [
-      "223011",
-      "3165",
-      "3011"
-    ],
+    "tags": ["SpellDamage"],
+    "from": ["1052"],
+    "into": ["223011", "3165", "3011"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -6633,16 +5429,8 @@
     "stats": {
       "FlatMagicDamageMod": 60
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3108",
-      "4642"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["3108", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6671,16 +5459,8 @@
       "FlatHPPoolMod": 400,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Health",
-      "SpellBlock",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1057",
-      "1028",
-      "3066"
-    ],
+    "tags": ["Health", "SpellBlock", "NonbootsMovement"],
+    "from": ["1057", "1028", "3066"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6707,15 +5487,8 @@
     "stats": {
       "FlatMagicDamageMod": 75
     },
-    "tags": [
-      "SpellDamage",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3108",
-      "3108",
-      "1052"
-    ],
+    "tags": ["SpellDamage", "AbilityHaste"],
+    "from": ["3108", "3108", "1052"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6744,17 +5517,8 @@
       "FlatMagicDamageMod": 70,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "NonbootsMovement",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3067",
-      "3113",
-      "3108"
-    ],
+    "tags": ["Health", "SpellDamage", "NonbootsMovement", "AbilityHaste"],
+    "from": ["3067", "3113", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6781,17 +5545,9 @@
     "stats": {
       "FlatMagicDamageMod": 25
     },
-    "tags": [
-      "MagicPenetration",
-      "SpellDamage"
-    ],
-    "from": [
-      "1052"
-    ],
-    "into": [
-      "3135",
-      "3137"
-    ],
+    "tags": ["MagicPenetration", "SpellDamage"],
+    "from": ["1052"],
+    "into": ["3135", "3137"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -6818,18 +5574,9 @@
       "FlatSpellBlockMod": 25,
       "FlatMagicDamageMod": 40
     },
-    "tags": [
-      "SpellBlock",
-      "SpellDamage"
-    ],
-    "from": [
-      "1052",
-      "1033",
-      "1052"
-    ],
-    "into": [
-      "3102"
-    ],
+    "tags": ["SpellBlock", "SpellDamage"],
+    "from": ["1052", "1033", "1052"],
+    "into": ["3102"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -6856,16 +5603,8 @@
       "FlatHPPoolMod": 350,
       "FlatMagicDamageMod": 70
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "CooldownReduction",
-      "SpellVamp"
-    ],
-    "from": [
-      "3147",
-      "3108"
-    ],
+    "tags": ["Health", "SpellDamage", "CooldownReduction", "SpellVamp"],
+    "from": ["3147", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6892,17 +5631,8 @@
     "stats": {
       "FlatMagicDamageMod": 20
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1004",
-      "1052",
-      "2022"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["1004", "1052", "2022"],
     "into": [
       "2065",
       "322065",
@@ -6938,14 +5668,8 @@
     "stats": {
       "FlatMagicDamageMod": 110
     },
-    "tags": [
-      "SpellDamage",
-      "MagicPenetration"
-    ],
-    "from": [
-      "3145",
-      "1058"
-    ],
+    "tags": ["SpellDamage", "MagicPenetration"],
+    "from": ["3145", "1058"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -6973,16 +5697,8 @@
       "FlatMagicDamageMod": 90,
       "PercentMovementSpeedMod": 0.06
     },
-    "tags": [
-      "SpellDamage",
-      "GoldPer",
-      "NonbootsMovement",
-      "MagicPenetration"
-    ],
-    "from": [
-      "3145",
-      "3113"
-    ],
+    "tags": ["SpellDamage", "GoldPer", "NonbootsMovement", "MagicPenetration"],
+    "from": ["3145", "3113"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7010,16 +5726,8 @@
       "FlatArmorMod": 50,
       "FlatPhysicalDamageMod": 60
     },
-    "tags": [
-      "Armor",
-      "Damage",
-      "AbilityHaste"
-    ],
-    "from": [
-      "2019",
-      "1037",
-      "3133"
-    ],
+    "tags": ["Armor", "Damage", "AbilityHaste"],
+    "from": ["2019", "1037", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7047,17 +5755,8 @@
       "FlatHPPoolMod": 450,
       "FlatPhysicalDamageMod": 45
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3123",
-      "1011",
-      "3133"
-    ],
+    "tags": ["Health", "Damage", "CooldownReduction", "AbilityHaste"],
+    "from": ["3123", "1011", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7085,17 +5784,8 @@
       "FlatHPPoolMod": 400,
       "FlatPhysicalDamageMod": 45
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "2021",
-      "3133",
-      "1028"
-    ],
+    "tags": ["Health", "Damage", "CooldownReduction", "AbilityHaste"],
+    "from": ["2021", "3133", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7122,16 +5812,8 @@
     "stats": {
       "FlatMagicDamageMod": 35
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3108",
-      "3114"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["3108", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7166,10 +5848,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "4642"
-    ],
+    "from": ["3067", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7204,10 +5883,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "4642"
-    ],
+    "from": ["3067", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7234,15 +5910,8 @@
     "stats": {
       "FlatMagicDamageMod": 45
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen"
-    ],
-    "from": [
-      "1026",
-      "3114",
-      "3114"
-    ],
+    "tags": ["SpellDamage", "ManaRegen"],
+    "from": ["1026", "3114", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7271,17 +5940,8 @@
       "FlatPhysicalDamageMod": 40,
       "PercentAttackSpeedMod": 0.25
     },
-    "tags": [
-      "Health",
-      "Damage",
-      "AttackSpeed",
-      "Slow"
-    ],
-    "from": [
-      "3077",
-      "3044",
-      "1042"
-    ],
+    "tags": ["Health", "Damage", "AttackSpeed", "Slow"],
+    "from": ["3077", "3044", "1042"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7309,14 +5969,8 @@
       "FlatHPPoolMod": 300,
       "FlatMagicDamageMod": 60
     },
-    "tags": [
-      "Health",
-      "SpellDamage"
-    ],
-    "from": [
-      "3147",
-      "2508"
-    ],
+    "tags": ["Health", "SpellDamage"],
+    "from": ["3147", "2508"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7344,16 +5998,8 @@
       "FlatMPPoolMod": 600,
       "FlatMagicDamageMod": 100
     },
-    "tags": [
-      "SpellDamage",
-      "Mana",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3802",
-      "3145"
-    ],
+    "tags": ["SpellDamage", "Mana", "CooldownReduction", "AbilityHaste"],
+    "from": ["3802", "3145"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7382,17 +6028,8 @@
       "FlatHPPoolMod": 350,
       "FlatMagicDamageMod": 45
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "SpellDamage",
-      "Mana",
-      "ManaRegen"
-    ],
-    "from": [
-      "1026",
-      "3803"
-    ],
+    "tags": ["Health", "HealthRegen", "SpellDamage", "Mana", "ManaRegen"],
+    "from": ["1026", "3803"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7419,18 +6056,9 @@
     "stats": {
       "FlatHPPoolMod": 150
     },
-    "tags": [
-      "Health",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1028",
-      "2022"
-    ],
-    "into": [
-      "3068",
-      "6664"
-    ],
+    "tags": ["Health", "AbilityHaste"],
+    "from": ["1028", "2022"],
+    "into": ["3068", "6664"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -7465,11 +6093,7 @@
       "OnHit",
       "AbilityHaste"
     ],
-    "from": [
-      "3057",
-      "1028",
-      "1031"
-    ],
+    "from": ["3057", "1028", "1031"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7505,10 +6129,7 @@
       "MagicResist",
       "AbilityHaste"
     ],
-    "from": [
-      "6660",
-      "3211"
-    ],
+    "from": ["6660", "3211"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7537,17 +6158,8 @@
       "FlatHPPoolMod": 350,
       "FlatArmorMod": 45
     },
-    "tags": [
-      "Health",
-      "SpellBlock",
-      "Armor",
-      "MagicResist"
-    ],
-    "from": [
-      "1011",
-      "1031",
-      "1057"
-    ],
+    "tags": ["Health", "SpellBlock", "Armor", "MagicResist"],
+    "from": ["1011", "1031", "1057"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7575,19 +6187,9 @@
       "FlatCritChanceMod": 0.2,
       "FlatPhysicalDamageMod": 15
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike"
-    ],
-    "from": [
-      "1036",
-      "1018"
-    ],
-    "into": [
-      "2523",
-      "3036",
-      "6673"
-    ],
+    "tags": ["Damage", "CriticalStrike"],
+    "from": ["1036", "1018"],
+    "into": ["2523", "3036", "6673"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -7615,17 +6217,8 @@
       "PercentAttackSpeedMod": 0.4,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Damage",
-      "AttackSpeed",
-      "OnHit",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "6690",
-      "3051",
-      "1043"
-    ],
+    "tags": ["Damage", "AttackSpeed", "OnHit", "NonbootsMovement"],
+    "from": ["6690", "3051", "1043"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7653,14 +6246,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike"
-    ],
-    "from": [
-      "1037",
-      "6670"
-    ],
+    "tags": ["Damage", "CriticalStrike"],
+    "from": ["1037", "6670"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7689,16 +6276,8 @@
       "PercentAttackSpeedMod": 0.4,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "CriticalStrike",
-      "AttackSpeed",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1042",
-      "3086",
-      "1042"
-    ],
+    "tags": ["CriticalStrike", "AttackSpeed", "NonbootsMovement"],
+    "from": ["1042", "3086", "1042"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7726,16 +6305,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 50
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "1037",
-      "3134",
-      "1018"
-    ],
+    "tags": ["Damage", "CriticalStrike", "ArmorPenetration"],
+    "from": ["1037", "3134", "1018"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7763,20 +6334,9 @@
       "FlatPhysicalDamageMod": 15,
       "PercentMovementSpeedMod": 0.04
     },
-    "tags": [
-      "Damage",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "1036"
-    ],
-    "into": [
-      "4003",
-      "6700",
-      "6672",
-      "3142",
-      "3087"
-    ],
+    "tags": ["Damage", "NonbootsMovement"],
+    "from": ["1036"],
+    "into": ["4003", "6700", "6672", "3142", "3087"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -7802,16 +6362,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 60
     },
-    "tags": [
-      "Damage",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3133",
-      "1037",
-      "1036"
-    ],
+    "tags": ["Damage", "CooldownReduction", "AbilityHaste"],
+    "from": ["3133", "1037", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7838,16 +6390,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 45
     },
-    "tags": [
-      "Damage",
-      "CooldownReduction",
-      "ArmorPenetration",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3133",
-      "3035"
-    ],
+    "tags": ["Damage", "CooldownReduction", "ArmorPenetration", "AbilityHaste"],
+    "from": ["3133", "3035"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7874,14 +6418,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Damage",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "3134",
-      "1037"
-    ],
+    "tags": ["Damage", "ArmorPenetration"],
+    "from": ["3134", "1037"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7908,15 +6446,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Damage",
-      "ArmorPenetration",
-      "AbilityHaste"
-    ],
-    "from": [
-      "2020",
-      "3133"
-    ],
+    "tags": ["Damage", "ArmorPenetration", "AbilityHaste"],
+    "from": ["2020", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7950,10 +6481,7 @@
       "ArmorPenetration",
       "AbilityHaste"
     ],
-    "from": [
-      "3134",
-      "3133"
-    ],
+    "from": ["3134", "3133"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -7987,10 +6515,7 @@
       "ArmorPenetration",
       "AbilityHaste"
     ],
-    "from": [
-      "3077",
-      "2020"
-    ],
+    "from": ["3077", "2020"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8024,11 +6549,7 @@
       "ArmorPenetration",
       "AbilityHaste"
     ],
-    "from": [
-      "2020",
-      "1036",
-      "1036"
-    ],
+    "from": ["2020", "1036", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8055,17 +6576,8 @@
     "stats": {
       "FlatPhysicalDamageMod": 55
     },
-    "tags": [
-      "Damage",
-      "Active",
-      "NonbootsMovement",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "1037",
-      "3134",
-      "1036"
-    ],
+    "tags": ["Damage", "Active", "NonbootsMovement", "ArmorPenetration"],
+    "from": ["1037", "3134", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8093,16 +6605,8 @@
       "FlatHPPoolMod": 400,
       "FlatMagicDamageMod": 65
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "CooldownReduction",
-      "MagicPenetration"
-    ],
-    "from": [
-      "3147",
-      "3108"
-    ],
+    "tags": ["Health", "SpellDamage", "CooldownReduction", "MagicPenetration"],
+    "from": ["3147", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8137,10 +6641,7 @@
       "MagicResist",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1057"
-    ],
+    "from": ["3067", "1057"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8176,10 +6677,7 @@
       "NonbootsMovement",
       "AbilityHaste"
     ],
-    "from": [
-      "3113",
-      "4642"
-    ],
+    "from": ["3113", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8207,19 +6705,9 @@
       "FlatMPPoolMod": 300,
       "FlatHPPoolMod": 200
     },
-    "tags": [
-      "Health",
-      "Mana",
-      "ManaRegen"
-    ],
-    "from": [
-      "3114",
-      "1028",
-      "323070"
-    ],
-    "into": [
-      "322530"
-    ],
+    "tags": ["Health", "Mana", "ManaRegen"],
+    "from": ["3114", "1028", "323070"],
+    "into": ["322530"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -8247,15 +6735,8 @@
       "FlatArmorMod": 45,
       "PercentMovementSpeedMod": 0.06
     },
-    "tags": [
-      "Health",
-      "Armor",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3066",
-      "1031"
-    ],
+    "tags": ["Health", "Armor", "NonbootsMovement"],
+    "from": ["3066", "1031"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8283,16 +6764,8 @@
       "FlatMPPoolMod": 600,
       "FlatMagicDamageMod": 70
     },
-    "tags": [
-      "SpellDamage",
-      "Mana",
-      "AbilityHaste"
-    ],
-    "from": [
-      "323070",
-      "3802",
-      "3108"
-    ],
+    "tags": ["SpellDamage", "Mana", "AbilityHaste"],
+    "from": ["323070", "3802", "3108"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8320,18 +6793,8 @@
       "FlatMPPoolMod": 500,
       "FlatPhysicalDamageMod": 35
     },
-    "tags": [
-      "Damage",
-      "Mana",
-      "CooldownReduction",
-      "OnHit",
-      "AbilityHaste"
-    ],
-    "from": [
-      "323070",
-      "3133",
-      "1036"
-    ],
+    "tags": ["Damage", "Mana", "CooldownReduction", "OnHit", "AbilityHaste"],
+    "from": ["323070", "3133", "1036"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8360,17 +6823,8 @@
       "FlatHPPoolMod": 350,
       "FlatArmorMod": 30
     },
-    "tags": [
-      "Health",
-      "SpellBlock",
-      "Armor",
-      "AbilityHaste"
-    ],
-    "from": [
-      "1029",
-      "3067",
-      "1033"
-    ],
+    "tags": ["Health", "SpellBlock", "Armor", "AbilityHaste"],
+    "from": ["1029", "3067", "1033"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8397,19 +6851,9 @@
     "stats": {
       "FlatMPPoolMod": 240
     },
-    "tags": [
-      "Mana",
-      "ManaRegen"
-    ],
+    "tags": ["Mana", "ManaRegen"],
     "from": [],
-    "into": [
-      "3003",
-      "3004",
-      "323003",
-      "323004",
-      "322526",
-      "323119"
-    ],
+    "into": ["3003", "3004", "323003", "323004", "322526", "323119"],
     "purchasable": true,
     "maps": {
       "11": true,
@@ -8436,15 +6880,8 @@
       "FlatHPPoolMod": 200,
       "FlatArmorMod": 85
     },
-    "tags": [
-      "Health",
-      "Armor"
-    ],
-    "from": [
-      "3076",
-      "1031",
-      "1028"
-    ],
+    "tags": ["Health", "Armor"],
+    "from": ["3076", "1031", "1028"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8472,17 +6909,8 @@
       "FlatHPPoolMod": 400,
       "FlatMagicDamageMod": 30
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3067",
-      "1028",
-      "3114"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["3067", "1028", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8519,11 +6947,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1031",
-      "1006"
-    ],
+    "from": ["3067", "1031", "1006"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8551,17 +6975,8 @@
       "FlatMPPoolMod": 500,
       "FlatArmorMod": 75
     },
-    "tags": [
-      "Armor",
-      "Mana",
-      "Aura",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3082",
-      "3024"
-    ],
+    "tags": ["Armor", "Mana", "Aura", "CooldownReduction", "AbilityHaste"],
+    "from": ["3082", "3024"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8589,16 +7004,8 @@
       "FlatMPPoolMod": 500,
       "FlatHPPoolMod": 550
     },
-    "tags": [
-      "Health",
-      "Mana",
-      "AbilityHaste"
-    ],
-    "from": [
-      "323070",
-      "1011",
-      "3067"
-    ],
+    "tags": ["Health", "Mana", "AbilityHaste"],
+    "from": ["323070", "1011", "3067"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8636,11 +7043,7 @@
       "MagicResist",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1029",
-      "1033"
-    ],
+    "from": ["3067", "1029", "1033"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8675,11 +7078,7 @@
       "Tenacity",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1028",
-      "3114"
-    ],
+    "from": ["3067", "1028", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8707,17 +7106,8 @@
       "FlatMagicDamageMod": 55,
       "PercentMovementSpeedMod": 0.06
     },
-    "tags": [
-      "AttackSpeed",
-      "SpellDamage",
-      "ManaRegen",
-      "NonbootsMovement"
-    ],
-    "from": [
-      "3113",
-      "1052",
-      "3114"
-    ],
+    "tags": ["AttackSpeed", "SpellDamage", "ManaRegen", "NonbootsMovement"],
+    "from": ["3113", "1052", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8744,17 +7134,8 @@
     "stats": {
       "FlatMagicDamageMod": 65
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3108",
-      "1052",
-      "4642"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["3108", "1052", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8781,17 +7162,8 @@
     "stats": {
       "FlatMagicDamageMod": 45
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen",
-      "CooldownReduction",
-      "AbilityHaste"
-    ],
-    "from": [
-      "3108",
-      "1052",
-      "3114"
-    ],
+    "tags": ["SpellDamage", "ManaRegen", "CooldownReduction", "AbilityHaste"],
+    "from": ["3108", "1052", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8826,11 +7198,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1028",
-      "4642"
-    ],
+    "from": ["3067", "1028", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8865,10 +7233,7 @@
       "CooldownReduction",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "4642"
-    ],
+    "from": ["3067", "4642"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8895,15 +7260,8 @@
     "stats": {
       "FlatMagicDamageMod": 50
     },
-    "tags": [
-      "SpellDamage",
-      "ManaRegen"
-    ],
-    "from": [
-      "1026",
-      "3114",
-      "3114"
-    ],
+    "tags": ["SpellDamage", "ManaRegen"],
+    "from": ["1026", "3114", "3114"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8932,17 +7290,8 @@
       "FlatHPPoolMod": 350,
       "FlatMagicDamageMod": 45
     },
-    "tags": [
-      "Health",
-      "HealthRegen",
-      "SpellDamage",
-      "Mana",
-      "ManaRegen"
-    ],
-    "from": [
-      "1026",
-      "3803"
-    ],
+    "tags": ["Health", "HealthRegen", "SpellDamage", "Mana", "ManaRegen"],
+    "from": ["1026", "3803"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -8977,10 +7326,7 @@
       "MagicResist",
       "AbilityHaste"
     ],
-    "from": [
-      "3067",
-      "1057"
-    ],
+    "from": ["3067", "1057"],
     "into": [],
     "purchasable": true,
     "maps": {
@@ -9008,11 +7354,7 @@
       "FlatHPPoolMod": 500,
       "FlatCritChanceMod": 0.2
     },
-    "tags": [
-      "Health",
-      "CriticalStrike",
-      "Lane"
-    ],
+    "tags": ["Health", "CriticalStrike", "Lane"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9075,10 +7417,7 @@
       "FlatHPPoolMod": 250,
       "FlatArmorMod": 80
     },
-    "tags": [
-      "Health",
-      "Armor"
-    ],
+    "tags": ["Health", "Armor"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9107,10 +7446,7 @@
       "FlatSpellBlockMod": 60,
       "FlatHPPoolMod": 250
     },
-    "tags": [
-      "Health",
-      "SpellBlock"
-    ],
+    "tags": ["Health", "SpellBlock"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9138,11 +7474,7 @@
     "stats": {
       "FlatCritChanceMod": 0.5
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "SpellDamage"
-    ],
+    "tags": ["Damage", "CriticalStrike", "SpellDamage"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9197,13 +7529,7 @@
       "FlatMagicDamageMod": 90,
       "FlatPhysicalDamageMod": 45
     },
-    "tags": [
-      "Damage",
-      "LifeSteal",
-      "SpellDamage",
-      "Active",
-      "SpellVamp"
-    ],
+    "tags": ["Damage", "LifeSteal", "SpellDamage", "Active", "SpellVamp"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9339,12 +7665,7 @@
       "FlatHPPoolMod": 250,
       "FlatMagicDamageMod": 65
     },
-    "tags": [
-      "Health",
-      "SpellDamage",
-      "Mana",
-      "AbilityHaste"
-    ],
+    "tags": ["Health", "SpellDamage", "Mana", "AbilityHaste"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9408,11 +7729,7 @@
       "FlatMagicDamageMod": 60,
       "FlatArmorMod": 25
     },
-    "tags": [
-      "Armor",
-      "SpellDamage",
-      "MagicResist"
-    ],
+    "tags": ["Armor", "SpellDamage", "MagicResist"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9440,12 +7757,7 @@
     "stats": {
       "FlatHPPoolMod": 500
     },
-    "tags": [
-      "Damage",
-      "SpellDamage",
-      "MagicPenetration",
-      "ArmorPenetration"
-    ],
+    "tags": ["Damage", "SpellDamage", "MagicPenetration", "ArmorPenetration"],
     "from": [],
     "into": [],
     "purchasable": true,
@@ -9474,16 +7786,8 @@
       "FlatCritChanceMod": 0.25,
       "FlatPhysicalDamageMod": 50
     },
-    "tags": [
-      "Damage",
-      "CriticalStrike",
-      "ArmorPenetration"
-    ],
-    "from": [
-      "1037",
-      "3134",
-      "1018"
-    ],
+    "tags": ["Damage", "CriticalStrike", "ArmorPenetration"],
+    "from": ["1037", "3134", "1018"],
     "into": [],
     "purchasable": true,
     "maps": {

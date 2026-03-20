@@ -13,11 +13,13 @@ export const ItemInventory = component$(() => {
   const buildState = useContext(BuildContext);
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4">
-      <h2 class="text-lg font-semibold mb-4">Inventory (6 Slots)</h2>
+    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+      <h2 class="text-lg font-semibold flex-shrink-0 mb-4">
+        Inventory (6 Slots)
+      </h2>
 
-      {/* Inventory grid - 2x3 layout */}
-      <div class="grid grid-cols-2 gap-2">
+      {/* Inventory grid - 3x2 layout */}
+      <div class="grid grid-cols-3 gap-2 flex-1 min-h-0 overflow-y-auto pr-2">
         {buildState.inventory.map((item, index) => (
           <div
             key={index}
@@ -38,8 +40,12 @@ export const ItemInventory = component$(() => {
                   class="w-12 h-12 rounded object-cover mb-1"
                   loading="lazy"
                 />
-                <div class="text-center line-clamp-2 group-hover:hidden">{item.name}</div>
-                <div class="hidden group-hover:block text-red-600 font-semibold">Remove</div>
+                <div class="text-center line-clamp-2 group-hover:hidden">
+                  {item.name}
+                </div>
+                <div class="hidden group-hover:block text-red-600 font-semibold">
+                  Remove
+                </div>
                 <div class="text-gray-600">{item.gold.total}g</div>
               </button>
             ) : (
@@ -52,7 +58,7 @@ export const ItemInventory = component$(() => {
       </div>
 
       {/* Inventory summary */}
-      <div class="mt-4 pt-4 border-t border-gray-200">
+      <div class="mt-4 pt-4 border-t border-gray-200 flex-shrink-0">
         <div class="text-sm">
           <p>
             <span class="text-gray-600">Total Gold Spent:</span>

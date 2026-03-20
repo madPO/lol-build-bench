@@ -5,9 +5,7 @@
     "name": "Aatrox",
     "title": "the Darkin Blade",
     "image": "Aatrox.png",
-    "tags": [
-      "Fighter"
-    ],
+    "tags": ["Fighter"],
     "partype": "Blood Well",
     "stats": {
       "hp": 650,
@@ -38,10 +36,7 @@
     "name": "Ahri",
     "title": "the Nine-Tailed Fox",
     "image": "Ahri.png",
-    "tags": [
-      "Mage",
-      "Assassin"
-    ],
+    "tags": ["Mage", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 590,
@@ -72,9 +67,7 @@
     "name": "Akali",
     "title": "the Rogue Assassin",
     "image": "Akali.png",
-    "tags": [
-      "Assassin"
-    ],
+    "tags": ["Assassin"],
     "partype": "Energy",
     "stats": {
       "hp": 600,
@@ -105,10 +98,7 @@
     "name": "Akshan",
     "title": "the Rogue Sentinel",
     "image": "Akshan.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -139,10 +129,7 @@
     "name": "Alistar",
     "title": "the Minotaur",
     "image": "Alistar.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 685,
@@ -173,10 +160,7 @@
     "name": "Ambessa",
     "title": "Matriarch of War",
     "image": "Ambessa.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Energy",
     "stats": {
       "hp": 630,
@@ -207,10 +191,7 @@
     "name": "Amumu",
     "title": "the Sad Mummy",
     "image": "Amumu.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 685,
@@ -241,9 +222,7 @@
     "name": "Anivia",
     "title": "the Cryophoenix",
     "image": "Anivia.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 550,
@@ -274,10 +253,7 @@
     "name": "Annie",
     "title": "the Dark Child",
     "image": "Annie.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 560,
@@ -308,9 +284,7 @@
     "name": "Aphelios",
     "title": "the Weapon of the Faithful",
     "image": "Aphelios.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -341,10 +315,7 @@
     "name": "Ashe",
     "title": "the Frost Archer",
     "image": "Ashe.png",
-    "tags": [
-      "Marksman",
-      "Support"
-    ],
+    "tags": ["Marksman", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -375,9 +346,7 @@
     "name": "Aurelion Sol",
     "title": "The Star Forger",
     "image": "AurelionSol.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -408,10 +377,7 @@
     "name": "Aurora",
     "title": "the Witch Between Worlds",
     "image": "Aurora.png",
-    "tags": [
-      "Mage",
-      "Assassin"
-    ],
+    "tags": ["Mage", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 607,
@@ -442,10 +408,7 @@
     "name": "Azir",
     "title": "the Emperor of the Sands",
     "image": "Azir.png",
-    "tags": [
-      "Mage",
-      "Marksman"
-    ],
+    "tags": ["Mage", "Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 575,
@@ -476,10 +439,7 @@
     "name": "Bard",
     "title": "the Wandering Caretaker",
     "image": "Bard.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -510,9 +470,7 @@
     "name": "Bel'Veth",
     "title": "the Empress of the Void",
     "image": "Belveth.png",
-    "tags": [
-      "Fighter"
-    ],
+    "tags": ["Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -543,10 +501,7 @@
     "name": "Blitzcrank",
     "title": "the Great Steam Golem",
     "image": "Blitzcrank.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -577,10 +532,7 @@
     "name": "Brand",
     "title": "the Burning Vengeance",
     "image": "Brand.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 570,
@@ -611,10 +563,7 @@
     "name": "Braum",
     "title": "the Heart of the Freljord",
     "image": "Braum.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -645,10 +594,7 @@
     "name": "Briar",
     "title": "the Restrained Hunger",
     "image": "Briar.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Fury",
     "stats": {
       "hp": 625,
@@ -679,9 +625,7 @@
     "name": "Caitlyn",
     "title": "the Sheriff of Piltover",
     "image": "Caitlyn.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 580,
@@ -712,10 +656,7 @@
     "name": "Camille",
     "title": "the Steel Shadow",
     "image": "Camille.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -746,9 +687,7 @@
     "name": "Cassiopeia",
     "title": "the Serpent's Embrace",
     "image": "Cassiopeia.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -779,10 +718,7 @@
     "name": "Cho'Gath",
     "title": "the Terror of the Void",
     "image": "Chogath.png",
-    "tags": [
-      "Tank",
-      "Mage"
-    ],
+    "tags": ["Tank", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 644,
@@ -813,10 +749,7 @@
     "name": "Corki",
     "title": "the Daring Bombardier",
     "image": "Corki.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -847,10 +780,7 @@
     "name": "Darius",
     "title": "the Hand of Noxus",
     "image": "Darius.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 652,
@@ -881,10 +811,7 @@
     "name": "Diana",
     "title": "Scorn of the Moon",
     "image": "Diana.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -915,9 +842,7 @@
     "name": "Draven",
     "title": "the Glorious Executioner",
     "image": "Draven.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 675,
@@ -948,10 +873,7 @@
     "name": "Dr. Mundo",
     "title": "the Madman of Zaun",
     "image": "DrMundo.png",
-    "tags": [
-      "Tank",
-      "Fighter"
-    ],
+    "tags": ["Tank", "Fighter"],
     "partype": "None",
     "stats": {
       "hp": 640,
@@ -982,10 +904,7 @@
     "name": "Ekko",
     "title": "the Boy Who Shattered Time",
     "image": "Ekko.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -1016,10 +935,7 @@
     "name": "Elise",
     "title": "the Spider Queen",
     "image": "Elise.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -1050,10 +966,7 @@
     "name": "Evelynn",
     "title": "Agony's Embrace",
     "image": "Evelynn.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 642,
@@ -1084,10 +997,7 @@
     "name": "Ezreal",
     "title": "the Prodigal Explorer",
     "image": "Ezreal.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -1118,10 +1028,7 @@
     "name": "Fiddlesticks",
     "title": "the Ancient Fear",
     "image": "Fiddlesticks.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -1152,10 +1059,7 @@
     "name": "Fiora",
     "title": "the Grand Duelist",
     "image": "Fiora.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -1186,10 +1090,7 @@
     "name": "Fizz",
     "title": "the Tidal Trickster",
     "image": "Fizz.png",
-    "tags": [
-      "Assassin",
-      "Fighter"
-    ],
+    "tags": ["Assassin", "Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -1220,10 +1121,7 @@
     "name": "Galio",
     "title": "the Colossus",
     "image": "Galio.png",
-    "tags": [
-      "Tank",
-      "Mage"
-    ],
+    "tags": ["Tank", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -1254,9 +1152,7 @@
     "name": "Gangplank",
     "title": "the Saltwater Scourge",
     "image": "Gangplank.png",
-    "tags": [
-      "Fighter"
-    ],
+    "tags": ["Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -1287,10 +1183,7 @@
     "name": "Garen",
     "title": "The Might of Demacia",
     "image": "Garen.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "None",
     "stats": {
       "hp": 690,
@@ -1321,10 +1214,7 @@
     "name": "Gnar",
     "title": "the Missing Link",
     "image": "Gnar.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Rage",
     "stats": {
       "hp": 540,
@@ -1355,10 +1245,7 @@
     "name": "Gragas",
     "title": "the Rabble Rouser",
     "image": "Gragas.png",
-    "tags": [
-      "Fighter",
-      "Mage"
-    ],
+    "tags": ["Fighter", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -1389,9 +1276,7 @@
     "name": "Graves",
     "title": "the Outlaw",
     "image": "Graves.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 625,
@@ -1422,9 +1307,7 @@
     "name": "Gwen",
     "title": "The Hallowed Seamstress",
     "image": "Gwen.png",
-    "tags": [
-      "Fighter"
-    ],
+    "tags": ["Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -1455,10 +1338,7 @@
     "name": "Hecarim",
     "title": "the Shadow of War",
     "image": "Hecarim.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 625,
@@ -1489,10 +1369,7 @@
     "name": "Heimerdinger",
     "title": "the Revered Inventor",
     "image": "Heimerdinger.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 558,
@@ -1523,10 +1400,7 @@
     "name": "Hwei",
     "title": "the Visionary",
     "image": "Hwei.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 580,
@@ -1557,10 +1431,7 @@
     "name": "Illaoi",
     "title": "the Kraken Priestess",
     "image": "Illaoi.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 656,
@@ -1591,10 +1462,7 @@
     "name": "Irelia",
     "title": "the Blade Dancer",
     "image": "Irelia.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -1625,10 +1493,7 @@
     "name": "Ivern",
     "title": "the Green Father",
     "image": "Ivern.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -1659,10 +1524,7 @@
     "name": "Janna",
     "title": "the Storm's Fury",
     "image": "Janna.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 570,
@@ -1693,10 +1555,7 @@
     "name": "Jarvan IV",
     "title": "the Exemplar of Demacia",
     "image": "JarvanIV.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -1727,9 +1586,7 @@
     "name": "Jax",
     "title": "Grandmaster at Arms",
     "image": "Jax.png",
-    "tags": [
-      "Fighter"
-    ],
+    "tags": ["Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -1760,10 +1617,7 @@
     "name": "Jayce",
     "title": "the Defender of Tomorrow",
     "image": "Jayce.png",
-    "tags": [
-      "Fighter",
-      "Marksman"
-    ],
+    "tags": ["Fighter", "Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 590,
@@ -1794,10 +1648,7 @@
     "name": "Jhin",
     "title": "the Virtuoso",
     "image": "Jhin.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -1828,9 +1679,7 @@
     "name": "Jinx",
     "title": "the Loose Cannon",
     "image": "Jinx.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -1861,10 +1710,7 @@
     "name": "Kai'Sa",
     "title": "Daughter of the Void",
     "image": "Kaisa.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -1895,9 +1741,7 @@
     "name": "Kalista",
     "title": "the Spear of Vengeance",
     "image": "Kalista.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 560,
@@ -1928,10 +1772,7 @@
     "name": "Karma",
     "title": "the Enlightened One",
     "image": "Karma.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -1962,9 +1803,7 @@
     "name": "Karthus",
     "title": "the Deathsinger",
     "image": "Karthus.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -1995,10 +1834,7 @@
     "name": "Kassadin",
     "title": "the Void Walker",
     "image": "Kassadin.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 646,
@@ -2029,10 +1865,7 @@
     "name": "Katarina",
     "title": "the Sinister Blade",
     "image": "Katarina.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "None",
     "stats": {
       "hp": 672,
@@ -2063,10 +1896,7 @@
     "name": "Kayle",
     "title": "the Righteous",
     "image": "Kayle.png",
-    "tags": [
-      "Mage",
-      "Marksman"
-    ],
+    "tags": ["Mage", "Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 670,
@@ -2097,10 +1927,7 @@
     "name": "Kayn",
     "title": "the Shadow Reaper",
     "image": "Kayn.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -2131,9 +1958,7 @@
     "name": "Kennen",
     "title": "the Heart of the Tempest",
     "image": "Kennen.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Energy",
     "stats": {
       "hp": 580,
@@ -2164,9 +1989,7 @@
     "name": "Kha'Zix",
     "title": "the Voidreaver",
     "image": "Khazix.png",
-    "tags": [
-      "Assassin"
-    ],
+    "tags": ["Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 643,
@@ -2197,9 +2020,7 @@
     "name": "Kindred",
     "title": "The Eternal Hunters",
     "image": "Kindred.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 595,
@@ -2230,9 +2051,7 @@
     "name": "Kled",
     "title": "the Cantankerous Cavalier",
     "image": "Kled.png",
-    "tags": [
-      "Fighter"
-    ],
+    "tags": ["Fighter"],
     "partype": "Courage",
     "stats": {
       "hp": 410,
@@ -2263,10 +2082,7 @@
     "name": "Kog'Maw",
     "title": "the Mouth of the Abyss",
     "image": "KogMaw.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 635,
@@ -2297,10 +2113,7 @@
     "name": "K'Sante",
     "title": "the Pride of Nazumah",
     "image": "KSante.png",
-    "tags": [
-      "Tank",
-      "Fighter"
-    ],
+    "tags": ["Tank", "Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 625,
@@ -2331,10 +2144,7 @@
     "name": "LeBlanc",
     "title": "the Deceiver",
     "image": "Leblanc.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 598,
@@ -2365,10 +2175,7 @@
     "name": "Lee Sin",
     "title": "the Blind Monk",
     "image": "LeeSin.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Energy",
     "stats": {
       "hp": 645,
@@ -2399,10 +2206,7 @@
     "name": "Leona",
     "title": "the Radiant Dawn",
     "image": "Leona.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 646,
@@ -2433,10 +2237,7 @@
     "name": "Lillia",
     "title": "the Bashful Bloom",
     "image": "Lillia.png",
-    "tags": [
-      "Fighter",
-      "Mage"
-    ],
+    "tags": ["Fighter", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 605,
@@ -2467,9 +2268,7 @@
     "name": "Lissandra",
     "title": "the Ice Witch",
     "image": "Lissandra.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -2500,10 +2299,7 @@
     "name": "Lucian",
     "title": "the Purifier",
     "image": "Lucian.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 641,
@@ -2534,10 +2330,7 @@
     "name": "Lulu",
     "title": "the Fae Sorceress",
     "image": "Lulu.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 565,
@@ -2568,10 +2361,7 @@
     "name": "Lux",
     "title": "the Lady of Luminosity",
     "image": "Lux.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 580,
@@ -2602,10 +2392,7 @@
     "name": "Malphite",
     "title": "Shard of the Monolith",
     "image": "Malphite.png",
-    "tags": [
-      "Tank",
-      "Mage"
-    ],
+    "tags": ["Tank", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 665,
@@ -2636,9 +2423,7 @@
     "name": "Malzahar",
     "title": "the Prophet of the Void",
     "image": "Malzahar.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 580,
@@ -2669,10 +2454,7 @@
     "name": "Maokai",
     "title": "the Twisted Treant",
     "image": "Maokai.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 665,
@@ -2703,10 +2485,7 @@
     "name": "Master Yi",
     "title": "the Wuju Bladesman",
     "image": "MasterYi.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -2737,10 +2516,7 @@
     "name": "Mel",
     "title": "the Soul's Reflection",
     "image": "Mel.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -2771,10 +2547,7 @@
     "name": "Milio",
     "title": "The Gentle Flame",
     "image": "Milio.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 560,
@@ -2805,10 +2578,7 @@
     "name": "Miss Fortune",
     "title": "the Bounty Hunter",
     "image": "MissFortune.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 625,
@@ -2839,10 +2609,7 @@
     "name": "Wukong",
     "title": "the Monkey King",
     "image": "MonkeyKing.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -2873,10 +2640,7 @@
     "name": "Mordekaiser",
     "title": "the Iron Revenant",
     "image": "Mordekaiser.png",
-    "tags": [
-      "Fighter",
-      "Mage"
-    ],
+    "tags": ["Fighter", "Mage"],
     "partype": "Shield",
     "stats": {
       "hp": 645,
@@ -2907,10 +2671,7 @@
     "name": "Morgana",
     "title": "the Fallen",
     "image": "Morgana.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -2941,10 +2702,7 @@
     "name": "Naafiri",
     "title": "the Hound of a Hundred Bites",
     "image": "Naafiri.png",
-    "tags": [
-      "Assassin",
-      "Fighter"
-    ],
+    "tags": ["Assassin", "Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -2975,10 +2733,7 @@
     "name": "Nami",
     "title": "the Tidecaller",
     "image": "Nami.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 560,
@@ -3009,10 +2764,7 @@
     "name": "Nasus",
     "title": "the Curator of the Sands",
     "image": "Nasus.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -3043,10 +2795,7 @@
     "name": "Nautilus",
     "title": "the Titan of the Depths",
     "image": "Nautilus.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 646,
@@ -3077,10 +2826,7 @@
     "name": "Neeko",
     "title": "the Curious Chameleon",
     "image": "Neeko.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -3111,10 +2857,7 @@
     "name": "Nidalee",
     "title": "the Bestial Huntress",
     "image": "Nidalee.png",
-    "tags": [
-      "Assassin",
-      "Mage"
-    ],
+    "tags": ["Assassin", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -3145,10 +2888,7 @@
     "name": "Nilah",
     "title": "the Joy Unbound",
     "image": "Nilah.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 570,
@@ -3179,10 +2919,7 @@
     "name": "Nocturne",
     "title": "the Eternal Nightmare",
     "image": "Nocturne.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -3213,10 +2950,7 @@
     "name": "Nunu & Willump",
     "title": "the Boy and His Yeti",
     "image": "Nunu.png",
-    "tags": [
-      "Tank",
-      "Mage"
-    ],
+    "tags": ["Tank", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -3247,10 +2981,7 @@
     "name": "Olaf",
     "title": "the Berserker",
     "image": "Olaf.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 645,
@@ -3281,10 +3012,7 @@
     "name": "Orianna",
     "title": "the Lady of Clockwork",
     "image": "Orianna.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 585,
@@ -3315,9 +3043,7 @@
     "name": "Ornn",
     "title": "The Fire below the Mountain",
     "image": "Ornn.png",
-    "tags": [
-      "Tank"
-    ],
+    "tags": ["Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 660,
@@ -3348,10 +3074,7 @@
     "name": "Pantheon",
     "title": "the Unbreakable Spear",
     "image": "Pantheon.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -3382,10 +3105,7 @@
     "name": "Poppy",
     "title": "Keeper of the Hammer",
     "image": "Poppy.png",
-    "tags": [
-      "Tank",
-      "Fighter"
-    ],
+    "tags": ["Tank", "Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -3416,10 +3136,7 @@
     "name": "Pyke",
     "title": "the Bloodharbor Ripper",
     "image": "Pyke.png",
-    "tags": [
-      "Support",
-      "Assassin"
-    ],
+    "tags": ["Support", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 670,
@@ -3450,9 +3167,7 @@
     "name": "Qiyana",
     "title": "Empress of the Elements",
     "image": "Qiyana.png",
-    "tags": [
-      "Assassin"
-    ],
+    "tags": ["Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 590,
@@ -3483,10 +3198,7 @@
     "name": "Quinn",
     "title": "Demacia's Wings",
     "image": "Quinn.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 565,
@@ -3517,9 +3229,7 @@
     "name": "Rakan",
     "title": "The Charmer",
     "image": "Rakan.png",
-    "tags": [
-      "Support"
-    ],
+    "tags": ["Support"],
     "partype": "Mana",
     "stats": {
       "hp": 610,
@@ -3550,9 +3260,7 @@
     "name": "Rammus",
     "title": "the Armordillo",
     "image": "Rammus.png",
-    "tags": [
-      "Tank"
-    ],
+    "tags": ["Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 645,
@@ -3583,10 +3291,7 @@
     "name": "Rek'Sai",
     "title": "the Void Burrower",
     "image": "RekSai.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Rage",
     "stats": {
       "hp": 600,
@@ -3617,10 +3322,7 @@
     "name": "Rell",
     "title": "the Iron Maiden",
     "image": "Rell.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -3651,10 +3353,7 @@
     "name": "Renata Glasc",
     "title": "the Chem-Baroness",
     "image": "Renata.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 545,
@@ -3685,10 +3384,7 @@
     "name": "Renekton",
     "title": "the Butcher of the Sands",
     "image": "Renekton.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Fury",
     "stats": {
       "hp": 660,
@@ -3719,10 +3415,7 @@
     "name": "Rengar",
     "title": "the Pridestalker",
     "image": "Rengar.png",
-    "tags": [
-      "Assassin",
-      "Fighter"
-    ],
+    "tags": ["Assassin", "Fighter"],
     "partype": "Ferocity",
     "stats": {
       "hp": 590,
@@ -3753,10 +3446,7 @@
     "name": "Riven",
     "title": "the Exile",
     "image": "Riven.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "None",
     "stats": {
       "hp": 630,
@@ -3787,10 +3477,7 @@
     "name": "Rumble",
     "title": "the Mechanized Menace",
     "image": "Rumble.png",
-    "tags": [
-      "Fighter",
-      "Mage"
-    ],
+    "tags": ["Fighter", "Mage"],
     "partype": "Heat",
     "stats": {
       "hp": 640,
@@ -3821,9 +3508,7 @@
     "name": "Ryze",
     "title": "the Rune Mage",
     "image": "Ryze.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 645,
@@ -3854,10 +3539,7 @@
     "name": "Samira",
     "title": "the Desert Rose",
     "image": "Samira.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -3888,9 +3570,7 @@
     "name": "Sejuani",
     "title": "Fury of the North",
     "image": "Sejuani.png",
-    "tags": [
-      "Tank"
-    ],
+    "tags": ["Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -3921,10 +3601,7 @@
     "name": "Senna",
     "title": "the Redeemer",
     "image": "Senna.png",
-    "tags": [
-      "Support",
-      "Marksman"
-    ],
+    "tags": ["Support", "Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 530,
@@ -3955,10 +3632,7 @@
     "name": "Seraphine",
     "title": "the Starry-Eyed Songstress",
     "image": "Seraphine.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 570,
@@ -3989,10 +3663,7 @@
     "name": "Sett",
     "title": "the Boss",
     "image": "Sett.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Grit",
     "stats": {
       "hp": 670,
@@ -4023,9 +3694,7 @@
     "name": "Shaco",
     "title": "the Demon Jester",
     "image": "Shaco.png",
-    "tags": [
-      "Assassin"
-    ],
+    "tags": ["Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -4056,9 +3725,7 @@
     "name": "Shen",
     "title": "the Eye of Twilight",
     "image": "Shen.png",
-    "tags": [
-      "Tank"
-    ],
+    "tags": ["Tank"],
     "partype": "Energy",
     "stats": {
       "hp": 610,
@@ -4089,10 +3756,7 @@
     "name": "Shyvana",
     "title": "the Half-Dragon",
     "image": "Shyvana.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Fury",
     "stats": {
       "hp": 625,
@@ -4123,10 +3787,7 @@
     "name": "Singed",
     "title": "the Mad Chemist",
     "image": "Singed.png",
-    "tags": [
-      "Tank",
-      "Mage"
-    ],
+    "tags": ["Tank", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -4157,10 +3818,7 @@
     "name": "Sion",
     "title": "The Undead Juggernaut",
     "image": "Sion.png",
-    "tags": [
-      "Tank",
-      "Fighter"
-    ],
+    "tags": ["Tank", "Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -4191,9 +3849,7 @@
     "name": "Sivir",
     "title": "the Battle Mistress",
     "image": "Sivir.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -4224,10 +3880,7 @@
     "name": "Skarner",
     "title": "the Primordial Sovereign",
     "image": "Skarner.png",
-    "tags": [
-      "Tank",
-      "Fighter"
-    ],
+    "tags": ["Tank", "Fighter"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -4258,10 +3911,7 @@
     "name": "Smolder",
     "title": "the Fiery Fledgling",
     "image": "Smolder.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 575,
@@ -4292,10 +3942,7 @@
     "name": "Sona",
     "title": "Maven of the Strings",
     "image": "Sona.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 550,
@@ -4326,10 +3973,7 @@
     "name": "Soraka",
     "title": "the Starchild",
     "image": "Soraka.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 605,
@@ -4360,10 +4004,7 @@
     "name": "Swain",
     "title": "the Noxian Grand General",
     "image": "Swain.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 595,
@@ -4394,10 +4035,7 @@
     "name": "Sylas",
     "title": "the Unshackled",
     "image": "Sylas.png",
-    "tags": [
-      "Mage",
-      "Assassin"
-    ],
+    "tags": ["Mage", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -4428,9 +4066,7 @@
     "name": "Syndra",
     "title": "the Dark Sovereign",
     "image": "Syndra.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 563,
@@ -4461,10 +4097,7 @@
     "name": "Tahm Kench",
     "title": "The River King",
     "image": "TahmKench.png",
-    "tags": [
-      "Tank",
-      "Support"
-    ],
+    "tags": ["Tank", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -4495,10 +4128,7 @@
     "name": "Taliyah",
     "title": "the Stoneweaver",
     "image": "Taliyah.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 550,
@@ -4529,9 +4159,7 @@
     "name": "Talon",
     "title": "the Blade's Shadow",
     "image": "Talon.png",
-    "tags": [
-      "Assassin"
-    ],
+    "tags": ["Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 658,
@@ -4562,10 +4190,7 @@
     "name": "Taric",
     "title": "the Shield of Valoran",
     "image": "Taric.png",
-    "tags": [
-      "Support",
-      "Tank"
-    ],
+    "tags": ["Support", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 645,
@@ -4596,10 +4221,7 @@
     "name": "Teemo",
     "title": "the Swift Scout",
     "image": "Teemo.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 615,
@@ -4630,10 +4252,7 @@
     "name": "Thresh",
     "title": "the Chain Warden",
     "image": "Thresh.png",
-    "tags": [
-      "Support",
-      "Tank"
-    ],
+    "tags": ["Support", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -4664,10 +4283,7 @@
     "name": "Tristana",
     "title": "the Yordle Gunner",
     "image": "Tristana.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -4698,10 +4314,7 @@
     "name": "Trundle",
     "title": "the Troll King",
     "image": "Trundle.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -4732,10 +4345,7 @@
     "name": "Tryndamere",
     "title": "the Barbarian King",
     "image": "Tryndamere.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Fury",
     "stats": {
       "hp": 696,
@@ -4766,10 +4376,7 @@
     "name": "Twisted Fate",
     "title": "the Card Master",
     "image": "TwistedFate.png",
-    "tags": [
-      "Mage",
-      "Marksman"
-    ],
+    "tags": ["Mage", "Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 604,
@@ -4800,10 +4407,7 @@
     "name": "Twitch",
     "title": "the Plague Rat",
     "image": "Twitch.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -4834,10 +4438,7 @@
     "name": "Udyr",
     "title": "the Spirit Walker",
     "image": "Udyr.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 664,
@@ -4868,10 +4469,7 @@
     "name": "Urgot",
     "title": "the Dreadnought",
     "image": "Urgot.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -4902,10 +4500,7 @@
     "name": "Varus",
     "title": "the Arrow of Retribution",
     "image": "Varus.png",
-    "tags": [
-      "Marksman",
-      "Mage"
-    ],
+    "tags": ["Marksman", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -4936,10 +4531,7 @@
     "name": "Vayne",
     "title": "the Night Hunter",
     "image": "Vayne.png",
-    "tags": [
-      "Marksman",
-      "Assassin"
-    ],
+    "tags": ["Marksman", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 550,
@@ -4970,9 +4562,7 @@
     "name": "Veigar",
     "title": "the Tiny Master of Evil",
     "image": "Veigar.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 580,
@@ -5003,10 +4593,7 @@
     "name": "Vel'Koz",
     "title": "the Eye of the Void",
     "image": "Velkoz.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 590,
@@ -5037,9 +4624,7 @@
     "name": "Vex",
     "title": "the Gloomist",
     "image": "Vex.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 590,
@@ -5070,10 +4655,7 @@
     "name": "Vi",
     "title": "the Piltover Enforcer",
     "image": "Vi.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 655,
@@ -5104,10 +4686,7 @@
     "name": "Viego",
     "title": "The Ruined King",
     "image": "Viego.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "None",
     "stats": {
       "hp": 630,
@@ -5138,9 +4717,7 @@
     "name": "Viktor",
     "title": "the Herald of the Arcane",
     "image": "Viktor.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -5171,10 +4748,7 @@
     "name": "Vladimir",
     "title": "the Crimson Reaper",
     "image": "Vladimir.png",
-    "tags": [
-      "Mage",
-      "Fighter"
-    ],
+    "tags": ["Mage", "Fighter"],
     "partype": "Crimson Rush",
     "stats": {
       "hp": 600,
@@ -5205,10 +4779,7 @@
     "name": "Volibear",
     "title": "the Relentless Storm",
     "image": "Volibear.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -5239,10 +4810,7 @@
     "name": "Warwick",
     "title": "the Uncaged Wrath of Zaun",
     "image": "Warwick.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -5273,9 +4841,7 @@
     "name": "Xayah",
     "title": "the Rebel",
     "image": "Xayah.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -5306,10 +4872,7 @@
     "name": "Xerath",
     "title": "the Magus Ascendant",
     "image": "Xerath.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 596,
@@ -5340,10 +4903,7 @@
     "name": "Xin Zhao",
     "title": "the Seneschal of Demacia",
     "image": "XinZhao.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 620,
@@ -5374,10 +4934,7 @@
     "name": "Yasuo",
     "title": "the Unforgiven",
     "image": "Yasuo.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Flow",
     "stats": {
       "hp": 590,
@@ -5408,10 +4965,7 @@
     "name": "Yone",
     "title": "the Unforgotten",
     "image": "Yone.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Flow",
     "stats": {
       "hp": 620,
@@ -5442,10 +4996,7 @@
     "name": "Yorick",
     "title": "Shepherd of Souls",
     "image": "Yorick.png",
-    "tags": [
-      "Fighter",
-      "Tank"
-    ],
+    "tags": ["Fighter", "Tank"],
     "partype": "Mana",
     "stats": {
       "hp": 650,
@@ -5476,9 +5027,7 @@
     "name": "Yunara",
     "title": "the Unbroken Faith",
     "image": "Yunara.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 590,
@@ -5509,10 +5058,7 @@
     "name": "Yuumi",
     "title": "the Magical Cat",
     "image": "Yuumi.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 500,
@@ -5543,10 +5089,7 @@
     "name": "Zaahen",
     "title": "The Unsundered",
     "image": "Zaahen.png",
-    "tags": [
-      "Fighter",
-      "Assassin"
-    ],
+    "tags": ["Fighter", "Assassin"],
     "partype": "Mana",
     "stats": {
       "hp": 640,
@@ -5577,10 +5120,7 @@
     "name": "Zac",
     "title": "the Secret Weapon",
     "image": "Zac.png",
-    "tags": [
-      "Tank",
-      "Fighter"
-    ],
+    "tags": ["Tank", "Fighter"],
     "partype": "None",
     "stats": {
       "hp": 685,
@@ -5611,9 +5151,7 @@
     "name": "Zed",
     "title": "the Master of Shadows",
     "image": "Zed.png",
-    "tags": [
-      "Assassin"
-    ],
+    "tags": ["Assassin"],
     "partype": "Energy",
     "stats": {
       "hp": 654,
@@ -5644,9 +5182,7 @@
     "name": "Zeri",
     "title": "The Spark of Zaun",
     "image": "Zeri.png",
-    "tags": [
-      "Marksman"
-    ],
+    "tags": ["Marksman"],
     "partype": "Mana",
     "stats": {
       "hp": 600,
@@ -5677,9 +5213,7 @@
     "name": "Ziggs",
     "title": "the Hexplosives Expert",
     "image": "Ziggs.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 606,
@@ -5710,10 +5244,7 @@
     "name": "Zilean",
     "title": "the Chronokeeper",
     "image": "Zilean.png",
-    "tags": [
-      "Support",
-      "Mage"
-    ],
+    "tags": ["Support", "Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 574,
@@ -5744,9 +5275,7 @@
     "name": "Zoe",
     "title": "the Aspect of Twilight",
     "image": "Zoe.png",
-    "tags": [
-      "Mage"
-    ],
+    "tags": ["Mage"],
     "partype": "Mana",
     "stats": {
       "hp": 630,
@@ -5777,10 +5306,7 @@
     "name": "Zyra",
     "title": "Rise of the Thorns",
     "image": "Zyra.png",
-    "tags": [
-      "Mage",
-      "Support"
-    ],
+    "tags": ["Mage", "Support"],
     "partype": "Mana",
     "stats": {
       "hp": 574,

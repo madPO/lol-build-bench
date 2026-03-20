@@ -7,7 +7,10 @@ import type { Item, ItemStats } from "~/entities/item";
  * @param items - Array of 6 items (can contain nulls for empty slots)
  * @returns Final computed stats object
  */
-export function computeStats(champion: Champion | null, items: (Item | null)[]): ComputedStats {
+export function computeStats(
+  champion: Champion | null,
+  items: (Item | null)[],
+): ComputedStats {
   if (!champion) {
     return {};
   }
@@ -55,15 +58,24 @@ function applyItemStats(stats: ComputedStats, itemStats: ItemStats): void {
       stats.hp += value;
     } else if (key === "FlatMPPoolMod" && stats.mp !== undefined) {
       stats.mp += value;
-    } else if (key === "FlatPhysicalDamageMod" && stats.attackdamage !== undefined) {
+    } else if (
+      key === "FlatPhysicalDamageMod" &&
+      stats.attackdamage !== undefined
+    ) {
       stats.attackdamage += value;
-    } else if (key === "FlatMagicDamageMod" && stats.attackdamage !== undefined) {
+    } else if (
+      key === "FlatMagicDamageMod" &&
+      stats.attackdamage !== undefined
+    ) {
       stats.attackdamage += value;
     } else if (key === "FlatArmorMod" && stats.armor !== undefined) {
       stats.armor += value;
     } else if (key === "FlatSpellBlockMod" && stats.spellblock !== undefined) {
       stats.spellblock += value;
-    } else if (key === "FlatMovementSpeedMod" && stats.movespeed !== undefined) {
+    } else if (
+      key === "FlatMovementSpeedMod" &&
+      stats.movespeed !== undefined
+    ) {
       stats.movespeed += value;
     } else if (key === "FlatCritChanceMod" && stats.crit !== undefined) {
       stats.crit += value;
@@ -71,9 +83,16 @@ function applyItemStats(stats: ComputedStats, itemStats: ItemStats): void {
       stats.hpregen += value;
     }
     // Percentage modifiers - track for later multiplication
-    else if (key === "PercentAttackSpeedMod" && stats.attackspeed !== undefined) {
-      percentMods["attackspeed"] = (percentMods["attackspeed"] || 1) * (1 + value);
-    } else if (key === "PercentMovementSpeedMod" && stats.movespeed !== undefined) {
+    else if (
+      key === "PercentAttackSpeedMod" &&
+      stats.attackspeed !== undefined
+    ) {
+      percentMods["attackspeed"] =
+        (percentMods["attackspeed"] || 1) * (1 + value);
+    } else if (
+      key === "PercentMovementSpeedMod" &&
+      stats.movespeed !== undefined
+    ) {
       percentMods["movespeed"] = (percentMods["movespeed"] || 1) * (1 + value);
     }
   }

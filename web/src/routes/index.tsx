@@ -11,7 +11,8 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Plan your League of Legends build with stats and gold progression",
+      content:
+        "Plan your League of Legends build with stats and gold progression",
     },
   ],
 };

@@ -4,9 +4,17 @@
  * Validates that primary and secondary trees are different
  */
 
-import { component$, useContext, useSignal, useComputed$ } from "@builder.io/qwik";
+import {
+  component$,
+  useContext,
+  useSignal,
+  useComputed$,
+} from "@builder.io/qwik";
 import { BuildContext } from "~/app/config/build-context";
-import { findTreeByKey, getAvailableSecondaryTrees } from "../model/rune-transforms";
+import {
+  findTreeByKey,
+  getAvailableSecondaryTrees,
+} from "../model/rune-transforms";
 import { runes } from "../model/data";
 
 export const RunePage = component$(() => {
@@ -28,14 +36,17 @@ export const RunePage = component$(() => {
 
   // Filter available secondary trees (not equal to primary)
   const availableSecondaryTrees = useComputed$(() => {
-    return getAvailableSecondaryTrees(runeTreeList, buildState.runeConfig.primaryTree);
+    return getAvailableSecondaryTrees(
+      runeTreeList,
+      buildState.runeConfig.primaryTree,
+    );
   });
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4">
-      <h2 class="text-lg font-semibold mb-4">Rune Page</h2>
+    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+      <h2 class="text-lg font-semibold flex-shrink-0 mb-4">Rune Page</h2>
 
-      <div class="space-y-4">
+      <div class="space-y-4 flex-1 min-h-0 overflow-y-auto pr-2">
         {/* Primary Tree Selection */}
         <div>
           <h3 class="text-sm font-semibold mb-2">Primary Tree</h3>
@@ -98,28 +109,34 @@ export const RunePage = component$(() => {
                   )}
 
                   {/* Minor Rune Slots (1, 2, 3) */}
-                  {primaryTreeObj.value.slots.slice(1, 4).map((slot, slotIdx) => (
-                    <div key={slotIdx}>
-                      <p class="text-xs font-semibold mb-1">Minor Slot {slotIdx + 1}</p>
-                      <div class="grid grid-cols-2 gap-1">
-                        {slot.runes.map((rune) => (
-                          <button
-                            key={rune.id}
-                            onClick$={() => {
-                              buildState.runeConfig.primarySlots[slotIdx] = rune.id;
-                            }}
-                            class={`p-1 rounded text-xs ${
-                              buildState.runeConfig.primarySlots[slotIdx] === rune.id
-                                ? "bg-blue-400 text-white"
-                                : "bg-white border border-gray-300 hover:border-gray-400"
-                            }`}
-                          >
-                            {rune.name}
-                          </button>
-                        ))}
+                  {primaryTreeObj.value.slots
+                    .slice(1, 4)
+                    .map((slot, slotIdx) => (
+                      <div key={slotIdx}>
+                        <p class="text-xs font-semibold mb-1">
+                          Minor Slot {slotIdx + 1}
+                        </p>
+                        <div class="grid grid-cols-2 gap-1">
+                          {slot.runes.map((rune) => (
+                            <button
+                              key={rune.id}
+                              onClick$={() => {
+                                buildState.runeConfig.primarySlots[slotIdx] =
+                                  rune.id;
+                              }}
+                              class={`p-1 rounded text-xs ${
+                                buildState.runeConfig.primarySlots[slotIdx] ===
+                                rune.id
+                                  ? "bg-blue-400 text-white"
+                                  : "bg-white border border-gray-300 hover:border-gray-400"
+                              }`}
+                            >
+                              {rune.name}
+                            </button>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               )}
             </div>
@@ -162,34 +179,50 @@ export const RunePage = component$(() => {
 
               {showSecondaryRunes.value && (
                 <div class="space-y-2">
-                  {secondaryTreeObj.value.slots.slice(1, 4).map((slot, slotIdx) => (
-                    <div key={slotIdx}>
-                      <p class="text-xs font-semibold mb-1">Slot {slotIdx + 1}</p>
-                      <div class="grid grid-cols-2 gap-1">
-                        {slot.runes.map((rune) => (
-                          <button
-                            key={rune.id}
-                            onClick$={() => {
-                              if (buildState.runeConfig.secondarySlots[slotIdx] === rune.id) {
-                                buildState.runeConfig.secondarySlots[slotIdx] = null;
-                              } else if (
-                                buildState.runeConfig.secondarySlots.filter((r) => r !== null).length < 2
-                              ) {
-                                buildState.runeConfig.secondarySlots[slotIdx] = rune.id;
-                              }
-                            }}
-                            class={`p-1 rounded text-xs ${
-                              buildState.runeConfig.secondarySlots.includes(rune.id)
-                                ? "bg-green-400 text-white"
-                                : "bg-white border border-gray-300 hover:border-gray-400"
-                            }`}
-                          >
-                            {rune.name}
-                          </button>
-                        ))}
+                  {secondaryTreeObj.value.slots
+                    .slice(1, 4)
+                    .map((slot, slotIdx) => (
+                      <div key={slotIdx}>
+                        <p class="text-xs font-semibold mb-1">
+                          Slot {slotIdx + 1}
+                        </p>
+                        <div class="grid grid-cols-2 gap-1">
+                          {slot.runes.map((rune) => (
+                            <button
+                              key={rune.id}
+                              onClick$={() => {
+                                if (
+                                  buildState.runeConfig.secondarySlots[
+                                    slotIdx
+                                  ] === rune.id
+                                ) {
+                                  buildState.runeConfig.secondarySlots[
+                                    slotIdx
+                                  ] = null;
+                                } else if (
+                                  buildState.runeConfig.secondarySlots.filter(
+                                    (r) => r !== null,
+                                  ).length < 2
+                                ) {
+                                  buildState.runeConfig.secondarySlots[
+                                    slotIdx
+                                  ] = rune.id;
+                                }
+                              }}
+                              class={`p-1 rounded text-xs ${
+                                buildState.runeConfig.secondarySlots.includes(
+                                  rune.id,
+                                )
+                                  ? "bg-green-400 text-white"
+                                  : "bg-white border border-gray-300 hover:border-gray-400"
+                              }`}
+                            >
+                              {rune.name}
+                            </button>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               )}
             </div>

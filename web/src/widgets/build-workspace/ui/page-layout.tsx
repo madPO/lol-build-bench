@@ -1,8 +1,8 @@
 /**
  * PageLayout Component
  * 3-row grid layout for the Champion Build Planner
- * Row 1: Champion selection (left) + Champion stats (right)
- * Row 2: Item sidebar (left, spans rows 1-2) + Inventory (left area) + Rune page (right)
+ * Row 1: Item sidebar (spans 2 rows) + Champion select/stats
+ * Row 2: Item sidebar (continued) + Inventory + Rune page
  * Row 3: Build chart (full width)
  */
 
@@ -14,36 +14,37 @@ export interface PageLayoutProps {
 
 export const PageLayout = component$<PageLayoutProps>(({ ...props }) => {
   return (
-    <div
-      class="min-h-screen bg-gray-50 p-4"
-      {...props}
-    >
-      {/* Main grid container */}
-      <div class="grid grid-cols-12 gap-4 max-w-7xl mx-auto">
-        {/* Row 1 */}
-        <div class="col-span-12 lg:col-span-3">
-          <Slot name="champion-select" />
-        </div>
-        <div class="col-span-12 lg:col-span-9">
-          <Slot name="champion-stats" />
+    <div class="h-screen w-screen overflow-hidden bg-gray-50 p-4" {...props}>
+      {/* Main 3x3 grid container */}
+      <div class="grid grid-cols-3 grid-rows-3 gap-4 h-full w-full">
+        {/* Column 1, Row 1-2: Item Sidebar */}
+        <div class="col-start-1 col-span-1 row-start-1 row-span-2 overflow-hidden h-full">
+          <Slot name="item-sidebar" />
         </div>
 
-        {/* Row 2 */}
-        <div class="col-span-12 lg:col-span-3">
+        {/* Column 2-3, Row 1: Champion Select & Stats */}
+        <div class="col-start-2 col-span-2 row-start-1 row-span-1 grid grid-cols-3 gap-4 overflow-hidden h-full">
+          <div class="col-span-1 h-full overflow-hidden">
+            <Slot name="champion-select" />
+          </div>
+          <div class="col-span-2 h-full overflow-hidden">
+            <Slot name="champion-stats" />
+          </div>
+        </div>
+
+        {/* Column 2, Row 2: Inventory */}
+        <div class="col-start-2 col-span-1 row-start-2 row-span-1 overflow-hidden h-full">
           <Slot name="inventory" />
         </div>
-        <div class="col-span-12 lg:col-span-9">
+
+        {/* Column 3, Row 2: Runes */}
+        <div class="col-start-3 col-span-1 row-start-2 row-span-1 overflow-hidden h-full">
           <Slot name="rune-page" />
         </div>
 
-        {/* Row 3 - Full width */}
-        <div class="col-span-12">
+        {/* Column 1-3, Row 3: Chart */}
+        <div class="col-start-1 col-span-3 row-start-3 row-span-1 overflow-hidden h-full">
           <Slot name="chart" />
-        </div>
-
-        {/* Item sidebar - positioned on left spanning rows 1-2 */}
-        <div class="col-span-12 lg:col-span-3 lg:row-span-2 lg:order-first">
-          <Slot name="item-sidebar" />
         </div>
       </div>
     </div>

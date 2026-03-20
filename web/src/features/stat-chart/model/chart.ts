@@ -22,7 +22,10 @@ export interface ChartSeries {
  * @param items - Array of 6 items (in addition order)
  * @returns Chart series data for uPlot
  */
-export function computeChartData(champion: Champion | null, items: (Item | null)[]): ChartSeries {
+export function computeChartData(
+  champion: Champion | null,
+  items: (Item | null)[],
+): ChartSeries {
   if (!champion) {
     return {
       goldValues: [],
@@ -104,8 +107,17 @@ function convertToChartSeries(dataPoints: ChartDataPoint[]): ChartSeries {
  * @param statSeries - All stat series data
  * @returns Array of stat keys to highlight
  */
-export function getRelevantStats(statSeries: Record<string, number[]>): string[] {
+export function getRelevantStats(
+  statSeries: Record<string, number[]>,
+): string[] {
   // For now, return common stats in priority order
-  const priority = ["attackdamage", "armor", "spellblock", "hp", "movespeed", "attackspeed"];
+  const priority = [
+    "attackdamage",
+    "armor",
+    "spellblock",
+    "hp",
+    "movespeed",
+    "attackspeed",
+  ];
   return priority.filter((stat) => stat in statSeries);
 }

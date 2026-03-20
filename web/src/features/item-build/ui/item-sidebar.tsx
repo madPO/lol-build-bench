@@ -4,7 +4,12 @@
  * Positioned on left spanning rows 1-2
  */
 
-import { component$, useContext, useSignal, useComputed$ } from "@builder.io/qwik";
+import {
+  component$,
+  useContext,
+  useSignal,
+  useComputed$,
+} from "@builder.io/qwik";
 import { BuildContext } from "~/app/config/build-context";
 import { filterItemsByName } from "../model/filters";
 import { items } from "../model/data";
@@ -30,8 +35,8 @@ export const ItemSidebar = component$(() => {
   });
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4">
-      <h2 class="text-lg font-semibold mb-4">Item Shop</h2>
+    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+      <h2 class="text-lg font-semibold flex-shrink-0 mb-4">Item Shop</h2>
 
       {/* Search input */}
       <input
@@ -42,18 +47,20 @@ export const ItemSidebar = component$(() => {
           const input = e.target as HTMLInputElement;
           searchTerm.value = input.value;
         }}
-        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+        class="w-full flex-shrink-0 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
       />
 
       {/* Inventory full warning */}
       {inventoryFull.value && (
-        <div class="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
-          <p class="text-sm text-yellow-800">Inventory full! Remove an item to add more.</p>
+        <div class="mb-4 flex-shrink-0 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+          <p class="text-sm text-yellow-800">
+            Inventory full! Remove an item to add more.
+          </p>
         </div>
       )}
 
       {/* Item list */}
-      <div class="space-y-2 max-h-96 overflow-y-auto">
+      <div class="space-y-2 flex-1 min-h-0 overflow-y-auto pr-2">
         {filteredItems.value.map((item) => (
           <button
             key={item.id}
