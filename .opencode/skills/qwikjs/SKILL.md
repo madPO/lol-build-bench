@@ -160,10 +160,10 @@ export default component$(() => {
 });
 ```
 
-**Passing a signal as prop — preferred pattern:**
+**Passing state explicitly via props and events — preferred pattern:**
 ```tsx
 const price = useSignal(9.99);
-<Item price={price} />  // Signal<number>, child can read price.value
+<Item value={price.value} onValueChange$={$((v) => price.value = v)} />
 ```
 
 ---
@@ -238,6 +238,8 @@ useTask$(({ track }) => {
 ---
 
 ## Context API
+
+> **Note:** Following the explicit state principle, avoid using the Context API for state management. State should be passed explicitly via properties, and updated via events.
 
 ```tsx
 import { createContextId, useContextProvider, useContext } from '@builder.io/qwik';
@@ -613,14 +615,27 @@ const loc = useLocation();
 if (loc.url.pathname.startsWith('/admin')) { /* ... */ }
 ```
 
-### Pass signals, not values
+### Explicit State Passing (Vue-like Props & Events)
+
+**Principle:** As in Vue.js, the state should be passed through a property and changed through appropriate events. For example, pass `value` to transfer state and `onValueChange$` to subscribe to state updates. The component should not use any context; any state should be passed explicitly and clearly updated.
 
 ```tsx
-// ❌ Bad — prop is not reactive
-<Child value={count.value} />
+interface ChildProps {
+  value: number;
+  onValueChange$: QRL<(newValue: number) => void>;
+}
 
-// ✅ Good — child receives a reactive signal
-<Child value={count} />
+// ✅ Good — explicitly passing state and emitting events
+export const Child = component$<ChildProps>(({ value, onValueChange$ }) => {
+  return <button onClick$={() => onValueChange$(value + 1)}>+</button>;
+});
+
+// Usage in parent
+export const Parent = component$(() => {
+  const count = useSignal(0);
+  // State is transferred explicitly via `value`, and updated via `onValueChange$`
+  return <Child value={count.value} onValueChange$={$((v: number) => count.value = v)} />;
+});
 ```
 
 ---

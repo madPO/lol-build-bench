@@ -1,4 +1,4 @@
-import { component$, type PropFunction } from "@builder.io/qwik";
+import { component$, type QRL } from "@builder.io/qwik";
 import type { RuneBranch } from "~/entities/rune-branch/model/types";
 import { RuneBranchIcon } from "~/entities/rune-branch/ui/rune-branch-icon";
 
@@ -6,7 +6,7 @@ export interface BranchSelectorProps {
   branches: RuneBranch[];
   primaryBranchId: string | null;
   secondaryBranchId: string | null;
-  onBranchClick$: PropFunction<(branchId: string) => void>;
+  onBranchClick$: QRL<(branchId: string) => void>;
 }
 
 export const BranchSelector = component$<BranchSelectorProps>((props) => {

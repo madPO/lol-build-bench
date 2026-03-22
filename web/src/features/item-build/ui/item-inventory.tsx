@@ -1,15 +1,21 @@
-import { component$, useContext } from "@builder.io/qwik";
-import { BuildContext } from "~/app/config/build-context";
+import { component$, $, type QRL } from "@builder.io/qwik";
 import { getItemImageUrl } from "~/entities/item";
-import { Panel } from "~/widgets/common/ui";
+import type { Item } from "~/entities/item/model/types";
 
-export const ItemInventory = component$(() => {
-  const buildState = useContext(BuildContext);
+export interface ItemInventoryProps {
+  inventory: (Item | null)[];
+  onItemRemove$: QRL<(index: number) => void>;
+}
+
+export const ItemInventory = component$<ItemInventoryProps>((props) => {
+  const handleRemove = $((index: number) => {
+    props.onItemRemove$(index);
+  });
 
   return (
-    <Panel class="w-full h-full flex flex-col items-center justify-start !p-3">
+    <div class="bg-surface/80 text-text backdrop-blur border border-accent rounded-xl shadow-xl w-full h-full flex flex-col items-center justify-start p-3">
       <div class="grid grid-cols-2 grid-rows-3 gap-2 shrink-0">
-        {buildState.inventory.map((item, index) => (
+        {props.inventory.map((item, index) => (
           <div
             key={index}
             class="w-12 h-12 bg-surface-hover border border-accent rounded-lg overflow-hidden relative group flex items-center justify-center transition-all hover:scale-110 active:scale-95 hover:border-active z-10 hover:z-20 shadow-sm"
@@ -25,9 +31,7 @@ export const ItemInventory = component$(() => {
                   loading="lazy"
                 />
                 <button
-                  onClick$={() => {
-                    buildState.inventory[index] = null;
-                  }}
+                  onClick$={() => handleRemove(index)}
                   class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
                   aria-label={`Remove ${item.name}`}
                 >
@@ -57,6 +61,6 @@ export const ItemInventory = component$(() => {
           </div>
         ))}
       </div>
-    </Panel>
+    </div>
   );
 });

@@ -6,32 +6,35 @@
 
 import {
   component$,
-  useContext,
   useSignal,
   useVisibleTask$,
 } from "@builder.io/qwik";
-import { BuildContext } from "~/app/config/build-context";
 import { computeChartData, getRelevantStats } from "../model/chart";
 import uPlot from "uplot";
-import { Panel } from "~/widgets/common/ui";
+import type { Champion } from "~/entities/champion";
+import type { Item } from "~/entities/item/model/types";
 
-export const BuildChart = component$(() => {
-  const buildState = useContext(BuildContext);
+export interface BuildChartProps {
+  selectedChampion: Champion | null;
+  inventory: (Item | null)[];
+}
+
+export const BuildChart = component$<BuildChartProps>((props) => {
   const containerRef = useSignal<HTMLDivElement>();
   const chartInstance = useSignal<uPlot | null>(null);
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(({ track, cleanup }) => {
     // Track changes to selected champion and inventory
-    track(() => buildState.selectedChampion?.id);
-    track(() => buildState.inventory.map((item) => item?.id).join(","));
+    track(() => props.selectedChampion?.id);
+    track(() => props.inventory.map((item) => item?.id).join(","));
 
     if (!containerRef.value) return;
 
     // Generate chart data
     const chartData = computeChartData(
-      buildState.selectedChampion,
-      buildState.inventory,
+      props.selectedChampion,
+      props.inventory,
     );
 
     if (chartData.goldValues.length === 0) {
@@ -110,24 +113,24 @@ export const BuildChart = component$(() => {
     });
   });
 
-  if (!buildState.selectedChampion) {
+  if (!props.selectedChampion) {
     return (
-      <Panel class="h-full flex flex-col">
+      <div class="bg-surface/80 text-text backdrop-blur border border-accent rounded-xl p-4 shadow-xl h-full flex flex-col">
         <h2 class="text-lg font-semibold flex-shrink-0 mb-4">Build Chart</h2>
         <div class="flex-1 flex items-center justify-center text-text/70 min-h-0">
           <p>Select a champion to view stat progression chart</p>
         </div>
-      </Panel>
+      </div>
     );
   }
 
   return (
-    <Panel class="h-full flex flex-col">
+    <div class="bg-surface/80 text-text backdrop-blur border border-accent rounded-xl p-4 shadow-xl h-full flex flex-col">
       <h2 class="text-lg font-semibold flex-shrink-0 mb-4">
-        {buildState.selectedChampion.name} - Stat Progression
+        {props.selectedChampion.name} - Stat Progression
       </h2>
       <div ref={containerRef} class="flex-1 min-h-0 w-full overflow-hidden" />
-    </Panel>
+    </div>
   );
 });
 

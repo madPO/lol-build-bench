@@ -1,9 +1,9 @@
 import {
   component$,
-  useContext,
   $,
   useComputed$,
   useSignal,
+  type QRL,
 } from "@builder.io/qwik";
 import type { RuneBranch } from "~/entities/rune-branch/model/types";
 import { BranchSelector } from "~/features/select-rune-branch/ui/branch-selector";
@@ -15,19 +15,17 @@ import { RuneColumn } from "~/entities/rune/ui/rune-column";
 import { EmptyRuneState } from "~/entities/rune/ui/empty-rune-state";
 import { getRunesByBranch } from "~/entities/rune/api";
 import type { Rune } from "~/entities/rune/model/types";
-import { BuildContext } from "~/app/config/build-context";
-import { Panel } from "~/widgets/common/ui";
+import type { RuneSelectionState } from "~/features/select-rune-branch/model/types";
 
 export interface RuneSelectionBoardProps {
   branches: RuneBranch[];
-  initialPrimaryBranchId?: string;
-  initialSecondaryBranchId?: string;
+  runeConfig: RuneSelectionState;
+  onRuneConfigUpdate$: QRL<(newState: RuneSelectionState) => void>;
 }
 
 export const RuneSelectionBoard = component$<RuneSelectionBoardProps>(
   (props) => {
-    const buildState = useContext(BuildContext);
-    const state = buildState.runeConfig;
+    const state = props.runeConfig;
 
     const hoveredRuneData = useSignal<{
       rune: Rune;
@@ -36,18 +34,14 @@ export const RuneSelectionBoard = component$<RuneSelectionBoardProps>(
     } | null>(null);
 
     const handleBranchClick$ = $((branchId: string) => {
-      const newState = calculateNewSelectionState(state, branchId);
-      state.primaryBranchId = newState.primaryBranchId;
-      state.secondaryBranchId = newState.secondaryBranchId;
-      state.primaryRuneIds = newState.primaryRuneIds;
-      state.secondaryRuneIds = newState.secondaryRuneIds;
+      const newState = calculateNewSelectionState(props.runeConfig, branchId);
+      props.onRuneConfigUpdate$(newState);
     });
 
     const handleRuneClick$ = $(
       (runeId: string, tier: number, isSecondary: boolean) => {
-        const newState = selectRune(state, runeId, tier, isSecondary);
-        state.primaryRuneIds = newState.primaryRuneIds;
-        state.secondaryRuneIds = newState.secondaryRuneIds;
+        const newState = selectRune(props.runeConfig, runeId, tier, isSecondary);
+        props.onRuneConfigUpdate$(newState);
       },
     );
 
@@ -80,7 +74,7 @@ export const RuneSelectionBoard = component$<RuneSelectionBoardProps>(
     });
 
     return (
-      <Panel class="h-full flex flex-col relative !p-4">
+      <div class="bg-surface/80 text-text backdrop-blur border border-accent rounded-xl shadow-xl h-full flex flex-col relative p-4">
         <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 flex-1 min-h-0 overflow-y-auto">
           <BranchSelector
             branches={props.branches}
@@ -146,7 +140,7 @@ export const RuneSelectionBoard = component$<RuneSelectionBoardProps>(
             </div>
           </div>
         )}
-      </Panel>
+      </div>
     );
   },
 );

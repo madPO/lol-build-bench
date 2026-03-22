@@ -1,9 +1,9 @@
-import { component$, type PropFunction } from "@builder.io/qwik";
+import { component$, type QRL } from "@builder.io/qwik";
 
 interface ChampionAvatarProps {
   avatarUrl?: string;
   name?: string;
-  onClick$?: PropFunction<() => void>;
+  onClick$?: QRL<() => void>;
 }
 
 export const ChampionAvatar = component$<ChampionAvatarProps>((props) => {

@@ -6,20 +6,23 @@
 
 import {
   component$,
-  useContext,
   useComputed$,
   useSignal,
+  $,
+  type QRL,
 } from "@builder.io/qwik";
-import { BuildContext } from "~/app/config/build-context";
 import { getItemImageUrl } from "~/entities/item/api/ddragon";
 import type { Item } from "~/entities/item/model/types";
 import { items } from "../model/data";
 import { stripHtmlTags } from "../model/description";
-import { isInventoryFull, findFirstEmptySlot } from "../model/inventory";
-import { SelectionGrid, SelectionItem } from "~/widgets/common/ui";
+import { isInventoryFull } from "../model/inventory";
 
-export const ItemSidebar = component$(() => {
-  const buildState = useContext(BuildContext);
+export interface ItemSidebarProps {
+  inventory: (Item | null)[];
+  onItemAdd$: QRL<(item: Item) => void>;
+}
+
+export const ItemSidebar = component$<ItemSidebarProps>((props) => {
   const hoveredItemData = useSignal<{
     item: Item;
     x: number;
@@ -28,64 +31,64 @@ export const ItemSidebar = component$(() => {
 
   // Check if inventory is full
   const inventoryFull = useComputed$(() => {
-    return isInventoryFull(buildState.inventory);
+    return isInventoryFull(props.inventory);
+  });
+
+  const handleItemClick = $((item: Item) => {
+    if (!inventoryFull.value) {
+      props.onItemAdd$(item);
+    }
+  });
+
+  const handlePointerEnter = $((event: PointerEvent, item: Item) => {
+    if (event.pointerType === "touch") return;
+    const element = event.target as HTMLElement;
+    const button = element.closest("button");
+    if (!button) return;
+
+    const rect = button.getBoundingClientRect();
+    const x = rect.right + 8 + 320 > window.innerWidth ? rect.left - 320 - 8 : rect.right + 8;
+    const tooltipMaxHeight = window.innerHeight * 0.6;
+    const y = rect.top + tooltipMaxHeight > window.innerHeight ? Math.max(8, window.innerHeight - tooltipMaxHeight - 8) : rect.top;
+
+    hoveredItemData.value = { item, x, y };
+  });
+
+  const handlePointerLeave = $(() => {
+    hoveredItemData.value = null;
   });
 
   return (
     <div class="h-full relative flex flex-col">
-      <SelectionGrid class="flex-1 min-h-0 h-full !p-3">
-        {items.map((item) => (
-          <SelectionItem
-            key={item.id}
-            size="md"
-            disabled={inventoryFull.value}
-            ariaLabel={item.name}
-            onClick$={() => {
-              if (!inventoryFull.value) {
-                const slot = findFirstEmptySlot(buildState.inventory);
-                if (slot !== -1) {
-                  buildState.inventory[slot] = item;
-                }
-              }
-            }}
-            onPointerEnter$={(event) => {
-              if (event.pointerType === "touch") return;
-              const element = event.target as HTMLElement;
-              const button = element.closest("button");
-              if (!button) return;
-
-              const rect = button.getBoundingClientRect();
-
-              // Calculate positioning with overflow handling
-              const x =
-                rect.right + 8 + 320 > window.innerWidth
-                  ? rect.left - 320 - 8
-                  : rect.right + 8;
-
-              // Vertical overflow: if tooltip (max 60vh) would exceed viewport bottom, shift up
-              const tooltipMaxHeight = window.innerHeight * 0.6;
-              const y =
-                rect.top + tooltipMaxHeight > window.innerHeight
-                  ? Math.max(8, window.innerHeight - tooltipMaxHeight - 8)
-                  : rect.top;
-
-              hoveredItemData.value = { item, x, y };
-            }}
-            onPointerLeave$={() => {
-              hoveredItemData.value = null;
-            }}
-          >
-            <img
-              src={getItemImageUrl(item.image)}
-              alt={item.name}
-              width={48}
-              height={48}
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </SelectionItem>
-        ))}
-      </SelectionGrid>
+      <div class="bg-surface text-text rounded-lg shadow-2xl flex flex-col relative border border-accent overflow-hidden flex-1 min-h-0 h-full p-3">
+        <div class="p-4 grid gap-2 overflow-y-auto justify-items-center grid-cols-4 sm:grid-cols-5 md:grid-cols-7">
+          {items.map((item) => (
+            <div key={item.id} class="group relative flex flex-col items-center p-0.5">
+              <button
+                type="button"
+                disabled={inventoryFull.value}
+                aria-label={item.name}
+                onClick$={() => handleItemClick(item)}
+                onPointerEnter$={(e) => handlePointerEnter(e, item)}
+                onPointerLeave$={handlePointerLeave}
+                class={`
+                  overflow-hidden transition-all shadow-sm flex items-center justify-center p-0 w-12 h-12 rounded-md cursor-pointer
+                  ${inventoryFull.value ? "bg-surface-hover cursor-not-allowed opacity-50 border border-transparent" : "bg-surface-hover border border-accent hover:border-active hover:scale-110 active:scale-95"}
+                `}
+              >
+                <img
+                  src={getItemImageUrl(item.image)}
+                  alt={item.name}
+                  width={48}
+                  height={48}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Custom Tooltip */}
       {hoveredItemData.value && (

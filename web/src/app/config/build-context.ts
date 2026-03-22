@@ -1,4 +1,3 @@
-import { createContextId } from "@builder.io/qwik";
 import type { Champion } from "~/entities/champion";
 import type { Item } from "~/entities/item";
 import type { RuneSelectionState } from "~/features/select-rune-branch/model/types";
@@ -8,8 +7,6 @@ export interface BuildState {
   inventory: (Item | null)[];
   runeConfig: RuneSelectionState;
 }
-
-export const BuildContext = createContextId<BuildState>("app.build-state");
 
 export function createInitialBuildState(): BuildState {
   return {
