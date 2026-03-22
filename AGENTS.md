@@ -84,9 +84,9 @@ Auto-generated context and guidelines for coding agents.
 - Minimize the amount of data serialized into the HTML; only pass necessary state to client-side components.
 
 ## Recent Changes
+- 008-game-data-api: Added Go 1.21+ + `clickhouse-go/v2`, `graphql-go/graphql`, `go-chi/chi/v5`
 - 007-datadragon-importer: Added Go 1.21+ + `clickhouse-go/v2`, `cloudevents/sdk-go`
 - 007-datadragon-importer: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
-- 006-style-switcher: Added TypeScript 5.4.5, Qwik JS 1.19.2 + Tailwind CSS v4.2.2, Basecoat CSS v0.3.11
 
 
 <!-- MANUAL ADDITIONS START -->
@@ -96,5 +96,5 @@ Dont commit any changes.
 <!-- MANUAL ADDITIONS END -->
 
 ## Active Technologies
-- Go 1.21+ + `clickhouse-go/v2`, `cloudevents/sdk-go` (007-datadragon-importer)
-- ClickHouse (007-datadragon-importer)
+- Go 1.21+ + `clickhouse-go/v2`, `graphql-go/graphql`, `go-chi/chi/v5` (008-game-data-api)
+- ClickHouse (read-only operations) (008-game-data-api)
