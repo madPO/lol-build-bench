@@ -34,7 +34,7 @@ Assisted-by: AI-agent
 - **Type**: lowercase, one of the allowed types below
 - **Scope**: optional, lowercase, noun in parentheses — describes the affected module/package/area (e.g. `auth`, `api`, `db`, `ci`)
 - **Summary**: imperative mood, lowercase, no period at the end ("add feature" not "added feature" or "adds feature"). Compact size 2 or 3 bullets.
-- **Body**: optional, wrapped at 72 chars, explains *what* and *why* (not *how*); separated from header by a blank line
+- **Body**: optional, wrapped at 72 chars, **maximum 3 lines**. Only state the main points — explain *what* and *why* (not *how*); separated from header by a blank line
 - **Footers**: key-value trailers separated from body by a blank line; `BREAKING CHANGE:` must be included for breaking changes
 - **`Assisted-by: AI-agent`**: ALWAYS the last line of the commit message, no exceptions
 
@@ -75,7 +75,7 @@ Assisted-by: AI-agent
 
 4. **Write the summary**: One line, imperative mood, lowercase, no trailing period. Be specific — avoid vague summaries like "update stuff" or "fix bug".
 
-5. **Write the body** (if the change is non-trivial): Explain the motivation and context. What problem does this solve? Why was this approach chosen? Do not repeat what the diff already shows.
+5. **Write the body** (if the change is non-trivial): **Maximum 3 lines.** Only write the main points — the core motivation or the key decisions. Do not repeat what the diff already shows. If you cannot summarize in 3 lines, you are being too detailed.
 
 6. **Add footers**: Include any relevant trailers such as `Fixes #123`, `Closes #456`, `Co-authored-by:`, `BREAKING CHANGE:`, etc. Always add `Assisted-by: AI-agent` as the final line.
 
@@ -90,7 +90,7 @@ Or as a multi-line message:
 feat(auth): add OAuth2 PKCE flow for SPA clients
 
 Replace implicit flow with PKCE to improve security for browser-based
-apps. The authorization code is now exchanged with a code verifier,
+apps. Authorization code is now exchanged with a code verifier,
 eliminating the risk of token interception.
 
 Closes #87
@@ -113,9 +113,8 @@ Assisted-by: AI-agent
 ```
 refactor(queue): replace RabbitMQ client with NATS JetStream
 
-The previous RabbitMQ setup required a separate broker process and
-had no built-in persistence guarantees for our use case. NATS
-JetStream provides at-least-once delivery and is easier to embed
+RabbitMQ required a separate broker with no built-in persistence.
+NATS JetStream provides at-least-once delivery and embeds directly
 in our Docker Compose stack.
 
 Assisted-by: AI-agent
@@ -160,6 +159,7 @@ Before outputting the commit message, verify:
 - [ ] Header is ≤ 72 characters
 - [ ] Type is from the allowed list and lowercase
 - [ ] Summary is imperative mood, lowercase, no trailing period
+- [ ] Body (if present) is **max 3 lines**, covering only the main points
 - [ ] Body (if present) is separated from header by a blank line
 - [ ] Footers (if present) are separated from body by a blank line
 - [ ] `Assisted-by: AI-agent` is the absolute last line
