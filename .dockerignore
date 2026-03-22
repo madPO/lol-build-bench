@@ -1,1 +1,13 @@
 .devcontainer
+node_modules/
+web/node_modules/
+.git/
+Dockerfile*
+.dockerignore
+*.log*
+.env*
+coverage/
+dist/
+web/dist/
+build/
+web/build/

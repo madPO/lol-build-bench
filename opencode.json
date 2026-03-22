@@ -7,7 +7,7 @@
         "npx",
         "-y",
         "chrome-devtools-mcp@latest",
-        "--browser-url=http://host.docker.internal:9222"
+        "--browser-url=http://host.docker.internal:9223"
       ],
       "enabled": true
     }

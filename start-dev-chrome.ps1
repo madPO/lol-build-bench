@@ -1,5 +1,5 @@
 param(
-    [int]$DebugPort = 9222,
+    [int]$DebugPort = 9223,
     [string]$UserDataDir = "C:\temp\chrome-mcp-profile"
 )
 
@@ -33,6 +33,7 @@ $arguments = @(
     "--no-first-run",
     "--no-default-browser-check",
     "--disable-extensions"
+    "--remote-allow-origins=*"
 )
 
 Write-Host "Starting Chrome for MCP with remote debugging enabled:" -ForegroundColor Green
