@@ -14,7 +14,7 @@ export interface PageLayoutProps {
 
 export const PageLayout = component$<PageLayoutProps>(({ ...props }) => {
   return (
-    <div class="h-screen w-screen overflow-hidden bg-gray-50 p-4" {...props}>
+    <div class="h-screen w-screen overflow-hidden bg-background p-4" {...props}>
       {/* Main compact grid container with dynamic row heights */}
       <div class="grid grid-cols-[auto_auto_1fr] grid-rows-[min-content_1fr_1fr] gap-2 h-full w-full">
         {/* Column 1, Row 1-2: Item Sidebar */}

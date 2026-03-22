@@ -16,7 +16,7 @@ export const SelectChampionModal = component$<SelectChampionModalProps>((props) 
 
   return (
     <div 
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/50 backdrop-blur-sm"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
       onClick$={(e) => {
         // Close if click is on the backdrop
         if (e.target === e.currentTarget) {
@@ -29,13 +29,13 @@ export const SelectChampionModal = component$<SelectChampionModalProps>((props) 
         }
       }}
     >
-      <div class="relative bg-white rounded-lg shadow-2xl max-w-[90vw] max-h-[85vh] w-full border border-gray-100 overflow-hidden flex flex-col">
-        <div class="flex justify-between items-center p-4 border-b border-gray-100 bg-gray-50/50 shrink-0">
-          <h2 class="text-xl font-bold text-gray-800">Select Champion</h2>
+      <div class="relative bg-surface rounded-lg shadow-2xl max-w-[90vw] max-h-[85vh] w-full border border-accent overflow-hidden flex flex-col">
+        <div class="flex justify-between items-center p-4 border-b border-accent bg-surface-hover shrink-0">
+          <h2 class="text-xl font-bold text-text">Select Champion</h2>
           <button
             type="button"
             onClick$={handleClose}
-            class="text-gray-400 hover:text-gray-600 p-1 hover:bg-gray-100 rounded-full transition-colors"
+            class="text-text/60 hover:text-text p-1 hover:bg-surface-hover rounded-full transition-colors"
             aria-label="Close modal"
           >
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

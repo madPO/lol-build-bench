@@ -27,7 +27,7 @@ export const ItemSidebar = component$(() => {
   });
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col relative">
+    <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col relative">
       {/* Item grid */}
       <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-1 flex-1 min-h-0 overflow-y-auto pr-2">
         {items.map((item) => (
@@ -70,8 +70,8 @@ export const ItemSidebar = component$(() => {
             aria-disabled={inventoryFull.value}
             class={`w-12 h-12 p-0 rounded-md transition-all overflow-hidden cursor-pointer ${
               inventoryFull.value
-                ? "bg-gray-100 cursor-not-allowed opacity-50"
-                : "bg-gray-100 border border-gray-200 hover:border-blue-500 hover:scale-110 active:scale-95"
+                ? "bg-surface-hover cursor-not-allowed opacity-50"
+                : "bg-surface-hover border border-accent hover:border-active hover:scale-110 active:scale-95"
             }`}
           >
             <img

@@ -18,7 +18,7 @@ export const ChampionAvatar = component$<ChampionAvatarProps>((props) => {
           props.onClick$?.();
         }
       }}
-      class="w-32 h-32 border-2 border-dashed border-gray-400 flex items-center justify-center cursor-pointer hover:border-blue-500 transition-colors bg-gray-50 rounded-md overflow-hidden shrink-0 z-10"
+      class="w-32 h-32 border-2 border-dashed border-accent flex items-center justify-center cursor-pointer hover:border-active transition-colors bg-surface-hover rounded-md overflow-hidden shrink-0 z-10"
     >
       {props.avatarUrl ? (
         <img 
@@ -30,8 +30,8 @@ export const ChampionAvatar = component$<ChampionAvatarProps>((props) => {
         />
       ) : (
         <div class="flex flex-col items-center pointer-events-none">
-          <span class="text-gray-400 text-4xl font-light">+</span>
-          <span class="text-gray-500 text-xs font-medium uppercase mt-1">Select</span>
+          <span class="text-text/60 text-4xl font-light">+</span>
+          <span class="text-text/70 text-xs font-medium uppercase mt-1">Select</span>
         </div>
       )}
     </div>

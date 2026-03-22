@@ -111,9 +111,9 @@ export const BuildChart = component$(() => {
 
   if (!buildState.selectedChampion) {
     return (
-      <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+      <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col">
         <h2 class="text-lg font-semibold flex-shrink-0 mb-4">Build Chart</h2>
-        <div class="flex-1 flex items-center justify-center text-gray-500 min-h-0">
+        <div class="flex-1 flex items-center justify-center text-text/70 min-h-0">
           <p>Select a champion to view stat progression chart</p>
         </div>
       </div>
@@ -121,7 +121,7 @@ export const BuildChart = component$(() => {
   }
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col">
+    <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col">
       <h2 class="text-lg font-semibold flex-shrink-0 mb-4">
         {buildState.selectedChampion.name} - Stat Progression
       </h2>

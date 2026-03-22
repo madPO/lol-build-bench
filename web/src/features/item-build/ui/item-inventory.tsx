@@ -6,12 +6,12 @@ export const ItemInventory = component$(() => {
   const buildState = useContext(BuildContext);
 
   return (
-    <div class="p-3 bg-white/80 backdrop-blur border border-gray-200 rounded-xl w-fit h-full flex flex-col items-center justify-start">
+    <div class="p-3 bg-surface/80 text-text backdrop-blur border border-accent rounded-xl w-fit h-full flex flex-col items-center justify-start">
       <div class="grid grid-cols-2 grid-rows-3 gap-2 shrink-0">
         {buildState.inventory.map((item, index) => (
           <div
             key={index}
-            class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-lg overflow-hidden relative group flex items-center justify-center transition-all hover:scale-110 active:scale-95 hover:border-blue-500 z-10 hover:z-20"
+            class="w-12 h-12 bg-surface-hover border border-accent rounded-lg overflow-hidden relative group flex items-center justify-center transition-all hover:scale-110 active:scale-95 hover:border-active z-10 hover:z-20"
           >
             {item ? (
               <>

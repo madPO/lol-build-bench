@@ -61,7 +61,7 @@ export const RuneSelectionBoard = component$<RuneSelectionBoardProps>((props) =>
   });
 
   return (
-    <div class="card bg-white rounded-lg shadow p-4 h-full flex flex-col relative">
+    <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col relative">
       <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 flex-1 min-h-0 overflow-y-auto">
         <BranchSelector
           branches={props.branches}
@@ -107,7 +107,7 @@ export const RuneSelectionBoard = component$<RuneSelectionBoardProps>((props) =>
       {/* Rune Tooltip */}
       {hoveredRuneData.value && (
         <div
-          class="fixed z-[100] bg-white text-gray-800 border shadow-2xl rounded-lg p-3 max-w-[320px] pointer-events-none"
+          class="fixed z-[100] bg-surface text-text border shadow-2xl rounded-lg p-3 max-w-[320px] pointer-events-none"
           style={{
             top: `${hoveredRuneData.value.y}px`,
             left: `${hoveredRuneData.value.x}px`,

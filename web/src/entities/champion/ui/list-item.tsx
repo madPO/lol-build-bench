@@ -15,7 +15,7 @@ export const ChampionListItem = component$<ChampionListItemProps>((props) => {
       <button
         type="button"
         onClick$={props.onClick$}
-        class="w-16 h-16 rounded-md overflow-hidden border border-gray-200 hover:border-blue-500 transition-all hover:scale-110 active:scale-95 bg-white shadow-sm cursor-pointer"
+        class="w-16 h-16 rounded-md overflow-hidden border border-accent hover:border-active transition-all hover:scale-110 active:scale-95 bg-surface-hover shadow-sm cursor-pointer"
       >
         <img 
           src={props.avatarUrl} 
@@ -28,7 +28,7 @@ export const ChampionListItem = component$<ChampionListItemProps>((props) => {
       </button>
       
       {/* Tooltip: CSS-only using group-hover */}
-      <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-2 py-0.5 bg-gray-800 text-white text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-[60] shadow-md border border-gray-700">
+      <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-2 py-0.5 bg-surface text-text text-[10px] rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-[60] shadow-md border border-accent">
         {props.name}
       </span>
     </div>
