@@ -84,9 +84,9 @@ Auto-generated context and guidelines for coding agents.
 - Minimize the amount of data serialized into the HTML; only pass necessary state to client-side components.
 
 ## Recent Changes
+- 007-datadragon-importer: Added Go 1.21+ + `clickhouse-go/v2`, `cloudevents/sdk-go`
+- 007-datadragon-importer: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
 - 006-style-switcher: Added TypeScript 5.4.5, Qwik JS 1.19.2 + Tailwind CSS v4.2.2, Basecoat CSS v0.3.11
-- 005-redesign-rune-selection: Added TypeScript 5.4.5, Node/Bun (Qwik JS 1.19.2) + Qwik JS, Qwik City, Tailwind CSS (v4.2.2), Basecoat CSS (v0.3.11)
-- 004-inventory-redesign: Added TypeScript (v5.4.5) + @builder.io/qwik (v1.19.2), Tailwind CSS (v4.2.2), Basecoat CSS (v0.3.11)
 
 
 <!-- MANUAL ADDITIONS START -->
@@ -96,5 +96,5 @@ Dont commit any changes.
 <!-- MANUAL ADDITIONS END -->
 
 ## Active Technologies
-- TypeScript 5.4.5, Qwik JS 1.19.2 + Tailwind CSS v4.2.2, Basecoat CSS v0.3.11 (006-style-switcher)
-- Client-side `window.localStorage` (006-style-switcher)
+- Go 1.21+ + `clickhouse-go/v2`, `cloudevents/sdk-go` (007-datadragon-importer)
+- ClickHouse (007-datadragon-importer)
