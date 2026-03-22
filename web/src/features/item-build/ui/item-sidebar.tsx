@@ -16,10 +16,15 @@ import type { Item } from "~/entities/item/model/types";
 import { items } from "../model/data";
 import { stripHtmlTags } from "../model/description";
 import { isInventoryFull, findFirstEmptySlot } from "../model/inventory";
+import { SelectionGrid, SelectionItem } from "~/widgets/common/ui";
 
 export const ItemSidebar = component$(() => {
   const buildState = useContext(BuildContext);
-  const hoveredItemData = useSignal<{ item: Item; x: number; y: number } | null>(null);
+  const hoveredItemData = useSignal<{
+    item: Item;
+    x: number;
+    y: number;
+  } | null>(null);
 
   // Check if inventory is full
   const inventoryFull = useComputed$(() => {
@@ -27,12 +32,14 @@ export const ItemSidebar = component$(() => {
   });
 
   return (
-    <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col relative">
-      {/* Item grid */}
-      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-1 flex-1 min-h-0 overflow-y-auto pr-2">
+    <div class="h-full relative flex flex-col">
+      <SelectionGrid class="flex-1 min-h-0 h-full !p-3">
         {items.map((item) => (
-          <button
+          <SelectionItem
             key={item.id}
+            size="md"
+            disabled={inventoryFull.value}
+            ariaLabel={item.name}
             onClick$={() => {
               if (!inventoryFull.value) {
                 const slot = findFirstEmptySlot(buildState.inventory);
@@ -48,31 +55,25 @@ export const ItemSidebar = component$(() => {
               if (!button) return;
 
               const rect = button.getBoundingClientRect();
-              
+
               // Calculate positioning with overflow handling
-              const x = rect.right + 8 + 320 > window.innerWidth 
-                ? rect.left - 320 - 8 
-                : rect.right + 8;
-              
+              const x =
+                rect.right + 8 + 320 > window.innerWidth
+                  ? rect.left - 320 - 8
+                  : rect.right + 8;
+
               // Vertical overflow: if tooltip (max 60vh) would exceed viewport bottom, shift up
               const tooltipMaxHeight = window.innerHeight * 0.6;
-              const y = rect.top + tooltipMaxHeight > window.innerHeight
-                ? Math.max(8, window.innerHeight - tooltipMaxHeight - 8)
-                : rect.top;
+              const y =
+                rect.top + tooltipMaxHeight > window.innerHeight
+                  ? Math.max(8, window.innerHeight - tooltipMaxHeight - 8)
+                  : rect.top;
 
               hoveredItemData.value = { item, x, y };
             }}
             onPointerLeave$={() => {
               hoveredItemData.value = null;
             }}
-            disabled={inventoryFull.value}
-            aria-label={item.name}
-            aria-disabled={inventoryFull.value}
-            class={`w-12 h-12 p-0 rounded-md transition-all overflow-hidden cursor-pointer ${
-              inventoryFull.value
-                ? "bg-surface-hover cursor-not-allowed opacity-50"
-                : "bg-surface-hover border border-accent hover:border-active hover:scale-110 active:scale-95"
-            }`}
           >
             <img
               src={getItemImageUrl(item.image)}
@@ -82,21 +83,23 @@ export const ItemSidebar = component$(() => {
               class="w-full h-full object-cover"
               loading="lazy"
             />
-          </button>
+          </SelectionItem>
         ))}
-      </div>
+      </SelectionGrid>
 
       {/* Custom Tooltip */}
       {hoveredItemData.value && (
         <div
-          class="fixed z-50 bg-popover text-popover-foreground border shadow-md rounded-md p-3 max-w-[320px] pointer-events-none"
+          class="fixed z-[70] bg-surface text-text border border-accent shadow-2xl rounded-lg p-3 max-w-[320px] pointer-events-none"
           style={{
             top: `${hoveredItemData.value.y}px`,
             left: `${hoveredItemData.value.x}px`,
           }}
         >
           <div class="max-h-[60vh] overflow-y-auto">
-            <div class="font-bold text-sm mb-1">{hoveredItemData.value.item.name}</div>
+            <div class="font-bold text-sm mb-1">
+              {hoveredItemData.value.item.name}
+            </div>
             <div class="text-xs opacity-90 leading-relaxed">
               {stripHtmlTags(hoveredItemData.value.item.description)}
             </div>

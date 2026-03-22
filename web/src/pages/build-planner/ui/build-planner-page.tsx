@@ -1,4 +1,10 @@
-import { component$, useContextProvider, useStore, useSignal, $ } from "@builder.io/qwik";
+import {
+  component$,
+  useContextProvider,
+  useStore,
+  useSignal,
+  $,
+} from "@builder.io/qwik";
 import {
   BuildContext,
   createInitialBuildState,
@@ -15,7 +21,7 @@ import { BuildChart } from "~/features/stat-chart";
 export const BuildPlannerPage = component$(() => {
   const buildState = useStore(createInitialBuildState());
   const isModalOpen = useSignal(false);
-  
+
   useContextProvider(BuildContext, buildState);
 
   const branches = getAllRuneBranches();
@@ -36,7 +42,7 @@ export const BuildPlannerPage = component$(() => {
         <RuneSelectionBoard q:slot="rune-page" branches={branches} />
         <BuildChart q:slot="chart" />
       </PageLayout>
-      
+
       <SelectChampionModal
         isOpen={isModalOpen}
         onSelect$={handleSelectChampion}

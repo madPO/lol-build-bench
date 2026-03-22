@@ -1,17 +1,18 @@
 import { component$, useContext } from "@builder.io/qwik";
 import { BuildContext } from "~/app/config/build-context";
 import { getItemImageUrl } from "~/entities/item";
+import { Panel } from "~/widgets/common/ui";
 
 export const ItemInventory = component$(() => {
   const buildState = useContext(BuildContext);
 
   return (
-    <div class="p-3 bg-surface/80 text-text backdrop-blur border border-accent rounded-xl w-fit h-full flex flex-col items-center justify-start">
+    <Panel class="w-full h-full flex flex-col items-center justify-start !p-3">
       <div class="grid grid-cols-2 grid-rows-3 gap-2 shrink-0">
         {buildState.inventory.map((item, index) => (
           <div
             key={index}
-            class="w-12 h-12 bg-surface-hover border border-accent rounded-lg overflow-hidden relative group flex items-center justify-center transition-all hover:scale-110 active:scale-95 hover:border-active z-10 hover:z-20"
+            class="w-12 h-12 bg-surface-hover border border-accent rounded-lg overflow-hidden relative group flex items-center justify-center transition-all hover:scale-110 active:scale-95 hover:border-active z-10 hover:z-20 shadow-sm"
           >
             {item ? (
               <>
@@ -49,13 +50,13 @@ export const ItemInventory = component$(() => {
                 </button>
               </>
             ) : (
-              <div class="w-full h-full flex items-center justify-center text-gray-200 text-lg font-light">
+              <div class="w-full h-full flex items-center justify-center text-text/30 text-lg font-light">
                 +
               </div>
             )}
           </div>
         ))}
       </div>
-    </div>
+    </Panel>
   );
 });

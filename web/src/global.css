@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Inter:wght@400;700&display=swap");
 @import "tailwindcss";
 @import "basecoat-css";
 
@@ -12,7 +12,7 @@
   --color-accent: var(--accent);
   --color-active: var(--active);
   --color-text: var(--text);
-  
+
   --shadow-theme-glow: var(--theme-glow);
   --shadow-accent-glow: var(--accent-glow);
 }
@@ -22,12 +22,12 @@
   --font-primary: "Cinzel", serif;
   --font-secondary: "Inter", sans-serif;
 
-  --background: #010A13;
-  --surface: #0A1428;
-  --surface-hover: #1E2328;
-  --accent: #C8AA6E;
-  --active: #C89B3C;
-  --text: #F0E6D2;
+  --background: #010a13;
+  --surface: #0a1428;
+  --surface-hover: #1e2328;
+  --accent: #c8aa6e;
+  --active: #c89b3c;
+  --text: #f0e6d2;
 
   --button-radius: 0px;
   --button-transform: uppercase;
@@ -38,20 +38,27 @@
 
 /* Global Styles */
 @layer base {
-  html, body {
+  html,
+  body {
     background: var(--background);
     color: var(--text);
     font-family: var(--font-body);
     min-height: 100vh;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     text-transform: var(--button-transform);
     letter-spacing: var(--button-letter-spacing);
   }
 
-  button, .btn {
+  button,
+  .btn {
     border-radius: var(--button-radius);
     text-transform: var(--button-transform);
     letter-spacing: var(--button-letter-spacing);

@@ -13,6 +13,7 @@ import {
 import { BuildContext } from "~/app/config/build-context";
 import { computeChartData, getRelevantStats } from "../model/chart";
 import uPlot from "uplot";
+import { Panel } from "~/widgets/common/ui";
 
 export const BuildChart = component$(() => {
   const buildState = useContext(BuildContext);
@@ -111,22 +112,22 @@ export const BuildChart = component$(() => {
 
   if (!buildState.selectedChampion) {
     return (
-      <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col">
+      <Panel class="h-full flex flex-col">
         <h2 class="text-lg font-semibold flex-shrink-0 mb-4">Build Chart</h2>
         <div class="flex-1 flex items-center justify-center text-text/70 min-h-0">
           <p>Select a champion to view stat progression chart</p>
         </div>
-      </div>
+      </Panel>
     );
   }
 
   return (
-    <div class="card bg-surface text-text rounded-lg shadow p-4 h-full flex flex-col">
+    <Panel class="h-full flex flex-col">
       <h2 class="text-lg font-semibold flex-shrink-0 mb-4">
         {buildState.selectedChampion.name} - Stat Progression
       </h2>
       <div ref={containerRef} class="flex-1 min-h-0 w-full overflow-hidden" />
-    </div>
+    </Panel>
   );
 });
 

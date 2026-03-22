@@ -16,7 +16,7 @@ function stripHtml(html: string): string {
 
 export function getRunesByBranch(branchId: string | null): Rune[] {
   if (!branchId) return [];
-  
+
   const tree = (runesData as any[]).find((t) => String(t.id) === branchId);
   if (!tree) return [];
 

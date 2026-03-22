@@ -33,7 +33,7 @@ Assisted-by: AI-agent
 - **Header line**: max 72 characters
 - **Type**: lowercase, one of the allowed types below
 - **Scope**: optional, lowercase, noun in parentheses — describes the affected module/package/area (e.g. `auth`, `api`, `db`, `ci`)
-- **Summary**: imperative mood, lowercase, no period at the end ("add feature" not "added feature" or "adds feature")
+- **Summary**: imperative mood, lowercase, no period at the end ("add feature" not "added feature" or "adds feature"). Compact size 2 or 3 bullets.
 - **Body**: optional, wrapped at 72 chars, explains *what* and *why* (not *how*); separated from header by a blank line
 - **Footers**: key-value trailers separated from body by a blank line; `BREAKING CHANGE:` must be included for breaking changes
 - **`Assisted-by: AI-agent`**: ALWAYS the last line of the commit message, no exceptions

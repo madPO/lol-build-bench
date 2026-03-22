@@ -4,22 +4,22 @@ import type { RuneSelectionState } from "./types";
  * Handles a click on a rune branch, applying selection/deselection rules.
  */
 export function calculateNewSelectionState(
-  currentState: RuneSelectionState, 
-  clickedBranchId: string
+  currentState: RuneSelectionState,
+  clickedBranchId: string,
 ): RuneSelectionState {
   // Deselection: Clicked an already selected branch
   if (currentState.primaryBranchId === clickedBranchId) {
-    return { 
-      ...currentState, 
+    return {
+      ...currentState,
       primaryBranchId: null,
-      primaryRuneIds: [null, null, null, null]
+      primaryRuneIds: [null, null, null, null],
     };
   }
   if (currentState.secondaryBranchId === clickedBranchId) {
-    return { 
-      ...currentState, 
+    return {
+      ...currentState,
       secondaryBranchId: null,
-      secondaryRuneIds: [null, null, null]
+      secondaryRuneIds: [null, null, null],
     };
   }
 
@@ -34,10 +34,10 @@ export function calculateNewSelectionState(
   }
 
   // Replacement: Primary and secondary already selected -> replace secondary
-  return { 
-    ...currentState, 
+  return {
+    ...currentState,
     secondaryBranchId: clickedBranchId,
-    secondaryRuneIds: [null, null, null]
+    secondaryRuneIds: [null, null, null],
   };
 }
 
@@ -48,7 +48,7 @@ export function selectRune(
   currentState: RuneSelectionState,
   runeId: string,
   tier: number,
-  isSecondary: boolean
+  isSecondary: boolean,
 ): RuneSelectionState {
   if (!isSecondary) {
     // Primary path: allow one per row (0-3)
@@ -61,13 +61,13 @@ export function selectRune(
 
     const nextRuneIds = [...currentState.secondaryRuneIds];
     const tierIndex = tier - 1; // slots 1,2,3 map to 0,1,2
-    
+
     // Check if clicking currently selected rune in its row -> deselect
     if (nextRuneIds[tierIndex] === runeId) {
       nextRuneIds[tierIndex] = null;
     } else {
-      const selectedCount = nextRuneIds.filter(id => id !== null).length;
-      
+      const selectedCount = nextRuneIds.filter((id) => id !== null).length;
+
       if (selectedCount < 2) {
         // Add or replace in its row
         nextRuneIds[tierIndex] = runeId;
@@ -77,7 +77,7 @@ export function selectRune(
           nextRuneIds[tierIndex] = runeId;
         } else {
           // Clicking a NEW row when 2 are already selected -> replace the "oldest" selected row.
-          // LoL behavior: replaces the oldest selected slot. 
+          // LoL behavior: replaces the oldest selected slot.
           // Implementation: find the first non-null that isn't the current tier and replace it.
           for (let i = 0; i < 3; i++) {
             if (nextRuneIds[i] !== null) {
