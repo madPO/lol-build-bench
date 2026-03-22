@@ -6,7 +6,6 @@ import (
 	"import-cli/internal/domain"
 
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
-	cloudevents "github.com/cloudevents/sdk-go/v2"
 )
 
 type Repository struct {
@@ -82,19 +81,13 @@ func (r *Repository) CreateSchema(ctx context.Context) error {
 	return nil
 }
 
-func (r *Repository) SaveChampions(ctx context.Context, events []cloudevents.Event) error {
+func (r *Repository) SaveChampions(ctx context.Context, champions []domain.Champion) error {
 	batch, err := r.conn.PrepareBatch(ctx, "INSERT INTO champions")
 	if err != nil {
 		return err
 	}
 
-	for _, e := range events {
-		var c domain.Champion
-		if err := e.DataAs(&c); err != nil {
-			fmt.Printf("Warning: failed to unmarshal champion event data: %v\n", err)
-			continue
-		}
-
+	for _, c := range champions {
 		err := batch.Append(
 			c.ID, c.Key, c.Name, c.Title, c.Tags, c.Version,
 			c.Stats.HP, c.Stats.HPPerLevel, c.Stats.MP, c.Stats.MPPerLevel,
@@ -112,19 +105,13 @@ func (r *Repository) SaveChampions(ctx context.Context, events []cloudevents.Eve
 	return batch.Send()
 }
 
-func (r *Repository) SaveItems(ctx context.Context, events []cloudevents.Event) error {
+func (r *Repository) SaveItems(ctx context.Context, items []domain.Item) error {
 	batch, err := r.conn.PrepareBatch(ctx, "INSERT INTO items")
 	if err != nil {
 		return err
 	}
 
-	for _, e := range events {
-		var i domain.Item
-		if err := e.DataAs(&i); err != nil {
-			fmt.Printf("Warning: failed to unmarshal item event data: %v\n", err)
-			continue
-		}
-
+	for _, i := range items {
 		err := batch.Append(
 			i.ID, i.Name, i.Description, i.Plaintext, i.Version,
 			i.Gold.Base, i.Gold.Purchasable, i.Gold.Total, i.Gold.Sell,
@@ -138,19 +125,13 @@ func (r *Repository) SaveItems(ctx context.Context, events []cloudevents.Event) 
 	return batch.Send()
 }
 
-func (r *Repository) SaveRunes(ctx context.Context, events []cloudevents.Event) error {
+func (r *Repository) SaveRunes(ctx context.Context, runes []domain.Rune) error {
 	batch, err := r.conn.PrepareBatch(ctx, "INSERT INTO runes")
 	if err != nil {
 		return err
 	}
 
-	for _, e := range events {
-		var run domain.Rune
-		if err := e.DataAs(&run); err != nil {
-			fmt.Printf("Warning: failed to unmarshal rune event data: %v\n", err)
-			continue
-		}
-
+	for _, run := range runes {
 		err := batch.Append(
 			run.ID, run.Key, run.Icon, run.Name, run.ShortDesc, run.LongDesc, run.TreeID, run.Version,
 		)

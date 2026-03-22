@@ -6,11 +6,8 @@ import (
 	"fmt"
 	"import-cli/internal/data/clickhouse"
 	"import-cli/internal/data/datadragon"
+	"import-cli/internal/domain"
 	"import-cli/internal/transformation"
-	"time"
-
-	cloudevents "github.com/cloudevents/sdk-go/v2"
-	"github.com/google/uuid"
 )
 
 func ImportItems(ctx context.Context, repo *clickhouse.Repository, zip *datadragon.ZipReader, version string) (int, error) {
@@ -39,7 +36,7 @@ func ImportItems(ctx context.Context, repo *clickhouse.Repository, zip *datadrag
 		return 0, fmt.Errorf("expected '{' after 'data' key")
 	}
 
-	var events []cloudevents.Event
+	var items []domain.Item
 	for decoder.More() {
 		// ID
 		idToken, err := decoder.Token()
@@ -50,18 +47,11 @@ func ImportItems(ctx context.Context, repo *clickhouse.Repository, zip *datadrag
 
 		var raw datadragon.ItemData
 		if err := decoder.Decode(&raw); err != nil {
-			return 0, fmt.Errorf("failed to decode item entry %s: %w", id, err)
+			return 0, fmt.Errorf("failed to decode item entry %s: %w", err)
 		}
 
 		item := transformation.ToItemDomain(id, raw, version)
-
-		// Create CloudEvent
-		evt, err := transformation.NewItemEvent(item, uuid.New().String(), time.Now())
-		if err != nil {
-			return 0, fmt.Errorf("failed to create item event: %w", err)
-		}
-
-		events = append(events, evt)
+		items = append(items, item)
 	}
 
 	// Read closing brace of data map
@@ -74,9 +64,9 @@ func ImportItems(ctx context.Context, repo *clickhouse.Repository, zip *datadrag
 		// It's possible we hit EOF or other fields, but for now just ensure we don't error out on valid end
 	}
 
-	if err := repo.SaveItems(ctx, events); err != nil {
+	if err := repo.SaveItems(ctx, items); err != nil {
 		return 0, fmt.Errorf("failed to save items: %w", err)
 	}
 
-	return len(events), nil
+	return len(items), nil
 }

@@ -232,3 +232,4 @@ lerna-debug.log*
 .create-qwik*
 .example
 bin
+.specify/memory/review

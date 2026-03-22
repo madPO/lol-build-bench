@@ -6,11 +6,8 @@ import (
 	"fmt"
 	"import-cli/internal/data/clickhouse"
 	"import-cli/internal/data/datadragon"
+	"import-cli/internal/domain"
 	"import-cli/internal/transformation"
-	"time"
-
-	cloudevents "github.com/cloudevents/sdk-go/v2"
-	"github.com/google/uuid"
 )
 
 func ImportChampions(ctx context.Context, repo *clickhouse.Repository, zip *datadragon.ZipReader, version string) (int, error) {
@@ -39,7 +36,7 @@ func ImportChampions(ctx context.Context, repo *clickhouse.Repository, zip *data
 		return 0, fmt.Errorf("expected '{' after 'data' key")
 	}
 
-	var events []cloudevents.Event
+	var champions []domain.Champion
 	for decoder.More() {
 		// Key (champion ID)
 		_, err := decoder.Token()
@@ -53,14 +50,7 @@ func ImportChampions(ctx context.Context, repo *clickhouse.Repository, zip *data
 		}
 
 		champion := transformation.ToChampionDomain(raw, version)
-
-		// Create CloudEvent (as mandated by Constitution Principle III)
-		evt, err := transformation.NewChampionEvent(champion, uuid.New().String(), time.Now())
-		if err != nil {
-			return 0, fmt.Errorf("failed to create champion event: %w", err)
-		}
-
-		events = append(events, evt)
+		champions = append(champions, champion)
 	}
 
 	// Read closing brace of data map
@@ -73,9 +63,9 @@ func ImportChampions(ctx context.Context, repo *clickhouse.Repository, zip *data
 		// It's possible we hit EOF or other fields, but for now just ensure we don't error out on valid end
 	}
 
-	if err := repo.SaveChampions(ctx, events); err != nil {
+	if err := repo.SaveChampions(ctx, champions); err != nil {
 		return 0, fmt.Errorf("failed to save champions: %w", err)
 	}
 
-	return len(events), nil
+	return len(champions), nil
 }

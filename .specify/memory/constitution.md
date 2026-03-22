@@ -1,15 +1,18 @@
 <!--
 === Sync Impact Report ===
-Version change: 3.1.0 -> 3.2.0
-Modified principles: none
-Added sections:
-  - Principle VI. Feature-Sliced Design (FSD)
-  - Development Workflow review checklist expanded (item 6)
-Removed sections: none
+Version change: 3.2.0 -> 4.0.0
+Modified principles:
+  - I. Dual-Stack Separation (removed BFF references)
+  - IV. Low Coupling, High Cohesion -> III. Low Coupling, High Cohesion (renumbered)
+  - V. MVP-First Development -> IV. MVP-First Development (renumbered)
+  - VI. Feature-Sliced Design (FSD) -> V. Feature-Sliced Design (FSD) (renumbered)
+Added sections: none
+Removed sections:
+  - III. Cloud Events & Event-Driven Persistence
 Templates requiring updates:
-  - .specify/templates/plan-template.md ............ ✅ updated
-  - .specify/templates/spec-template.md ............ compatible, no update needed
-  - .specify/templates/tasks-template.md ........... ✅ updated
+  - .specify/templates/plan-template.md ............ ✅ compatible
+  - .specify/templates/spec-template.md ............ ✅ compatible
+  - .specify/templates/tasks-template.md ........... ✅ compatible
 Follow-up TODOs: none
 === End Sync Impact Report ===
 -->
@@ -25,9 +28,8 @@ The system is composed of two independently runnable stacks:
 - **Go API backend** — owns persistence, domain logic, and
   exposes a JSON REST (or JSON-RPC) API. It MUST NOT serve
   HTML or frontend assets.
-- **Qwik JS frontend with BFF** — owns all UI rendering and
-  acts as the Backend-For-Frontend. It runs on Bun, handles
-  SSR, and proxies or reshapes Go API responses for the UI.
+- **Qwik JS frontend** — owns all UI rendering. It runs on
+  Bun, handles SSR, and consumes Go API responses for the UI.
 
 Each stack MUST be buildable, startable, and deployable without
 the other being co-located. Shared contracts (API schemas) are
@@ -64,36 +66,12 @@ an HTTP call).
 the codebase predictable, easier to reason about, and naturally
 composable.
 
-### III. Cloud Events & Event-Driven Persistence
-
-All significant state changes MUST be expressed as events
-conforming to the CloudEvents specification (v1.0+):
-
-- Each event MUST include at minimum: `id`, `source`, `type`,
-  `specversion`, and `data` fields per the CloudEvents spec.
-- Persistence MUST be event-driven: the system records events
-  as the primary source of truth. Current state is derived by
-  replaying or projecting events.
-- Events MUST be published to an internal event bus (in-process
-  or message broker) before any read-model or projection is
-  updated.
-- Event types MUST use a namespaced, dot-separated naming
-  convention (e.g., `lolbench.build.created`,
-  `lolbench.champion.selected`).
-- Consumers of events MUST be idempotent — processing the same
-  event twice MUST NOT produce duplicate side effects.
-
-**Rationale**: Event-driven persistence provides a complete
-audit trail, decouples producers from consumers, and enables
-temporal queries and replay-based debugging.
-
-### IV. Low Coupling, High Cohesion
+### III. Low Coupling, High Cohesion
 
 - **Low Coupling**: Modules MUST communicate through narrow,
-  well-defined interfaces (function signatures, event contracts,
-  or API endpoints). A module MUST NOT reach into the internals
-  of another module. Shared mutable state between modules is
-  forbidden.
+  well-defined interfaces (function signatures, or API endpoints).
+  A module MUST NOT reach into the internals of another module.
+  Shared mutable state between modules is forbidden.
 - **High Cohesion**: Each module MUST have a single, clearly
   stated responsibility. All code within a module MUST relate
   directly to that responsibility. If a module serves two
@@ -108,7 +86,7 @@ temporal queries and replay-based debugging.
 deployment; high cohesion makes each unit understandable in
 isolation. Together they reduce the blast radius of changes.
 
-### V. MVP-First Development
+### IV. MVP-First Development
 
 All features MUST be delivered in Minimum Viable Product
 increments:
@@ -130,7 +108,7 @@ increments:
 reduces wasted effort, and ensures every increment delivers
 real user value.
 
-### VI. Feature-Sliced Design (FSD)
+### V. Feature-Sliced Design (FSD)
 
 All frontend codebase structure MUST strictly adhere to the Feature-Sliced Design (FSD) architecture. The structure MUST be organized by `app`, `pages` (or `routes`), `widgets`, `features`, and `entities`.
 
@@ -146,9 +124,7 @@ All frontend codebase structure MUST strictly adhere to the Feature-Sliced Desig
 |-------|-----------|-------------------|
 | Backend API | Go (latest stable) | `go build` / `go run` |
 | Frontend UI | Qwik JS | Bun |
-| Frontend BFF | Qwik server (SSR) | Bun |
 | Package manager (frontend) | Bun | `bun install` |
-| Event format | CloudEvents v1.0+ | Both stacks |
 | Testing | Skipped | Per project owner decision |
 
 Additional constraints:
@@ -169,15 +145,13 @@ Additional constraints:
 - **Code review**: Every PR MUST be reviewed against constitution
   principles before merge. The review checklist includes:
   1. Dual-stack boundary respected (no direct DB access from
-     the Qwik BFF, no HTML serving from Go backend).
+     the Qwik frontend, no HTML serving from Go backend).
   2. Code categorized as Data, Transformation, or Action — no
      mixed-category files.
-  3. State changes expressed as CloudEvents; persistence is
-     event-driven.
-  4. No circular dependencies; modules have single
+  3. No circular dependencies; modules have single
      responsibility.
-  5. Feature delivers smallest viable slice (MVP-first).
-  6. Frontend architecture strictly follows Feature-Sliced Design (FSD) and does NOT use a `shared` directory.
+  4. Feature delivers smallest viable slice (MVP-first).
+  5. Frontend architecture strictly follows Feature-Sliced Design (FSD) and does NOT use a `shared` directory.
 - **Build verification**: Both stacks MUST build without errors
   before a PR is approved (`go build ./...` and `bun run build`).
 - **No test gates**: Since testing is deferred, CI pipelines
@@ -205,4 +179,4 @@ and architectural choices MUST comply with its principles.
   brief constitution-compliance note (even if just
   "No constitution impact").
 
-**Version**: 3.2.0 | **Ratified**: 2026-03-18 | **Last Amended**: 2026-03-20
+**Version**: 4.0.0 | **Ratified**: 2026-03-18 | **Last Amended**: 2026-03-22
