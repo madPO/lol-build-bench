@@ -10,8 +10,8 @@ import (
 	"import-cli/internal/transformation"
 )
 
-func ImportRunes(ctx context.Context, repo *clickhouse.Repository, zip *datadragon.ZipReader, version string) (int, error) {
-	rc, err := zip.OpenJSON("runesReforged.json")
+func ImportRunes(ctx context.Context, repo *clickhouse.Repository, archive *datadragon.ArchiveReader, version string) (int, error) {
+	rc, err := archive.OpenJSON("runesReforged.json")
 	if err != nil {
 		return 0, err
 	}

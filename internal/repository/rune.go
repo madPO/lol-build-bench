@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 	"fmt"
-	"import-cli/api/internal/models"
+	"import-cli/internal/models"
 
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 )
@@ -17,9 +17,9 @@ func NewRuneRepository(conn driver.Conn) RuneRepository {
 }
 
 func (r *runeRepository) GetAll(ctx context.Context, version string) ([]models.Rune, error) {
-	query := `SELECT 
+	query := `SELECT
 		id, treeId, name, longDesc, icon
-	FROM runes 
+	FROM runes
 	WHERE version = ?`
 
 	rows, err := r.conn.Query(ctx, query, version)

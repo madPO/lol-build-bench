@@ -24,6 +24,7 @@ RUN dnf -y update && dnf -y install \
     python3-pip \
     nodejs \
     procps-ng \
+    zsh \
     && dnf clean all
 
 ENV LANG=en_US.UTF-8
@@ -45,9 +46,7 @@ WORKDIR /workspace
 RUN chown ${USER_NAME}:${USER_NAME} /workspace
 
 RUN curl -fsSL https://opencode.ai/install | bash
-
 RUN curl -fsSL https://bun.sh/install | bash
-
 RUN curl -fsSL https://astral.sh/uv/install.sh | sh
 RUN ln -s /root/.local/bin/uvx /usr/local/bin/uvx
 
@@ -57,7 +56,7 @@ RUN printf '#!/usr/bin/env sh\nexec uvx --from git+https://github.com/github/spe
 ENV PATH="/root/.bun/bin:/usr/local/bin:${PATH}"
 
 ENV GOPATH="/home/${USER_NAME}/go"
-ENV PATH="/home/${USER_NAME}/.bun/bin:/usr/local/go/bin:${GOPATH}/bin:${PATH}"
+ENV PATH="/home/${USER_NAME}/.bun/bin:/usr/local/go/bin:${GOPATH}/bin:/root/.opencode/bin:${PATH}"
 
 USER root
 EXPOSE 22

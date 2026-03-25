@@ -10,8 +10,8 @@ import (
 	"import-cli/internal/transformation"
 )
 
-func ImportChampions(ctx context.Context, repo *clickhouse.Repository, zip *datadragon.ZipReader, version string) (int, error) {
-	rc, err := zip.OpenJSON("champion.json")
+func ImportChampions(ctx context.Context, repo *clickhouse.Repository, archive *datadragon.ArchiveReader, version string) (int, error) {
+	rc, err := archive.OpenJSON("champion.json")
 	if err != nil {
 		return 0, err
 	}

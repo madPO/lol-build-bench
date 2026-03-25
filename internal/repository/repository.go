@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"import-cli/api/internal/models"
+	"import-cli/internal/models"
 )
 
 type ChampionRepository interface {

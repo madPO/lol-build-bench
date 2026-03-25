@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 	"fmt"
-	"import-cli/api/internal/models"
+	"import-cli/internal/models"
 
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 )
@@ -17,13 +17,13 @@ func NewChampionRepository(conn driver.Conn) ChampionRepository {
 }
 
 func (r *championRepository) GetAll(ctx context.Context, version string) ([]models.Champion, error) {
-	query := `SELECT 
+	query := `SELECT
 		id, key, name, title, tags, version,
 		hp, hpperlevel, mp, mpperlevel, movespeed, armor, armorperlevel,
 		spellblock, spellblockperlevel, attackrange, hpregen, hpregenperlevel,
-		mpregen, mpregenperlevel, crit, critperlevel, attackdamage, 
+		mpregen, mpregenperlevel, crit, critperlevel, attackdamage,
 		attackdamageperlevel, attackspeedperlevel, attackspeed
-	FROM champions 
+	FROM champions
 	WHERE version = ?`
 
 	rows, err := r.conn.Query(ctx, query, version)
@@ -58,13 +58,13 @@ func (r *championRepository) GetAll(ctx context.Context, version string) ([]mode
 }
 
 func (r *championRepository) GetByID(ctx context.Context, version string, id string) (*models.Champion, error) {
-	query := `SELECT 
+	query := `SELECT
 		id, key, name, title, tags, version,
 		hp, hpperlevel, mp, mpperlevel, movespeed, armor, armorperlevel,
 		spellblock, spellblockperlevel, attackrange, hpregen, hpregenperlevel,
-		mpregen, mpregenperlevel, crit, critperlevel, attackdamage, 
+		mpregen, mpregenperlevel, crit, critperlevel, attackdamage,
 		attackdamageperlevel, attackspeedperlevel, attackspeed
-	FROM champions 
+	FROM champions
 	WHERE version = ? AND id = ?`
 
 	var c models.Champion

@@ -39,6 +39,7 @@ type Item struct {
 	Description string             `json:"description"`
 	Plaintext   string             `json:"plaintext"`
 	Gold        ItemGold           `json:"gold"`
+	Tags        []string           `json:"tags"`
 	Stats       map[string]float64 `json:"stats"`
 	Version     string             `json:"version"`
 }

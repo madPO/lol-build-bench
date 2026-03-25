@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 	"fmt"
-	"import-cli/api/internal/models"
+	"import-cli/internal/models"
 
 	"github.com/ClickHouse/clickhouse-go/v2/lib/driver"
 )
@@ -17,9 +17,9 @@ func NewItemRepository(conn driver.Conn) ItemRepository {
 }
 
 func (r *itemRepository) GetAll(ctx context.Context, version string) ([]models.Item, error) {
-	query := `SELECT 
-		id, name, description, version, gold_base, gold_purchasable, gold_total, gold_sell, stats, tags
-	FROM items 
+	query := `SELECT
+		id, name, description, version, gold_base, gold_purchasable, gold_total, gold_sell, stats
+	FROM items
 	WHERE version = ?`
 
 	rows, err := r.conn.Query(ctx, query, version)
@@ -33,7 +33,7 @@ func (r *itemRepository) GetAll(ctx context.Context, version string) ([]models.I
 		var i models.Item
 		var g models.ItemGold
 		if err := rows.Scan(
-			&i.ID, &i.Name, &i.Description, &i.Version, &g.Base, &g.Purchasable, &g.Total, &g.Sell, &i.Stats, &i.Tags,
+			&i.ID, &i.Name, &i.Description, &i.Version, &g.Base, &g.Purchasable, &g.Total, &g.Sell, &i.Stats,
 		); err != nil {
 			return nil, err
 		}
@@ -46,15 +46,15 @@ func (r *itemRepository) GetAll(ctx context.Context, version string) ([]models.I
 }
 
 func (r *itemRepository) GetByID(ctx context.Context, version string, id string) (*models.Item, error) {
-	query := `SELECT 
-		id, name, description, version, gold_base, gold_purchasable, gold_total, gold_sell, stats, tags
-	FROM items 
+	query := `SELECT
+		id, name, description, version, gold_base, gold_purchasable, gold_total, gold_sell, stats
+	FROM items
 	WHERE version = ? AND id = ?`
 
 	var i models.Item
 	var g models.ItemGold
 	err := r.conn.QueryRow(ctx, query, version, id).Scan(
-		&i.ID, &i.Name, &i.Description, &i.Version, &g.Base, &g.Purchasable, &g.Total, &g.Sell, &i.Stats, &i.Tags,
+		&i.ID, &i.Name, &i.Description, &i.Version, &g.Base, &g.Purchasable, &g.Total, &g.Sell, &i.Stats,
 	)
 	if err != nil {
 		return nil, err

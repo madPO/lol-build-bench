@@ -21,42 +21,42 @@ func main() {
 	flag.Parse()
 
 	if flag.NArg() < 1 {
-		fmt.Println("Usage: import-cli [options] <path-to-datadragon-zip>")
+		fmt.Println("Usage: import-cli [options] <path-to-datadragon-tgz>")
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
 
-	zipPath := flag.Arg(0)
+	archivePath := flag.Arg(0)
 
 	// Check if file exists
-	if _, err := os.Stat(zipPath); os.IsNotExist(err) {
-		log.Printf("Error: file %s does not exist", zipPath)
+	if _, err := os.Stat(archivePath); os.IsNotExist(err) {
+		log.Printf("Error: file %s does not exist", archivePath)
 		os.Exit(2)
 	}
 
 	ctx := context.Background()
 
 	// Open Zip
-	zip, err := datadragon.NewZipReader(zipPath)
+	archive, err := datadragon.NewArchiveReader(archivePath)
 	if err != nil {
-		if errors.Is(err, datadragon.ErrInvalidZip) {
+		if errors.Is(err, datadragon.ErrInvalidArchive) {
 			log.Printf("Fatal: %v", err)
 			os.Exit(2)
 		}
-		log.Printf("Failed to open zip: %v", err)
+		log.Printf("Failed to open archive: %v", err)
 		os.Exit(2)
 	}
-	defer zip.Close()
+	defer archive.Close()
 
 	// Extract Version from manifest.json
-	version, err := zip.GetVersion()
+	version, err := archive.GetVersion()
 	if err != nil {
 		log.Printf("Warning: failed to extract version from manifest.json: %v. Falling back to path extraction.", err)
-		version = datadragon.ExtractVersion(zipPath)
+		version = datadragon.ExtractVersion(archivePath)
 	}
 
 	log.Printf("Starting DataDragon import for version: %s", version)
-	log.Printf("Archive: %s", zipPath)
+	log.Printf("Archive: %s", archivePath)
 
 	// Connect to ClickHouse
 	conn, err := clickhouse.Connect(ctx, *dbHost, *dbUser, *dbPass, *dbName)
@@ -76,7 +76,7 @@ func main() {
 
 	// Import Champions
 	log.Println("Importing champions...")
-	count, err := actions.ImportChampions(ctx, repo, zip, version)
+	count, err := actions.ImportChampions(ctx, repo, archive, version)
 	if err != nil {
 		log.Printf("Error importing champions: %v", err)
 		if errors.Is(err, datadragon.ErrFileNotFound) {
@@ -90,7 +90,7 @@ func main() {
 
 	// Import Items
 	log.Println("Importing items...")
-	count, err = actions.ImportItems(ctx, repo, zip, version)
+	count, err = actions.ImportItems(ctx, repo, archive, version)
 	if err != nil {
 		log.Printf("Error importing items: %v", err)
 		if !errors.Is(err, datadragon.ErrFileNotFound) {
@@ -102,7 +102,7 @@ func main() {
 
 	// Import Runes
 	log.Println("Importing runes...")
-	count, err = actions.ImportRunes(ctx, repo, zip, version)
+	count, err = actions.ImportRunes(ctx, repo, archive, version)
 	if err != nil {
 		log.Printf("Error importing runes: %v", err)
 		if !errors.Is(err, datadragon.ErrFileNotFound) {

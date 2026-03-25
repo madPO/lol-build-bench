@@ -4,10 +4,11 @@ import (
 	"context"
 	"net/http"
 
+	internalgql "import-cli/internal/graphql"
+	"import-cli/internal/repository"
+
 	"github.com/go-chi/chi/v5"
 	"github.com/graphql-go/graphql"
-	internalgql "import-cli/api/internal/graphql"
-	"import-cli/api/internal/repository"
 )
 
 func ChampionHandlers(cr repository.ChampionRepository) http.Handler {

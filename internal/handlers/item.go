@@ -3,9 +3,10 @@ package handlers
 import (
 	"net/http"
 
+	internalgql "import-cli/internal/graphql"
+	"import-cli/internal/repository"
+
 	"github.com/go-chi/chi/v5"
-	internalgql "import-cli/api/internal/graphql"
-	"import-cli/api/internal/repository"
 )
 
 func ItemHandlers(ir repository.ItemRepository) http.Handler {

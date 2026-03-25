@@ -13,6 +13,7 @@ services:
     ports:
       - 5173:5173
       - 8223:22
+      - 8081:8080
     extra_hosts:
       - "host.docker.internal:192.168.144.1"
     depends_on:
@@ -31,6 +32,8 @@ services:
       nofile:
         soft: 262144
         hard: 262144
+    environment:
+      - CLICKHOUSE_PASSWORD=default
 
   nats:
     image: nats:latest

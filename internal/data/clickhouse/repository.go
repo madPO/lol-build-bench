@@ -57,6 +57,7 @@ func (r *Repository) CreateSchema(ctx context.Context) error {
 			gold_purchasable Boolean,
 			gold_total Int32,
 			gold_sell Int32,
+			tags Array(String),
 			stats Map(String, Float64)
 		) ENGINE = ReplacingMergeTree() ORDER BY (id, version)`,
 
@@ -115,6 +116,7 @@ func (r *Repository) SaveItems(ctx context.Context, items []domain.Item) error {
 		err := batch.Append(
 			i.ID, i.Name, i.Description, i.Plaintext, i.Version,
 			i.Gold.Base, i.Gold.Purchasable, i.Gold.Total, i.Gold.Sell,
+			i.Tags,
 			i.Stats,
 		)
 		if err != nil {

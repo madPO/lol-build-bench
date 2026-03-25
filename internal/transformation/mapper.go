@@ -53,6 +53,7 @@ func ToItemDomain(id string, raw datadragon.ItemData, version string) domain.Ite
 			Total:       raw.Gold.Total,
 			Sell:        raw.Gold.Sell,
 		},
+		Tags:  raw.Tags,
 		Stats: raw.Stats,
 	}
 }

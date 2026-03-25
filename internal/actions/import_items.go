@@ -10,8 +10,8 @@ import (
 	"import-cli/internal/transformation"
 )
 
-func ImportItems(ctx context.Context, repo *clickhouse.Repository, zip *datadragon.ZipReader, version string) (int, error) {
-	rc, err := zip.OpenJSON("item.json")
+func ImportItems(ctx context.Context, repo *clickhouse.Repository, archive *datadragon.ArchiveReader, version string) (int, error) {
+	rc, err := archive.OpenJSON("item.json")
 	if err != nil {
 		return 0, err
 	}
@@ -47,7 +47,7 @@ func ImportItems(ctx context.Context, repo *clickhouse.Repository, zip *datadrag
 
 		var raw datadragon.ItemData
 		if err := decoder.Decode(&raw); err != nil {
-			return 0, fmt.Errorf("failed to decode item entry %s: %w", err)
+			return 0, fmt.Errorf("failed to decode item entry %s: %w", id, err)
 		}
 
 		item := transformation.ToItemDomain(id, raw, version)
