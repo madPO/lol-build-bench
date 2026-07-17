@@ -1,0 +1,24 @@
+web_search = "cached"
+personality = "friendly"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+
+[features]
+memories = true
+multi_agent = true
+shell_snapshot = true
+undo = true
+codex_git_commit = false
+apps = true
+
+[mcp_servers."chrome-devtools"]
+type = "stdio"
+command = "npx"
+args = [
+    "chrome-devtools-mcp@latest",
+    "--channel=stable",
+    "--headless=true",
+    "--isolated=true",
+    "--chrome-arg=--no-sandbox",
+    "--chrome-arg=--disable-setuid-sandbox"
+]

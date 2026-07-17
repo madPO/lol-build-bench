@@ -1,99 +1,97 @@
-# 🤖 Agentic Coding Guidelines (AGENTS.md)
+# Skill Policy
 
-Auto-generated context and guidelines for coding agents.
-**DO NOT REMOVE THE MANUAL ADDITIONS SECTION.**
+Use repository skills as the primary source of task-specific guidance whenever a task falls into a covered domain.
 
-## 1. 🏗️ Project Architecture & Structure
+`functional-thinking` is the default foundational skill for code-related work. For tasks involving code design, implementation, refactoring, architecture, code review, testability, or project structure, apply `functional-thinking` first and then combine it with the most specific domain skill.
 
-- **Framework Context**: Qwik JS (v1.19.2), Qwik City, Vite, Tailwind CSS, TypeScript (v5.4.5)
-- **Directory Context**: The main application code lives inside the `web/` folder.
-  - **CRITICAL**: Always run node commands (bun/vite/tsc) from within the `web/` directory using `workdir="web"`.
-- **Architecture**: **Feature-Sliced Design (FSD)** is strictly enforced.
-  - `src/app/`: Application-wide settings, global styles, routing configuration.
-  - `src/pages/` (or `src/routes/`): File-based routing for Qwik City. Contains `index.tsx`, `layout.tsx`, and `index.ts` (API endpoints).
-  - `src/widgets/`: Complex UI blocks composing features and entities (e.g., `header`, `sidebar`, `champion-build-board`).
-  - `src/features/`: User interactions, business logic (e.g., `champion-select`, `item-build`, `save-build`).
-  - `src/entities/`: Business entities (e.g., `champion`, `item`, `rune`). Should contain `ui`, `model` (types/state), `api` logic for that specific entity.
-  - `src/shared/`: dont use.
+General rules:
 
-## 2. 💻 Code Style & Conventions
+- First classify the task by domain, primary operation, and intended artifact.
+- For code-related work, start with `functional-thinking`.
+- Then select the most specific applicable skill for the domain and main deliverable.
+- Prefer one primary domain skill at a time unless two skills are clearly complementary.
+- Do not skip an obviously relevant skill just because the task looks simple.
+- If no domain-specific skill applies, continue with `functional-thinking` alone for code work, or proceed normally for non-code operational work.
+- Re-evaluate skill selection when the task shifts from analysis to implementation, from execution to diagnostics, or from project-wide scope to a narrow target.
 
-### TypeScript & Types
-- Strict mode is enabled. Define explicit interfaces/types for all models and API responses.
-- Export types from `model/types.ts` where applicable.
-- Use `import type { ... }` for type-only imports to help Qwik's optimizer split code efficiently.
+Priority order:
 
-### Naming Conventions
-- **Files/Directories**: `kebab-case` (e.g., `champion-select.tsx`, `item-inventory.tsx`).
-- **Components/Types/Interfaces**: `PascalCase` (e.g., `ChampionSelect`, `ItemInventory`, `ChampionState`).
-- **Variables/Functions/Hooks**: `camelCase` (e.g., `fetchChampions`, `useBuildState`).
-- **CSS Classes**: Tailwind utility classes directly in JSX `class="..."`.
+1. User request
+2. Repository rules in AGENTS.md
+3. `functional-thinking` for code-related work
+4. Applicable domain-specific repository skill
+5. Existing repository conventions and code patterns
+6. General programming knowledge
 
-### Imports & Exports
-- Use absolute path aliases `~/` which maps to `src/`. Avoid deeply nested relative paths (e.g. `../../`).
-- Order imports:
-  1. Built-in Node modules
-  2. External packages (`@builder.io/qwik`, etc.)
-  3. Absolute imports (`~/shared/...`, `~/entities/...`)
-  4. Relative imports (`./model/filters`)
+# Skill Routing
 
-### Qwik Specifics
-- Always wrap components in `component$(...)`.
-- Use Qwik hooks for state management: `useSignal()`, `useStore()`, `useComputed$()`, `useTask$()`.
-- Event handlers, closures, and side-effects must have the `$` suffix (e.g., `onClick$`, `onInput$`, `routeLoader$`).
-- Leverage Qwik City's `routeLoader$` for data fetching on the server and `routeAction$` for form submissions/mutations.
+## Global baseline
 
-### Styling & Error Handling
-- Use Tailwind CSS utility classes directly. Do NOT use `className` (use `class` instead).
-- Avoid custom CSS unless absolutely necessary (add to `global.css` if so).
-- Use standard `try/catch` blocks for asynchronous tasks.
-- Ensure API fallbacks or loading states are represented in the UI (e.g., missing images, empty states).
-- Use Qwik Error Boundaries for catching rendering errors where appropriate.
+- Use `functional-thinking` for code design, implementation, refactoring, architecture reasoning, code review, testability, and project structure decisions.
+- Combine other code-related skills with `functional-thinking` when they influence code shape, effect boundaries, abstractions, or decomposition.
 
-## 3. 🛠️ Build, Lint, and Test Commands
+## UI and frontend work
 
-*Important: Execute all bun/build commands from the `web/` directory!*
+- Use `ui-component-design` for UI component design, component review, accessibility, icon choice, and UI copy.
+- Use `matte-clair-obscur-ui` when designing, reviewing, or implementing premium product interfaces with quiet dark navigation chrome, a warm light workspace, matte surfaces, tonal hierarchy, subtle depth, and restrained accents.
+- Use `tailwind-blocks` when building or styling a UI element and an appropriate Tailwind Blocks component already exists.
+- Use `qwik-dev-en` for Qwik or QwikCity application work, including components, routing, loaders, actions, and framework best practices.
+- Prefer `ui-component-design` for design and UX decisions.
+- Prefer `matte-clair-obscur-ui` for visual direction when the requested interface uses or should preserve that aesthetic.
+- Prefer `tailwind-blocks` for implementation from an existing component pattern.
+- Prefer `qwik-dev-en` when the task is framework-specific to Qwik/QwikCity.
+- Combine `matte-clair-obscur-ui` with `ui-component-design` for aesthetic and UX decisions, and with `tailwind-blocks` or `qwik-dev-en` when implementation is also required.
 
-- **Install dependencies**: `bun install`
-- **Development Server**: `bun run dev` (starts Vite SSR dev server)
-- **Production Build**: `bun run build`
-- **Linting**: `bun run lint` (runs ESLint)
-- **Formatting**: `bun run fmt` (runs Prettier) or `bun run fmt.check` to verify.
-- **Type Checking**: `bun run build.types` (runs `tsc --noEmit`)
+## Architecture and code organization
 
-### Testing Strategy
-- **Full Suite**: `bun test` (Uses Vitest if configured, else standard test runner).
-- **Single Test**: `bunx vitest run path/to/file.spec.tsx` (or `bun test -- path/to/file`).
-- Tests should be written in `.spec.tsx` or `.test.ts` files alongside the component (e.g., `ui/champion-select.spec.tsx`).
-- For Qwik components, use `@builder.io/qwik/testing` (e.g., `createDOM()`) for component mounting.
-- Assert component rendering and user interactions using `@testing-library/dom` or similar if set up.
+- Use `fsd-architecture` for Feature-Sliced Design structure, project organization, module boundaries, scaffolding, or architecture review in FSD-based projects.
+- Use `cloudevents` for CloudEvents modeling, event contracts, event production/consumption, or transport-specific CloudEvents handling.
+- Use `ddd-event-storming-monolith` for modular monolith backend design that maps transport requests to commands, commands to aggregates or domain services, and business outcomes to domain events with in-process handlers.
+- Combine these skills with `functional-thinking` when the task affects boundaries, composition, or domain flow.
 
-## 4. 📝 Development Workflow
+## Go development
 
-1. **Understand FSD**: Before creating a new component, decide whether it is a `shared` UI, a business `entity`, a `feature`, or a `widget`. Follow the directory structure strictly.
-2. **Context Check**: Check existing `data/*.json` files in `src/data/` for mock data structures (e.g., `champions.json`).
-3. **Draft Plan**: For complex components, first build a simple prototype with placeholder data to get user approval.
-4. **Verification**: After modifying code, ALWAYS verify your changes by running `bun run lint` and `bun run build.types`. Do not commit code with TypeScript errors.
+- Use `golang-concurrency` when writing or reviewing concurrent Go code involving goroutines, channels, `select`, synchronization primitives, `errgroup`, `singleflight`, worker pools, or fan-out/fan-in pipelines, and when diagnosing leaks, races, or channel ownership.
+- Use `golang-context` when designing context propagation across API boundaries, cancellation, timeouts, deadlines, request-scoped values, or background work that outlives a request. Do not load it solely because Go code accepts `context.Context` as its first parameter.
+- Use `golang-design-patterns` when choosing Go architecture or API patterns, including constructors, functional options, dependency injection, resource lifecycles, graceful shutdown, resilience, streaming, and data handling.
+- Use `golang-error-handling` when creating, wrapping, inspecting, joining, logging, or recovering from errors in Go, including custom and sentinel errors, `errors.Is`/`errors.As`, `%w`, `slog`, and HTTP request logging.
+- Use `golang-grpc` for Go gRPC servers or clients, protobuf organization, interceptors, status codes, TLS/mTLS, streaming RPCs, `bufconn` tests, or gRPC debugging.
+- Combine the Go skills when their concerns overlap. For example, gRPC work commonly also needs `golang-context`, `golang-error-handling`, or `golang-concurrency`; use `golang-design-patterns` only when the task includes an explicit API, lifecycle, resilience, or architecture decision.
 
-## 5. 🔒 Security & Performance
+## Commit workflow
 
-- Never expose API keys or sensitive variables in the client-side code.
-- Prefer `useComputed$` for derived state to avoid unnecessary re-renders.
-- Use `loading="lazy"` on images and consider Qwik's built-in `<img>` component optimizations where applicable.
-- Ensure proper ARIA attributes are used for accessibility on interactive elements (e.g., `aria-label`, `role="button"`).
-- Minimize the amount of data serialized into the HTML; only pass necessary state to client-side components.
+- Use `git-commit` when the primary artifact is a git commit message in Conventional Commits style.
 
-## Recent Changes
-- 009-add-fixed-footer: Added TypeScript 5.4.5, Qwik JS 1.19.2 + Vite, Tailwind CSS, Qwik City
-- 009-add-fixed-footer: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
-- 008-game-data-api: Added Go 1.21+ + `clickhouse-go/v2`, `graphql-go/graphql`, `go-chi/chi/v5`
+# Repository Guidelines
 
+## Project Structure & Module Organization
 
-<!-- MANUAL ADDITIONS START -->
+LoL Build Bench has a Go backend and a Qwik frontend. Go entry points live in `cmd/server` (HTTP/GraphQL server) and `cmd/import-cli` (Data Dragon importer). Backend packages are under `internal/`: keep HTTP handlers in `handlers`, persistence in `repository` and `data`, domain types in `domain` or `models`, and external-data transformations in `transformation`.
 
-Dont commit any changes.
+The frontend is in `web/`. Use the existing feature-sliced layout: reusable game data belongs in `src/entities`, user interactions in `src/features`, composed UI in `src/widgets`, and route-level screens in `src/pages` and `src/routes`. Static assets are in `web/public`; checked-in game-data fixtures are in `web/src/data`. Feature specifications and implementation plans live under `specs/<number>-<feature>/`.
 
-<!-- MANUAL ADDITIONS END -->
+## Build, Test, and Development Commands
 
-## Active Technologies
-- TypeScript 5.4.5, Qwik JS 1.19.2 + Vite, Tailwind CSS, Qwik City (009-add-fixed-footer)
+- `go test ./...` runs all Go package tests; run it from the repository root.
+- `go run ./cmd/server` starts the backend server. Configure required database settings before using data-backed endpoints.
+- `go run ./cmd/import-cli` runs the Data Dragon importer.
+- `cd web && bun install` installs frontend dependencies (the lockfile is `bun.lock`).
+- `cd web && bun run dev` starts the Qwik/Vite development server.
+- `cd web && bun run lint`, `bun run build.types`, and `bun run build` respectively lint, type-check, and produce a production build.
+- `cd web && bun run fmt.check` verifies Prettier formatting; use `bun run fmt` to apply it.
+
+## Coding Style & Naming Conventions
+
+Format Go with `gofmt`; use idiomatic Go package names and descriptive files such as `champion_schema.go`. Keep request parsing and response writing in handlers, with data access behind repository boundaries.
+
+Use TypeScript and Qwik components in the frontend. Follow the existing lowercase, hyphenated filenames (for example, `build-planner-page.tsx`); component exports use PascalCase and functions/variables use camelCase. Let ESLint and Prettier determine formatting—do not hand-format around their output.
+
+## Testing Guidelines
+
+Add Go tests beside the package under test as `*_test.go`, using table-driven cases for transformations and domain logic. Run `go test ./...` before opening a change. Frontend automated tests are not currently configured; at minimum run lint, type checks, and a production build, then manually verify affected flows in the development server.
+
+## Commit & Pull Request Guidelines
+
+Recent history uses Conventional Commit-style messages, such as `feat(api): implement game data server` and `refactor(ui): standardize components`. Use `feat`, `fix`, `refactor`, `style`, or `docs`, with an optional focused scope.
+
+Pull requests should explain the user-visible change, list validation commands run, link the relevant issue or `specs/` feature when applicable, and include screenshots for UI changes. Preserve the AGPL-3.0 license and required attribution in `NOTICE` when distributing modified work.

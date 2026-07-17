@@ -5,24 +5,22 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: devbox
+    container_name: builds_devbox
     env_file:
       - .env
     volumes:
       - ../:/workspace:cached
+      - codex-state:/home/marko/.codex
     ports:
       - 5173:5173
-      - 8223:22
       - 8081:8080
-    extra_hosts:
-      - "host.docker.internal:192.168.144.1"
+      - 55051:55051
     depends_on:
       - clickhouse
-      - nats
 
   clickhouse:
     image: clickhouse/clickhouse-server:latest
-    container_name: clickhouse
+    container_name: builds_clickhouse
     ports:
       - "8123:8123" # HTTP
       - "9000:9000" # TCP Native
@@ -35,13 +33,6 @@ services:
     environment:
       - CLICKHOUSE_PASSWORD=default
 
-  nats:
-    image: nats:latest
-    container_name: nats
-    ports:
-      - "4222:4222" # client
-      - "8222:8222" # monitoring HTTP
-    command: ["-js", "-m", "8222"]
-
 volumes:
   clickhouse_data:
+  codex-state:
