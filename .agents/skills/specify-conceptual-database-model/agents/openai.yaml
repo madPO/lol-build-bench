@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify Conceptual Database Model"
+  short_description: "Create a conceptual database model specification"
+  default_prompt: "Use $specify-conceptual-database-model to interview me and create a conceptual database model from a business entity."

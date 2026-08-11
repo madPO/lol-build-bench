@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify Distributed Architecture"
+  short_description: "Create a distributed architecture specification"
+  default_prompt: "Use $specify-distributed-architecture to interview me and create a distributed architecture specification."

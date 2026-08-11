@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify Business User Case"
+  short_description: "Create a single business use case specification"
+  default_prompt: "Use $specify-business-user-case to interview me and create a single-path business use case specification."

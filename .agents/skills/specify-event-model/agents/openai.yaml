@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify Event Model"
+  short_description: "Create an EventStorming system specification"
+  default_prompt: "Use $specify-event-model to interview me and create an EventStorming system specification."

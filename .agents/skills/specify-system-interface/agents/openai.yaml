@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify System Interface"
+  short_description: "Create a native-format system interface contract"
+  default_prompt: "Use $specify-system-interface to interview me and create a native-format system interface specification."

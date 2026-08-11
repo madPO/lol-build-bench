@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify Business Actors"
+  short_description: "Create a complete business actor specification"
+  default_prompt: "Use $specify-business-actors to interview me and create a business actor specification."

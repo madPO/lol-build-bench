@@ -1,0 +1,4 @@
+interface:
+  display_name: "Specify Business Entity"
+  short_description: "Create a complete business entity specification"
+  default_prompt: "Use $specify-business-entity to interview me and create a business entity specification."
